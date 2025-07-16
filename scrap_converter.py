@@ -10,10 +10,8 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
 
-df_ward = pd.read_csv(BASE_DIR / 'data/ward.csv')
-for code_col in ['wardCode', 'districtCode', 'provinceCode']:
-    df_ward[code_col] = df_ward[code_col].astype(str)
-df_ward['wardCode'] = df_ward['wardCode'].str.replace('.0', '')
+df_ward = pd.read_csv(BASE_DIR / 'data/ward.csv', dtype={'wardCode': str, 'districtCode': str, 'provinceCode': str})
+df_ward.fillna('', inplace=True)
 
 headers = {
     'origin': 'https://address-converter.io.vn',
@@ -49,6 +47,7 @@ def scrap_convert(payload):
 data_new_wards = []
 error_logs = []
 
+df_ward = df_ward.loc[2846:,]
 for _, row in tqdm(df_ward.iterrows(), total=len(df_ward)):
     payload = {
         'detailAddress': '',

@@ -72,3 +72,4 @@ for _, row in tqdm(df_ward.iterrows(), total=len(df_ward)):
         df_new_wards = pd.DataFrame(data_new_wards)
         with sqlite3.connect(BASE_DIR / 'data/convert.db') as conn:
             df_new_wards.to_sql(name='convert', con=conn, if_exists='append', index=False)
+        data_new_wards = []

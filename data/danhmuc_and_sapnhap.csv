@@ -1510,8 +1510,8 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 10,True,87,Huyện,2989.0,Xã,True,False,Tỉnh Lào Cai,Huyện Bảo Yên,Xã Bảo Hà,Tỉnh Lào Cai,Bảo Hà,9,319.0,xã,22.205,104.326,243.0
 10,True,87,Huyện,2992.0,Xã,True,False,Tỉnh Lào Cai,Huyện Bảo Yên,Xã Lương Sơn,Tỉnh Lào Cai,Bảo Yên,9,322.0,xã,22.2155,104.491,119.1
 10,True,87,Huyện,2998.0,Xã,True,False,Tỉnh Lào Cai,Huyện Bảo Yên,Xã Phúc Khánh,Tỉnh Lào Cai,Phúc Khánh,9,375.0,xã,22.1694,104.559,114.0
-10,True,88,Thị xã,3001.0,Phường,True,True,Tỉnh Lào Cai,Thị xã Sa Pa,Phường Sa Pa,Tỉnh Lào Cai,Sa Pa,9,379.0,phường,22.3497,103.837,54.63
-10,True,88,Thị xã,3002.0,Phường,True,True,Tỉnh Lào Cai,Thị xã Sa Pa,Phường Sa Pả,Tỉnh Lào Cai,Sa Pa,9,379.0,phường,22.3497,103.837,54.63
+10,True,88,Thị xã,3001.0,Phường,True,False,Tỉnh Lào Cai,Thị xã Sa Pa,Phường Sa Pa,Tỉnh Lào Cai,Sa Pa,9,379.0,phường,22.3497,103.837,54.63
+10,True,88,Thị xã,3002.0,Phường,True,False,Tỉnh Lào Cai,Thị xã Sa Pa,Phường Sa Pả,Tỉnh Lào Cai,Sa Pa,9,379.0,phường,22.3497,103.837,54.63
 10,True,88,Thị xã,3003.0,Phường,True,False,Tỉnh Lào Cai,Thị xã Sa Pa,Phường Ô Quý Hồ,Tỉnh Lào Cai,Sa Pa,9,379.0,phường,22.3497,103.837,54.63
 10,True,88,Thị xã,3004.0,Xã,False,False,Tỉnh Lào Cai,Thị xã Sa Pa,Xã Ngũ Chỉ Sơn,Tỉnh Lào Cai,Ngũ Chỉ Sơn,9,369.0,xã,22.4296,103.782,82.47
 10,True,88,Thị xã,3006.0,Phường,True,False,Tỉnh Lào Cai,Thị xã Sa Pa,Phường Phan Si Păng,Tỉnh Lào Cai,Sa Pa,9,379.0,phường,22.3497,103.837,54.63
@@ -2079,16 +2079,14 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 15,True,138,Huyện,4504.0,Xã,True,False,Tỉnh Yên Bái,Huyện Trấn Yên,Xã Báo Đáp,Tỉnh Lào Cai,Trấn Yên,9,394.0,xã,21.8103,104.816,110.72
 15,True,138,Huyện,4510.0,Xã,True,False,Tỉnh Yên Bái,Huyện Trấn Yên,Xã Thành Thịnh,Tỉnh Lào Cai,Trấn Yên,9,394.0,xã,21.8103,104.816,110.72
 15,True,138,Huyện,4513.0,Xã,True,False,Tỉnh Yên Bái,Huyện Trấn Yên,Xã Hòa Cuông,Tỉnh Lào Cai,Trấn Yên,9,394.0,xã,21.8103,104.816,110.72
-15,True,138,Huyện,4516.0,Xã,True,True,Tỉnh Yên Bái,Huyện Trấn Yên,Xã Minh Quán,Tỉnh Lào Cai,Trấn Yên,9,394.0,xã,21.8103,104.816,110.72
-15,True,138,Huyện,4516.0,Xã,True,True,Tỉnh Yên Bái,Huyện Trấn Yên,Xã Minh Quán,Tỉnh Lào Cai,Âu Lâu,9,312.0,phường,21.6592,104.909,66.17
+15,True,138,Huyện,4516.0,Xã,True,False,Tỉnh Yên Bái,Huyện Trấn Yên,Xã Minh Quán,Tỉnh Lào Cai,Trấn Yên,9,394.0,xã,21.8103,104.816,110.72
 15,True,138,Huyện,4519.0,Xã,True,False,Tỉnh Yên Bái,Huyện Trấn Yên,Xã Quy Mông,Tỉnh Lào Cai,Quy Mông,9,378.0,xã,21.722,104.757,149.17
 15,True,138,Huyện,4522.0,Xã,True,False,Tỉnh Yên Bái,Huyện Trấn Yên,Xã Cường Thịnh,Tỉnh Lào Cai,Nam Cường,9,364.0,phường,21.748,104.879,46.09
 15,True,138,Huyện,4525.0,Xã,True,False,Tỉnh Yên Bái,Huyện Trấn Yên,Xã Kiên Thành,Tỉnh Lào Cai,Quy Mông,9,378.0,xã,21.722,104.757,149.17
 15,True,138,Huyện,4531.0,Xã,True,False,Tỉnh Yên Bái,Huyện Trấn Yên,Xã Y Can,Tỉnh Lào Cai,Quy Mông,9,378.0,xã,21.722,104.757,149.17
 15,True,138,Huyện,4537.0,Xã,True,False,Tỉnh Yên Bái,Huyện Trấn Yên,Xã Lương Thịnh,Tỉnh Lào Cai,Lương Thịnh,9,353.0,xã,21.6416,104.787,94.21
 15,True,138,Huyện,4564.0,Xã,True,False,Tỉnh Yên Bái,Huyện Trấn Yên,Xã Việt Cường,Tỉnh Lào Cai,Việt Hồng,9,401.0,xã,21.5998,104.851,101.37
-15,True,138,Huyện,4567.0,Xã,True,True,Tỉnh Yên Bái,Huyện Trấn Yên,Xã Minh Quân,Tỉnh Lào Cai,Trấn Yên,9,394.0,xã,21.8103,104.816,110.72
-15,True,138,Huyện,4567.0,Xã,True,True,Tỉnh Yên Bái,Huyện Trấn Yên,Xã Minh Quân,Tỉnh Lào Cai,Âu Lâu,9,312.0,phường,21.6592,104.909,66.17
+15,True,138,Huyện,4567.0,Xã,True,False,Tỉnh Yên Bái,Huyện Trấn Yên,Xã Minh Quân,Tỉnh Lào Cai,Âu Lâu,9,312.0,phường,21.6592,104.909,66.17
 15,True,138,Huyện,4570.0,Xã,True,False,Tỉnh Yên Bái,Huyện Trấn Yên,Xã Hồng Ca,Tỉnh Lào Cai,Hưng Khánh,9,342.0,xã,21.592,104.716,122.18
 15,True,138,Huyện,4573.0,Xã,True,False,Tỉnh Yên Bái,Huyện Trấn Yên,Xã Hưng Thịnh,Tỉnh Lào Cai,Lương Thịnh,9,353.0,xã,21.6416,104.787,94.21
 15,True,138,Huyện,4576.0,Xã,True,False,Tỉnh Yên Bái,Huyện Trấn Yên,Xã Hưng Khánh,Tỉnh Lào Cai,Hưng Khánh,9,342.0,xã,21.592,104.716,122.18
@@ -4549,8 +4547,7 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 36,True,363,Huyện,14041.0,Xã,True,False,Tỉnh Nam Định,Huyện Trực Ninh,Xã Trực Tuấn,Tỉnh Ninh Bình,Cổ Lễ,6,1265.0,xã,20.2968,106.274,18.33
 36,True,363,Huyện,14044.0,Xã,True,False,Tỉnh Nam Định,Huyện Trực Ninh,Xã Việt Hùng,Tỉnh Ninh Bình,Cát Thành,6,1262.0,xã,20.2529,106.284,23.07
 36,True,363,Huyện,14047.0,Xã,True,False,Tỉnh Nam Định,Huyện Trực Ninh,Xã Trực Đạo,Tỉnh Ninh Bình,Cát Thành,6,1262.0,xã,20.2529,106.284,23.07
-36,True,363,Huyện,14050.0,Xã,True,True,Tỉnh Nam Định,Huyện Trực Ninh,Xã Trực Hưng,Tỉnh Ninh Bình,Trực Ninh,6,1363.0,xã,20.2537,106.226,17.26
-36,True,363,Huyện,14050.0,Xã,True,True,Tỉnh Nam Định,Huyện Trực Ninh,Xã Trực Hưng,Tỉnh Ninh Bình,Ninh Cường,6,1337.0,xã,20.1848,106.201,22.28
+36,True,363,Huyện,14050.0,Xã,True,False,Tỉnh Nam Định,Huyện Trực Ninh,Xã Trực Hưng,Tỉnh Ninh Bình,Trực Ninh,6,1363.0,xã,20.2537,106.226,17.26
 36,True,363,Huyện,14053.0,Xã,True,False,Tỉnh Nam Định,Huyện Trực Ninh,Xã Trực Nội,Tỉnh Ninh Bình,Trực Ninh,6,1363.0,xã,20.2537,106.226,17.26
 36,True,363,Huyện,14056.0,Thị trấn,True,False,Tỉnh Nam Định,Huyện Trực Ninh,Thị trấn Cát Thành,Tỉnh Ninh Bình,Cát Thành,6,1262.0,xã,20.2529,106.284,23.07
 36,True,363,Huyện,14059.0,Xã,True,False,Tỉnh Nam Định,Huyện Trực Ninh,Xã Trực Thanh,Tỉnh Ninh Bình,Trực Ninh,6,1363.0,xã,20.2537,106.226,17.26
@@ -4561,8 +4558,7 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 36,True,363,Huyện,14074.0,Xã,True,False,Tỉnh Nam Định,Huyện Trực Ninh,Xã Trực Cường,Tỉnh Ninh Bình,Ninh Cường,6,1337.0,xã,20.1848,106.201,22.28
 36,True,363,Huyện,14077.0,Thị trấn,True,False,Tỉnh Nam Định,Huyện Trực Ninh,Thị trấn Ninh Cường,Tỉnh Ninh Bình,Ninh Cường,6,1337.0,xã,20.1848,106.201,22.28
 36,True,363,Huyện,14080.0,Xã,True,False,Tỉnh Nam Định,Huyện Trực Ninh,Xã Trực Thái,Tỉnh Ninh Bình,Minh Thái,6,1320.0,xã,20.1941,106.233,23.44
-36,True,363,Huyện,14083.0,Xã,True,True,Tỉnh Nam Định,Huyện Trực Ninh,Xã Trực Hùng,Tỉnh Ninh Bình,Trực Ninh,6,1363.0,xã,20.2537,106.226,17.26
-36,True,363,Huyện,14083.0,Xã,True,True,Tỉnh Nam Định,Huyện Trực Ninh,Xã Trực Hùng,Tỉnh Ninh Bình,Ninh Cường,6,1337.0,xã,20.1848,106.201,22.28
+36,True,363,Huyện,14083.0,Xã,True,False,Tỉnh Nam Định,Huyện Trực Ninh,Xã Trực Hùng,Tỉnh Ninh Bình,Ninh Cường,6,1337.0,xã,20.1848,106.201,22.28
 36,True,363,Huyện,14086.0,Xã,True,False,Tỉnh Nam Định,Huyện Trực Ninh,Xã Trực Thắng,Tỉnh Ninh Bình,Minh Thái,6,1320.0,xã,20.1941,106.233,23.44
 36,True,364,Huyện,14089.0,Thị trấn,True,False,Tỉnh Nam Định,Huyện Xuân Trường,Thị trấn Xuân Trường,Tỉnh Ninh Bình,Xuân Trường,6,1374.0,xã,20.2647,106.332,122.92
 36,True,364,Huyện,14092.0,Xã,True,False,Tỉnh Nam Định,Huyện Xuân Trường,Xã Xuân Châu,Tỉnh Ninh Bình,Xuân Hồng,6,1372.0,xã,20.3408,106.334,27.61
@@ -4970,11 +4966,9 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 38,False,393,Huyện,15358.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Vĩnh Lộc,Xã Vĩnh Tiến,Tỉnh Thanh Hóa,Tây Đô,16,1490.0,xã,20.0887,105.596,35.36
 38,False,393,Huyện,15361.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Vĩnh Lộc,Xã Vĩnh Long,Tỉnh Thanh Hóa,Tây Đô,16,1490.0,xã,20.0887,105.596,35.36
 38,False,393,Huyện,15364.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Vĩnh Lộc,Xã Vĩnh Phúc,Tỉnh Thanh Hóa,Vĩnh Lộc,16,1535.0,xã,20.0522,105.64,56.94
-38,False,393,Huyện,15367.0,Xã,True,True,Tỉnh Thanh Hóa,Huyện Vĩnh Lộc,Xã Vĩnh Hưng,Tỉnh Thanh Hóa,Vĩnh Lộc,16,1535.0,xã,20.0522,105.64,56.94
-38,False,393,Huyện,15367.0,Xã,True,True,Tỉnh Thanh Hóa,Huyện Vĩnh Lộc,Xã Vĩnh Hưng,Tỉnh Thanh Hóa,Biện Thượng,16,1389.0,xã,20.0184,105.722,65.4
+38,False,393,Huyện,15367.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Vĩnh Lộc,Xã Vĩnh Hưng,Tỉnh Thanh Hóa,Vĩnh Lộc,16,1535.0,xã,20.0522,105.64,56.94
 38,False,393,Huyện,15376.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Vĩnh Lộc,Xã Vĩnh Hòa,Tỉnh Thanh Hóa,Vĩnh Lộc,16,1535.0,xã,20.0522,105.64,56.94
-38,False,393,Huyện,15379.0,Xã,True,True,Tỉnh Thanh Hóa,Huyện Vĩnh Lộc,Xã Vĩnh Hùng,Tỉnh Thanh Hóa,Vĩnh Lộc,16,1535.0,xã,20.0522,105.64,56.94
-38,False,393,Huyện,15379.0,Xã,True,True,Tỉnh Thanh Hóa,Huyện Vĩnh Lộc,Xã Vĩnh Hùng,Tỉnh Thanh Hóa,Biện Thượng,16,1389.0,xã,20.0184,105.722,65.4
+38,False,393,Huyện,15379.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Vĩnh Lộc,Xã Vĩnh Hùng,Tỉnh Thanh Hóa,Biện Thượng,16,1389.0,xã,20.0184,105.722,65.4
 38,False,393,Huyện,15382.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Vĩnh Lộc,Xã Minh Tân,Tỉnh Thanh Hóa,Biện Thượng,16,1389.0,xã,20.0184,105.722,65.4
 38,False,393,Huyện,15385.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Vĩnh Lộc,Xã Ninh Khang,Tỉnh Thanh Hóa,Vĩnh Lộc,16,1535.0,xã,20.0522,105.64,56.94
 38,False,393,Huyện,15388.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Vĩnh Lộc,Xã Vĩnh Thịnh,Tỉnh Thanh Hóa,Biện Thượng,16,1389.0,xã,20.0184,105.722,65.4
@@ -5029,8 +5023,7 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 38,False,395,Huyện,15568.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Thọ Xuân,Xã Thọ Lập,Tỉnh Thanh Hóa,Thọ Lập,16,1509.0,xã,19.9677,105.451,33.81
 38,False,395,Huyện,15571.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Thọ Xuân,Xã Quảng Phú,Tỉnh Thanh Hóa,Xuân Tín,16,1542.0,xã,19.9877,105.492,31.93
 38,False,395,Huyện,15574.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Thọ Xuân,Xã Xuân Tín,Tỉnh Thanh Hóa,Xuân Tín,16,1542.0,xã,19.9877,105.492,31.93
-38,False,395,Huyện,15577.0,Xã,True,True,Tỉnh Thanh Hóa,Huyện Thọ Xuân,Xã Phú Xuân,Tỉnh Thanh Hóa,Xuân Tín,16,1542.0,xã,19.9877,105.492,31.93
-38,False,395,Huyện,15577.0,Xã,False,True,Tỉnh Thanh Hóa,Huyện Thọ Xuân,Xã Phú Xuân,Tỉnh Thanh Hóa,Phú Xuân,16,1465.0,xã,20.4653,105.022,102.36
+38,False,395,Huyện,15577.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Thọ Xuân,Xã Phú Xuân,Tỉnh Thanh Hóa,Xuân Tín,16,1542.0,xã,19.9877,105.492,31.93
 38,False,395,Huyện,15583.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Thọ Xuân,Xã Xuân Lai,Tỉnh Thanh Hóa,Xuân Lập,16,1540.0,xã,19.9624,105.555,34.49
 38,False,395,Huyện,15586.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Thọ Xuân,Xã Xuân Lập,Tỉnh Thanh Hóa,Xuân Lập,16,1540.0,xã,19.9624,105.555,34.49
 38,False,395,Huyện,15592.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Thọ Xuân,Xã Xuân Minh,Tỉnh Thanh Hóa,Xuân Lập,16,1540.0,xã,19.9624,105.555,34.49
@@ -5114,30 +5107,25 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 38,False,399,Huyện,15865.0,Thị trấn,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Thị trấn Bút Sơn,Tỉnh Thanh Hóa,Hoằng Hóa,16,1424.0,xã,19.8555,105.858,35.16
 38,False,399,Huyện,15877.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Xuân,Tỉnh Thanh Hóa,Hoằng Giang,16,1423.0,xã,19.9146,105.774,30.53
 38,False,399,Huyện,15880.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Giang,Tỉnh Thanh Hóa,Hoằng Giang,16,1423.0,xã,19.9146,105.774,30.53
-38,False,399,Huyện,15883.0,Xã,True,True,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Phú,Tỉnh Thanh Hóa,Hoằng Phú,16,1426.0,xã,19.9059,105.805,15.5
-38,False,399,Huyện,15883.0,Xã,True,True,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Phú,Tỉnh Thanh Hóa,Hoằng Thanh,16,1428.0,xã,19.8244,105.914,23.24
-38,False,399,Huyện,15886.0,Xã,True,True,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Quỳ,Tỉnh Thanh Hóa,Hoằng Giang,16,1423.0,xã,19.9146,105.774,30.53
-38,False,399,Huyện,15886.0,Xã,True,True,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Quỳ,Tỉnh Thanh Hóa,Hoằng Phú,16,1426.0,xã,19.9059,105.805,15.5
+38,False,399,Huyện,15883.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Phú,Tỉnh Thanh Hóa,Hoằng Phú,16,1426.0,xã,19.9059,105.805,15.5
+38,False,399,Huyện,15886.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Quỳ,Tỉnh Thanh Hóa,Hoằng Giang,16,1423.0,xã,19.9146,105.774,30.53
 38,False,399,Huyện,15889.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Kim,Tỉnh Thanh Hóa,Hoằng Phú,16,1426.0,xã,19.9059,105.805,15.5
 38,False,399,Huyện,15892.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Trung,Tỉnh Thanh Hóa,Hoằng Phú,16,1426.0,xã,19.9059,105.805,15.5
 38,False,399,Huyện,15895.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Trinh,Tỉnh Thanh Hóa,Hoằng Sơn,16,1427.0,xã,19.88,105.839,21.9
 38,False,399,Huyện,15901.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Sơn,Tỉnh Thanh Hóa,Hoằng Sơn,16,1427.0,xã,19.88,105.839,21.9
 38,False,399,Huyện,15907.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Cát,Tỉnh Thanh Hóa,Hoằng Sơn,16,1427.0,xã,19.88,105.839,21.9
 38,False,399,Huyện,15910.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Xuyên,Tỉnh Thanh Hóa,Hoằng Sơn,16,1427.0,xã,19.88,105.839,21.9
-38,False,399,Huyện,15916.0,Xã,True,True,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Quý,Tỉnh Thanh Hóa,Hoằng Giang,16,1423.0,xã,19.9146,105.774,30.53
-38,False,399,Huyện,15916.0,Xã,True,True,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Quý,Tỉnh Thanh Hóa,Hoằng Phú,16,1426.0,xã,19.9059,105.805,15.5
+38,False,399,Huyện,15916.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Quý,Tỉnh Thanh Hóa,Hoằng Phú,16,1426.0,xã,19.9059,105.805,15.5
 38,False,399,Huyện,15919.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Hợp,Tỉnh Thanh Hóa,Hoằng Giang,16,1423.0,xã,19.9146,105.774,30.53
 38,False,399,Huyện,15928.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Đức,Tỉnh Thanh Hóa,Hoằng Hóa,16,1424.0,xã,19.8555,105.858,35.16
 38,False,399,Huyện,15937.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Hà,Tỉnh Thanh Hóa,Hoằng Hóa,16,1424.0,xã,19.8555,105.858,35.16
 38,False,399,Huyện,15940.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Đạt,Tỉnh Thanh Hóa,Hoằng Hóa,16,1424.0,xã,19.8555,105.858,35.16
 38,False,399,Huyện,15946.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Đạo,Tỉnh Thanh Hóa,Hoằng Hóa,16,1424.0,xã,19.8555,105.858,35.16
 38,False,399,Huyện,15949.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Thắng,Tỉnh Thanh Hóa,Hoằng Châu,16,1422.0,xã,19.8049,105.887,33.31
-38,False,399,Huyện,15952.0,Xã,True,True,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Đồng,Tỉnh Thanh Hóa,Hoằng Hóa,16,1424.0,xã,19.8555,105.858,35.16
-38,False,399,Huyện,15952.0,Xã,True,True,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Đồng,Tỉnh Thanh Hóa,Hoằng Thanh,16,1428.0,xã,19.8244,105.914,23.24
+38,False,399,Huyện,15952.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Đồng,Tỉnh Thanh Hóa,Hoằng Hóa,16,1424.0,xã,19.8555,105.858,35.16
 38,False,399,Huyện,15955.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Thái,Tỉnh Thanh Hóa,Hoằng Lộc,16,1425.0,xã,19.8075,105.852,20.57
 38,False,399,Huyện,15958.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Thịnh,Tỉnh Thanh Hóa,Hoằng Lộc,16,1425.0,xã,19.8075,105.852,20.57
-38,False,399,Huyện,15961.0,Xã,True,True,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Thành,Tỉnh Thanh Hóa,Hoằng Lộc,16,1425.0,xã,19.8075,105.852,20.57
-38,False,399,Huyện,15961.0,Xã,True,True,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Thành,Tỉnh Thanh Hóa,Hoằng Thanh,16,1428.0,xã,19.8244,105.914,23.24
+38,False,399,Huyện,15961.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Thành,Tỉnh Thanh Hóa,Hoằng Lộc,16,1425.0,xã,19.8075,105.852,20.57
 38,False,399,Huyện,15964.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Lộc,Tỉnh Thanh Hóa,Hoằng Lộc,16,1425.0,xã,19.8075,105.852,20.57
 38,False,399,Huyện,15967.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Trạch,Tỉnh Thanh Hóa,Hoằng Lộc,16,1425.0,xã,19.8075,105.852,20.57
 38,False,399,Huyện,15973.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Phong,Tỉnh Thanh Hóa,Hoằng Châu,16,1422.0,xã,19.8049,105.887,33.31
@@ -5148,12 +5136,9 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 38,False,399,Huyện,15988.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Tiến,Tỉnh Thanh Hóa,Hoằng Tiến,16,1429.0,xã,19.8679,105.926,23.79
 38,False,399,Huyện,15991.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Hải,Tỉnh Thanh Hóa,Hoằng Tiến,16,1429.0,xã,19.8679,105.926,23.79
 38,False,399,Huyện,15994.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Ngọc,Tỉnh Thanh Hóa,Hoằng Thanh,16,1428.0,xã,19.8244,105.914,23.24
-38,False,399,Huyện,15997.0,Xã,True,True,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Đông,Tỉnh Thanh Hóa,Hoằng Hóa,16,1424.0,xã,19.8555,105.858,35.16
-38,False,399,Huyện,15997.0,Xã,True,True,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Đông,Tỉnh Thanh Hóa,Hoằng Thanh,16,1428.0,xã,19.8244,105.914,23.24
-38,False,399,Huyện,16000.0,Xã,True,True,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Thanh,Tỉnh Thanh Hóa,Hoằng Lộc,16,1425.0,xã,19.8075,105.852,20.57
-38,False,399,Huyện,16000.0,Xã,True,True,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Thanh,Tỉnh Thanh Hóa,Hoằng Thanh,16,1428.0,xã,19.8244,105.914,23.24
-38,False,399,Huyện,16003.0,Xã,True,True,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Phụ,Tỉnh Thanh Hóa,Hoằng Phú,16,1426.0,xã,19.9059,105.805,15.5
-38,False,399,Huyện,16003.0,Xã,True,True,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Phụ,Tỉnh Thanh Hóa,Hoằng Thanh,16,1428.0,xã,19.8244,105.914,23.24
+38,False,399,Huyện,15997.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Đông,Tỉnh Thanh Hóa,Hoằng Thanh,16,1428.0,xã,19.8244,105.914,23.24
+38,False,399,Huyện,16000.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Thanh,Tỉnh Thanh Hóa,Hoằng Thanh,16,1428.0,xã,19.8244,105.914,23.24
+38,False,399,Huyện,16003.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Phụ,Tỉnh Thanh Hóa,Hoằng Thanh,16,1428.0,xã,19.8244,105.914,23.24
 38,False,399,Huyện,16006.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hoằng Hóa,Xã Hoằng Trường,Tỉnh Thanh Hóa,Hoằng Tiến,16,1429.0,xã,19.8679,105.926,23.79
 38,False,400,Huyện,16012.0,Thị trấn,True,False,Tỉnh Thanh Hóa,Huyện Hậu Lộc,Thị trấn Hậu Lộc,Tỉnh Thanh Hóa,Hậu Lộc,16,1417.0,xã,19.9162,105.873,24.92
 38,False,400,Huyện,16015.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hậu Lộc,Xã Đồng Lộc,Tỉnh Thanh Hóa,Đông Thành,16,1407.0,xã,19.9655,105.872,26.38
@@ -5167,11 +5152,11 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 38,False,400,Huyện,16045.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hậu Lộc,Xã Mỹ Lộc,Tỉnh Thanh Hóa,Hậu Lộc,16,1417.0,xã,19.9162,105.873,24.92
 38,False,400,Huyện,16048.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hậu Lộc,Xã Thuần Lộc,Tỉnh Thanh Hóa,Hậu Lộc,16,1417.0,xã,19.9162,105.873,24.92
 38,False,400,Huyện,16057.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hậu Lộc,Xã Xuân Lộc,Tỉnh Thanh Hóa,Hoa Lộc,16,1420.0,xã,19.9203,105.916,34.69
-38,False,400,Huyện,16063.0,Xã,True,True,Tỉnh Thanh Hóa,Huyện Hậu Lộc,Xã Hoa Lộc,Tỉnh Thanh Hóa,Hoa Lộc,16,1420.0,xã,19.9203,105.916,34.69
+38,False,400,Huyện,16063.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hậu Lộc,Xã Hoa Lộc,Tỉnh Thanh Hóa,Hoa Lộc,16,1420.0,xã,19.9203,105.916,34.69
 38,False,400,Huyện,16066.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hậu Lộc,Xã Liên Lộc,Tỉnh Thanh Hóa,Hoa Lộc,16,1420.0,xã,19.9203,105.916,34.69
 38,False,400,Huyện,16069.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hậu Lộc,Xã Quang Lộc,Tỉnh Thanh Hóa,Hoa Lộc,16,1420.0,xã,19.9203,105.916,34.69
 38,False,400,Huyện,16072.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hậu Lộc,Xã Phú Lộc,Tỉnh Thanh Hóa,Hoa Lộc,16,1420.0,xã,19.9203,105.916,34.69
-38,False,400,Huyện,16075.0,Xã,True,True,Tỉnh Thanh Hóa,Huyện Hậu Lộc,Xã Hòa Lộc,Tỉnh Thanh Hóa,Hoa Lộc,16,1420.0,xã,19.9203,105.916,34.69
+38,False,400,Huyện,16075.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hậu Lộc,Xã Hòa Lộc,Tỉnh Thanh Hóa,Hoa Lộc,16,1420.0,xã,19.9203,105.916,34.69
 38,False,400,Huyện,16078.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hậu Lộc,Xã Minh Lộc,Tỉnh Thanh Hóa,Vạn Lộc,16,1531.0,xã,19.9488,105.969,28.4
 38,False,400,Huyện,16081.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hậu Lộc,Xã Hưng Lộc,Tỉnh Thanh Hóa,Vạn Lộc,16,1531.0,xã,19.9488,105.969,28.4
 38,False,400,Huyện,16084.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Hậu Lộc,Xã Hải Lộc,Tỉnh Thanh Hóa,Vạn Lộc,16,1531.0,xã,19.9488,105.969,28.4
@@ -5185,13 +5170,11 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 38,False,401,Huyện,16108.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Nga Sơn,Xã Nga Tiến,Tỉnh Thanh Hóa,Tân Tiến,16,1489.0,xã,19.9834,106.009,28.54
 38,False,401,Huyện,16114.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Nga Sơn,Xã Nga Phượng,Tỉnh Thanh Hóa,Nga Thắng,16,1452.0,xã,19.9836,105.941,27.52
 38,False,401,Huyện,16120.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Nga Sơn,Xã Nga Hiệp,Tỉnh Thanh Hóa,Nga Sơn,16,1451.0,xã,19.9881,105.98,27.14
-38,False,401,Huyện,16123.0,Xã,True,True,Tỉnh Thanh Hóa,Huyện Nga Sơn,Xã Nga Thanh,Tỉnh Thanh Hóa,Nga Sơn,16,1451.0,xã,19.9881,105.98,27.14
-38,False,401,Huyện,16123.0,Xã,True,True,Tỉnh Thanh Hóa,Huyện Nga Sơn,Xã Nga Thanh,Tỉnh Thanh Hóa,Hồ Vương,16,1419.0,xã,20.0213,106.001,19.28
+38,False,401,Huyện,16123.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Nga Sơn,Xã Nga Thanh,Tỉnh Thanh Hóa,Nga Sơn,16,1451.0,xã,19.9881,105.98,27.14
 38,False,401,Huyện,16132.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Nga Sơn,Xã Nga Yên,Tỉnh Thanh Hóa,Nga Sơn,16,1451.0,xã,19.9881,105.98,27.14
 38,False,401,Huyện,16135.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Nga Sơn,Xã Nga Giáp,Tỉnh Thanh Hóa,Hồ Vương,16,1419.0,xã,20.0213,106.001,19.28
 38,False,401,Huyện,16138.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Nga Sơn,Xã Nga Hải,Tỉnh Thanh Hóa,Hồ Vương,16,1419.0,xã,20.0213,106.001,19.28
-38,False,401,Huyện,16141.0,Xã,True,True,Tỉnh Thanh Hóa,Huyện Nga Sơn,Xã Nga Thành,Tỉnh Thanh Hóa,Nga Sơn,16,1451.0,xã,19.9881,105.98,27.14
-38,False,401,Huyện,16141.0,Xã,True,True,Tỉnh Thanh Hóa,Huyện Nga Sơn,Xã Nga Thành,Tỉnh Thanh Hóa,Hồ Vương,16,1419.0,xã,20.0213,106.001,19.28
+38,False,401,Huyện,16141.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Nga Sơn,Xã Nga Thành,Tỉnh Thanh Hóa,Hồ Vương,16,1419.0,xã,20.0213,106.001,19.28
 38,False,401,Huyện,16144.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Nga Sơn,Xã Nga An,Tỉnh Thanh Hóa,Nga An,16,1450.0,xã,20.0465,106.036,28.1
 38,False,401,Huyện,16147.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Nga Sơn,Xã Nga Phú,Tỉnh Thanh Hóa,Nga An,16,1450.0,xã,20.0465,106.036,28.1
 38,False,401,Huyện,16150.0,Xã,True,False,Tỉnh Thanh Hóa,Huyện Nga Sơn,Xã Nga Điền,Tỉnh Thanh Hóa,Nga An,16,1450.0,xã,20.0465,106.036,28.1
@@ -5375,8 +5358,7 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 40,False,415,Huyện,16771.0,Xã,True,False,Tỉnh Nghệ An,Huyện Quế Phong,Xã Quang Phong,Tỉnh Nghệ An,Mường Quàng,17,1607.0,xã,19.4891,104.851,342.15
 40,False,415,Huyện,16774.0,Xã,True,False,Tỉnh Nghệ An,Huyện Quế Phong,Xã Cắm Muộn,Tỉnh Nghệ An,Mường Quàng,17,1607.0,xã,19.4891,104.851,342.15
 40,False,416,Huyện,16777.0,Thị trấn,True,False,Tỉnh Nghệ An,Huyện Quỳ Châu,Thị trấn Tân Lạc,Tỉnh Nghệ An,Quỳ Châu,17,1633.0,xã,19.5816,105.163,327.53
-40,False,416,Huyện,16780.0,Xã,True,True,Tỉnh Nghệ An,Huyện Quỳ Châu,Xã Châu Bính,Tỉnh Nghệ An,Châu Tiến,17,1567.0,xã,19.6752,105.073,247.16
-40,False,416,Huyện,16780.0,Xã,False,True,Tỉnh Nghệ An,Huyện Quỳ Châu,Xã Châu Bính,Tỉnh Nghệ An,Châu Bình,17,1563.0,xã,19.4913,105.2,130.91
+40,False,416,Huyện,16780.0,Xã,True,False,Tỉnh Nghệ An,Huyện Quỳ Châu,Xã Châu Bính,Tỉnh Nghệ An,Châu Tiến,17,1567.0,xã,19.6752,105.073,247.16
 40,False,416,Huyện,16783.0,Xã,True,False,Tỉnh Nghệ An,Huyện Quỳ Châu,Xã Châu Thuận,Tỉnh Nghệ An,Châu Tiến,17,1567.0,xã,19.6752,105.073,247.16
 40,False,416,Huyện,16786.0,Xã,True,False,Tỉnh Nghệ An,Huyện Quỳ Châu,Xã Châu Hội,Tỉnh Nghệ An,Quỳ Châu,17,1633.0,xã,19.5816,105.163,327.53
 40,False,416,Huyện,16789.0,Xã,True,False,Tỉnh Nghệ An,Huyện Quỳ Châu,Xã Châu Nga,Tỉnh Nghệ An,Quỳ Châu,17,1633.0,xã,19.5816,105.163,327.53
@@ -5384,8 +5366,7 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 40,False,416,Huyện,16795.0,Xã,True,False,Tỉnh Nghệ An,Huyện Quỳ Châu,Xã Châu Hạnh,Tỉnh Nghệ An,Quỳ Châu,17,1633.0,xã,19.5816,105.163,327.53
 40,False,416,Huyện,16798.0,Xã,True,False,Tỉnh Nghệ An,Huyện Quỳ Châu,Xã Châu Thắng,Tỉnh Nghệ An,Châu Tiến,17,1567.0,xã,19.6752,105.073,247.16
 40,False,416,Huyện,16801.0,Xã,True,False,Tỉnh Nghệ An,Huyện Quỳ Châu,Xã Châu Phong,Tỉnh Nghệ An,Hùng Chân,17,1587.0,xã,19.4374,104.973,351.87
-40,False,416,Huyện,16804.0,Xã,True,True,Tỉnh Nghệ An,Huyện Quỳ Châu,Xã Châu Bình,Tỉnh Nghệ An,Châu Tiến,17,1567.0,xã,19.6752,105.073,247.16
-40,False,416,Huyện,16804.0,Xã,False,True,Tỉnh Nghệ An,Huyện Quỳ Châu,Xã Châu Bình,Tỉnh Nghệ An,Châu Bình,17,1563.0,xã,19.4913,105.2,130.91
+40,False,416,Huyện,16804.0,Xã,False,False,Tỉnh Nghệ An,Huyện Quỳ Châu,Xã Châu Bình,Tỉnh Nghệ An,Châu Bình,17,1563.0,xã,19.4913,105.2,130.91
 40,False,416,Huyện,16807.0,Xã,True,False,Tỉnh Nghệ An,Huyện Quỳ Châu,Xã Châu Hoàn,Tỉnh Nghệ An,Hùng Chân,17,1587.0,xã,19.4374,104.973,351.87
 40,False,416,Huyện,16810.0,Xã,True,False,Tỉnh Nghệ An,Huyện Quỳ Châu,Xã Diên Lãm,Tỉnh Nghệ An,Hùng Chân,17,1587.0,xã,19.4374,104.973,351.87
 40,False,417,Huyện,16813.0,Thị trấn,True,False,Tỉnh Nghệ An,Huyện Kỳ Sơn,Thị trấn Mường Xén,Tỉnh Nghệ An,Mường Xén,17,1609.0,xã,19.3627,104.095,182.49
@@ -5396,8 +5377,7 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 40,False,417,Huyện,16828.0,Xã,False,False,Tỉnh Nghệ An,Huyện Kỳ Sơn,Xã Huồi Tụ,Tỉnh Nghệ An,Huồi Tụ,17,1591.0,xã,19.5256,104.26,109.03
 40,False,417,Huyện,16831.0,Xã,False,False,Tỉnh Nghệ An,Huyện Kỳ Sơn,Xã Mường Lống,Tỉnh Nghệ An,Mường Lống,17,1606.0,xã,19.4978,104.371,148.31
 40,False,417,Huyện,16834.0,Xã,True,False,Tỉnh Nghệ An,Huyện Kỳ Sơn,Xã Na Loi,Tỉnh Nghệ An,Na Loi,17,1611.0,xã,19.5678,104.177,141.86
-40,False,417,Huyện,16837.0,Xã,True,True,Tỉnh Nghệ An,Huyện Kỳ Sơn,Xã Nậm Cắn,Tỉnh Nghệ An,Nậm Cắn,17,1613.0,xã,19.4553,104.153,147.7
-40,False,417,Huyện,16837.0,Xã,True,True,Tỉnh Nghệ An,Huyện Kỳ Sơn,Xã Nậm Cắn,Tỉnh Nghệ An,Na Ngoi,17,1612.0,xã,19.2239,104.212,341.25
+40,False,417,Huyện,16837.0,Xã,True,False,Tỉnh Nghệ An,Huyện Kỳ Sơn,Xã Nậm Cắn,Tỉnh Nghệ An,Nậm Cắn,17,1613.0,xã,19.4553,104.153,147.7
 40,False,417,Huyện,16840.0,Xã,True,False,Tỉnh Nghệ An,Huyện Kỳ Sơn,Xã Bảo Nam,Tỉnh Nghệ An,Hữu Kiệm,17,1593.0,xã,19.3999,104.245,188.97
 40,False,417,Huyện,16843.0,Xã,True,False,Tỉnh Nghệ An,Huyện Kỳ Sơn,Xã Phà Đánh,Tỉnh Nghệ An,Nậm Cắn,17,1613.0,xã,19.4553,104.153,147.7
 40,False,417,Huyện,16846.0,Xã,True,False,Tỉnh Nghệ An,Huyện Kỳ Sơn,Xã Bảo Thắng,Tỉnh Nghệ An,Chiêu Lưu,17,1568.0,xã,19.3462,104.294,196.93
@@ -5409,8 +5389,7 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 40,False,417,Huyện,16864.0,Xã,True,False,Tỉnh Nghệ An,Huyện Kỳ Sơn,Xã Tây Sơn,Tỉnh Nghệ An,Mường Xén,17,1609.0,xã,19.3627,104.095,182.49
 40,False,417,Huyện,16867.0,Xã,True,False,Tỉnh Nghệ An,Huyện Kỳ Sơn,Xã Mường Ải,Tỉnh Nghệ An,Mường Típ,17,1608.0,xã,19.3078,103.993,217.66
 40,False,417,Huyện,16870.0,Xã,True,False,Tỉnh Nghệ An,Huyện Kỳ Sơn,Xã Na Ngoi,Tỉnh Nghệ An,Na Ngoi,17,1612.0,xã,19.2239,104.212,341.25
-40,False,417,Huyện,16873.0,Xã,True,True,Tỉnh Nghệ An,Huyện Kỳ Sơn,Xã Nậm Càn,Tỉnh Nghệ An,Nậm Cắn,17,1613.0,xã,19.4553,104.153,147.7
-40,False,417,Huyện,16873.0,Xã,True,True,Tỉnh Nghệ An,Huyện Kỳ Sơn,Xã Nậm Càn,Tỉnh Nghệ An,Na Ngoi,17,1612.0,xã,19.2239,104.212,341.25
+40,False,417,Huyện,16873.0,Xã,True,False,Tỉnh Nghệ An,Huyện Kỳ Sơn,Xã Nậm Càn,Tỉnh Nghệ An,Na Ngoi,17,1612.0,xã,19.2239,104.212,341.25
 40,False,418,Huyện,16876.0,Thị trấn,True,False,Tỉnh Nghệ An,Huyện Tương Dương,Thị trấn Thạch Giám,Tỉnh Nghệ An,Tương Dương,17,1666.0,xã,19.2473,104.394,330.95
 40,False,418,Huyện,16879.0,Xã,True,False,Tỉnh Nghệ An,Huyện Tương Dương,Xã Mai Sơn,Tỉnh Nghệ An,Nhôn Mai,17,1627.0,xã,19.5674,104.498,310.26
 40,False,418,Huyện,16882.0,Xã,True,False,Tỉnh Nghệ An,Huyện Tương Dương,Xã Nhôn Mai,Tỉnh Nghệ An,Nhôn Mai,17,1627.0,xã,19.5674,104.498,310.26
@@ -5591,15 +5570,13 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 40,False,426,Huyện,17536.0,Xã,True,False,Tỉnh Nghệ An,Huyện Yên Thành,Xã Tây Thành,Tỉnh Nghệ An,Vân Du,17,1668.0,xã,18.9881,105.352,84.3
 40,False,426,Huyện,17539.0,Xã,True,False,Tỉnh Nghệ An,Huyện Yên Thành,Xã Phúc Thành,Tỉnh Nghệ An,Giai Lạc,17,1579.0,xã,19.0799,105.445,88.58
 40,False,426,Huyện,17542.0,Xã,True,False,Tỉnh Nghệ An,Huyện Yên Thành,Xã Phú Thành,Tỉnh Nghệ An,Đông Thành,17,1577.0,xã,19.0674,105.558,30.2
-40,False,426,Huyện,17545.0,Xã,True,True,Tỉnh Nghệ An,Huyện Yên Thành,Xã Đồng Thành,Tỉnh Nghệ An,Quang Đồng,17,1631.0,xã,19.0408,105.391,75.61
-40,False,426,Huyện,17545.0,Xã,True,True,Tỉnh Nghệ An,Huyện Yên Thành,Xã Đồng Thành,Tỉnh Nghệ An,Yên Thành,17,1679.0,xã,19.0015,105.483,38.13
+40,False,426,Huyện,17545.0,Xã,True,False,Tỉnh Nghệ An,Huyện Yên Thành,Xã Đồng Thành,Tỉnh Nghệ An,Quang Đồng,17,1631.0,xã,19.0408,105.391,75.61
 40,False,426,Huyện,17554.0,Xã,True,False,Tỉnh Nghệ An,Huyện Yên Thành,Xã Tăng Thành,Tỉnh Nghệ An,Yên Thành,17,1679.0,xã,19.0015,105.483,38.13
 40,False,426,Huyện,17557.0,Xã,True,False,Tỉnh Nghệ An,Huyện Yên Thành,Xã Văn Thành,Tỉnh Nghệ An,Yên Thành,17,1679.0,xã,19.0015,105.483,38.13
 40,False,426,Huyện,17560.0,Xã,True,False,Tỉnh Nghệ An,Huyện Yên Thành,Xã Thịnh Thành,Tỉnh Nghệ An,Vân Du,17,1668.0,xã,18.9881,105.352,84.3
 40,False,426,Huyện,17566.0,Xã,True,False,Tỉnh Nghệ An,Huyện Yên Thành,Xã Xuân Thành,Tỉnh Nghệ An,Quan Thành,17,1629.0,xã,18.9786,105.436,37.71
 40,False,426,Huyện,17569.0,Xã,True,False,Tỉnh Nghệ An,Huyện Yên Thành,Xã Bắc Thành,Tỉnh Nghệ An,Quan Thành,17,1629.0,xã,18.9786,105.436,37.71
-40,False,426,Huyện,17572.0,Xã,True,True,Tỉnh Nghệ An,Huyện Yên Thành,Xã Đông Thành,Tỉnh Nghệ An,Quang Đồng,17,1631.0,xã,19.0408,105.391,75.61
-40,False,426,Huyện,17572.0,Xã,True,True,Tỉnh Nghệ An,Huyện Yên Thành,Xã Đông Thành,Tỉnh Nghệ An,Yên Thành,17,1679.0,xã,19.0015,105.483,38.13
+40,False,426,Huyện,17572.0,Xã,True,False,Tỉnh Nghệ An,Huyện Yên Thành,Xã Đông Thành,Tỉnh Nghệ An,Yên Thành,17,1679.0,xã,19.0015,105.483,38.13
 40,False,426,Huyện,17575.0,Xã,True,False,Tỉnh Nghệ An,Huyện Yên Thành,Xã Trung Thành,Tỉnh Nghệ An,Quan Thành,17,1629.0,xã,18.9786,105.436,37.71
 40,False,426,Huyện,17578.0,Xã,True,False,Tỉnh Nghệ An,Huyện Yên Thành,Xã Long Thành,Tỉnh Nghệ An,Hợp Minh,17,1586.0,xã,18.9288,105.489,54.75
 40,False,426,Huyện,17581.0,Xã,True,False,Tỉnh Nghệ An,Huyện Yên Thành,Xã Minh Thành,Tỉnh Nghệ An,Vân Du,17,1668.0,xã,18.9881,105.352,84.3
@@ -5673,8 +5650,7 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 40,False,428,Huyện,17821.0,Xã,True,False,Tỉnh Nghệ An,Huyện Thanh Chương,Xã Thanh Xuân,Tỉnh Nghệ An,Bích Hào,17,1558.0,xã,18.6325,105.409,147.06
 40,False,428,Huyện,17824.0,Xã,True,False,Tỉnh Nghệ An,Huyện Thanh Chương,Xã Thanh Đức,Tỉnh Nghệ An,Hạnh Lâm,17,1583.0,xã,18.8006,105.075,274.57
 40,False,429,Huyện,17827.0,Thị trấn,True,False,Tỉnh Nghệ An,Huyện Nghi Lộc,Thị trấn Quán Hành,Tỉnh Nghệ An,Nghi Lộc,17,1616.0,xã,18.7692,105.635,33.31
-40,False,429,Huyện,17830.0,Xã,True,True,Tỉnh Nghệ An,Huyện Nghi Lộc,Xã Nghi Văn,Tỉnh Nghệ An,Văn Kiều,17,1670.0,xã,18.8423,105.503,63.46
-40,False,429,Huyện,17830.0,Xã,True,True,Tỉnh Nghệ An,Huyện Nghi Lộc,Xã Nghi Văn,Tỉnh Nghệ An,Nghi Lộc,17,1616.0,xã,18.7692,105.635,33.31
+40,False,429,Huyện,17830.0,Xã,True,False,Tỉnh Nghệ An,Huyện Nghi Lộc,Xã Nghi Văn,Tỉnh Nghệ An,Văn Kiều,17,1670.0,xã,18.8423,105.503,63.46
 40,False,429,Huyện,17833.0,Xã,True,False,Tỉnh Nghệ An,Huyện Nghi Lộc,Xã Nghi Yên,Tỉnh Nghệ An,Hải Lộc,17,1582.0,xã,18.8691,105.632,41.25
 40,False,429,Huyện,17836.0,Xã,True,False,Tỉnh Nghệ An,Huyện Nghi Lộc,Xã Nghi Tiến,Tỉnh Nghệ An,Hải Lộc,17,1582.0,xã,18.8691,105.632,41.25
 40,False,429,Huyện,17839.0,Xã,True,False,Tỉnh Nghệ An,Huyện Nghi Lộc,Xã Nghi Hưng,Tỉnh Nghệ An,Thần Lĩnh,17,1655.0,xã,18.8328,105.599,44.69
@@ -5695,8 +5671,7 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 40,False,429,Huyện,17893.0,Xã,True,False,Tỉnh Nghệ An,Huyện Nghi Lộc,Xã Nghi Trung,Tỉnh Nghệ An,Nghi Lộc,17,1616.0,xã,18.7692,105.635,33.31
 40,False,429,Huyện,17896.0,Xã,True,False,Tỉnh Nghệ An,Huyện Nghi Lộc,Xã Thịnh Trường,Tỉnh Nghệ An,Đông Lộc,17,1576.0,xã,18.7856,105.69,29.32
 40,False,429,Huyện,17899.0,Xã,True,False,Tỉnh Nghệ An,Huyện Nghi Lộc,Xã Diên Hoa,Tỉnh Nghệ An,Nghi Lộc,17,1616.0,xã,18.7692,105.635,33.31
-40,False,429,Huyện,17911.0,Xã,True,True,Tỉnh Nghệ An,Huyện Nghi Lộc,Xã Nghi Vạn,Tỉnh Nghệ An,Văn Kiều,17,1670.0,xã,18.8423,105.503,63.46
-40,False,429,Huyện,17911.0,Xã,True,True,Tỉnh Nghệ An,Huyện Nghi Lộc,Xã Nghi Vạn,Tỉnh Nghệ An,Nghi Lộc,17,1616.0,xã,18.7692,105.635,33.31
+40,False,429,Huyện,17911.0,Xã,True,False,Tỉnh Nghệ An,Huyện Nghi Lộc,Xã Nghi Vạn,Tỉnh Nghệ An,Nghi Lộc,17,1616.0,xã,18.7692,105.635,33.31
 40,False,430,Huyện,17932.0,Xã,True,False,Tỉnh Nghệ An,Huyện Nam Đàn,Xã Nam Hưng,Tỉnh Nghệ An,Nam Đàn,17,1614.0,xã,18.7504,105.461,67.6
 40,False,430,Huyện,17935.0,Xã,True,False,Tỉnh Nghệ An,Huyện Nam Đàn,Xã Nghĩa Thái,Tỉnh Nghệ An,Nam Đàn,17,1614.0,xã,18.7504,105.461,67.6
 40,False,430,Huyện,17938.0,Xã,True,False,Tỉnh Nghệ An,Huyện Nam Đàn,Xã Nam Thanh,Tỉnh Nghệ An,Nam Đàn,17,1614.0,xã,18.7504,105.461,67.6
@@ -6137,8 +6112,7 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 45,True,465,Huyện,19447.0,Xã,True,False,Tỉnh Quảng Trị,Huyện Hướng Hóa,Xã Hướng Linh,Tỉnh Quảng Trị,Hướng Phùng,19,1784.0,xã,16.7622,106.669,447.59
 45,True,465,Huyện,19450.0,Xã,True,False,Tỉnh Quảng Trị,Huyện Hướng Hóa,Xã Tân Hợp,Tỉnh Quảng Trị,Khe Sanh,19,1785.0,xã,16.589,106.782,134.81
 45,True,465,Huyện,19453.0,Xã,True,False,Tỉnh Quảng Trị,Huyện Hướng Hóa,Xã Hướng Tân,Tỉnh Quảng Trị,Khe Sanh,19,1785.0,xã,16.589,106.782,134.81
-45,True,465,Huyện,19456.0,Xã,True,True,Tỉnh Quảng Trị,Huyện Hướng Hóa,Xã Tân Thành,Tỉnh Quảng Trị,Lao Bảo,19,1790.0,xã,16.6362,106.633,83.04
-45,True,465,Huyện,19456.0,Xã,False,True,Tỉnh Quảng Trị,Huyện Hướng Hóa,Xã Tân Thành,Tỉnh Quảng Trị,Tân Thành,19,1813.0,xã,17.8809,105.828,89.77
+45,True,465,Huyện,19456.0,Xã,True,False,Tỉnh Quảng Trị,Huyện Hướng Hóa,Xã Tân Thành,Tỉnh Quảng Trị,Lao Bảo,19,1790.0,xã,16.6362,106.633,83.04
 45,True,465,Huyện,19459.0,Xã,True,False,Tỉnh Quảng Trị,Huyện Hướng Hóa,Xã Tân Long,Tỉnh Quảng Trị,Lao Bảo,19,1790.0,xã,16.6362,106.633,83.04
 45,True,465,Huyện,19462.0,Xã,True,False,Tỉnh Quảng Trị,Huyện Hướng Hóa,Xã Tân Lập,Tỉnh Quảng Trị,Tân Lập,19,1811.0,xã,16.5759,106.708,83.18
 45,True,465,Huyện,19465.0,Xã,True,False,Tỉnh Quảng Trị,Huyện Hướng Hóa,Xã Tân Liên,Tỉnh Quảng Trị,Tân Lập,19,1811.0,xã,16.5759,106.708,83.18
@@ -6298,8 +6272,8 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 46,False,479,Thị xã,19993.0,Xã,True,False,Thành phố Huế,Thị xã Hương Thủy,Xã Dương Hòa,Thành phố Huế,Phú Bài,20,1859.0,phường,16.2807,107.611,344.63
 46,False,480,Thị xã,19996.0,Phường,True,False,Thành phố Huế,Thị xã Hương Trà,Phường Tứ Hạ,Thành phố Huế,Hương Trà,20,1846.0,phường,16.4064,107.401,83.28
 46,False,480,Thị xã,20005.0,Xã,True,False,Thành phố Huế,Thị xã Hương Trà,Xã Hương Toàn,Thành phố Huế,Kim Trà,20,1849.0,phường,16.4941,107.509,42.8
-46,False,480,Thị xã,20008.0,Phường,True,True,Thành phố Huế,Thị xã Hương Trà,Phường Hương Vân,Thành phố Huế,Hương Trà,20,1846.0,phường,16.4064,107.401,83.28
-46,False,480,Thị xã,20011.0,Phường,True,True,Thành phố Huế,Thị xã Hương Trà,Phường Hương Văn,Thành phố Huế,Hương Trà,20,1846.0,phường,16.4064,107.401,83.28
+46,False,480,Thị xã,20008.0,Phường,True,False,Thành phố Huế,Thị xã Hương Trà,Phường Hương Vân,Thành phố Huế,Hương Trà,20,1846.0,phường,16.4064,107.401,83.28
+46,False,480,Thị xã,20011.0,Phường,True,False,Thành phố Huế,Thị xã Hương Trà,Phường Hương Văn,Thành phố Huế,Hương Trà,20,1846.0,phường,16.4064,107.401,83.28
 46,False,480,Thị xã,20017.0,Phường,True,False,Thành phố Huế,Thị xã Hương Trà,Phường Hương Xuân,Thành phố Huế,Kim Trà,20,1849.0,phường,16.4941,107.509,42.8
 46,False,480,Thị xã,20020.0,Phường,True,False,Thành phố Huế,Thị xã Hương Trà,Phường Hương Chữ,Thành phố Huế,Kim Trà,20,1849.0,phường,16.4941,107.509,42.8
 46,False,480,Thị xã,20026.0,Xã,True,False,Thành phố Huế,Thị xã Hương Trà,Xã Hương Bình,Thành phố Huế,Bình Điền,20,1838.0,xã,16.3492,107.459,266.5
@@ -6596,15 +6570,13 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 49,True,515,Huyện,20929.0,Xã,True,False,Tỉnh Quảng Nam,Huyện Bắc Trà My,Xã Trà Giáp,Thành phố Đà Nẵng,Trà Giáp,21,1956.0,xã,15.1964,108.258,121.55
 49,True,515,Huyện,20932.0,Xã,True,False,Tỉnh Quảng Nam,Huyện Bắc Trà My,Xã Trà Ka,Thành phố Đà Nẵng,Trà Giáp,21,1956.0,xã,15.1964,108.258,121.55
 49,True,516,Huyện,20935.0,Xã,True,False,Tỉnh Quảng Nam,Huyện Nam Trà My,Xã Trà Leng,Thành phố Đà Nẵng,Trà Leng,21,1957.0,xã,15.2399,108.009,221.15
-49,True,516,Huyện,20938.0,Xã,True,True,Tỉnh Quảng Nam,Huyện Nam Trà My,Xã Trà Dơn,Thành phố Đà Nẵng,Trà Leng,21,1957.0,xã,15.2399,108.009,221.15
-49,True,516,Huyện,20938.0,Xã,True,True,Tỉnh Quảng Nam,Huyện Nam Trà My,Xã Trà Dơn,Thành phố Đà Nẵng,Nam Trà My,21,1917.0,xã,15.0796,108.156,178.31
+49,True,516,Huyện,20938.0,Xã,True,False,Tỉnh Quảng Nam,Huyện Nam Trà My,Xã Trà Dơn,Thành phố Đà Nẵng,Trà Leng,21,1957.0,xã,15.2399,108.009,221.15
 49,True,516,Huyện,20941.0,Xã,True,False,Tỉnh Quảng Nam,Huyện Nam Trà My,Xã Trà Tập,Thành phố Đà Nẵng,Trà Tập,21,1962.0,xã,15.1313,108.06,183.17
 49,True,516,Huyện,20944.0,Xã,True,False,Tỉnh Quảng Nam,Huyện Nam Trà My,Xã Trà Mai,Thành phố Đà Nẵng,Nam Trà My,21,1917.0,xã,15.0796,108.156,178.31
 49,True,516,Huyện,20947.0,Xã,True,False,Tỉnh Quảng Nam,Huyện Nam Trà My,Xã Trà Cang,Thành phố Đà Nẵng,Trà Tập,21,1962.0,xã,15.1313,108.06,183.17
 49,True,516,Huyện,20950.0,Xã,True,False,Tỉnh Quảng Nam,Huyện Nam Trà My,Xã Trà Linh,Thành phố Đà Nẵng,Trà Linh,21,1959.0,xã,15.0158,108.056,158.19
 49,True,516,Huyện,20953.0,Xã,True,False,Tỉnh Quảng Nam,Huyện Nam Trà My,Xã Trà Nam,Thành phố Đà Nẵng,Trà Linh,21,1959.0,xã,15.0158,108.056,158.19
-49,True,516,Huyện,20956.0,Xã,True,True,Tỉnh Quảng Nam,Huyện Nam Trà My,Xã Trà Don,Thành phố Đà Nẵng,Trà Leng,21,1957.0,xã,15.2399,108.009,221.15
-49,True,516,Huyện,20956.0,Xã,True,True,Tỉnh Quảng Nam,Huyện Nam Trà My,Xã Trà Don,Thành phố Đà Nẵng,Nam Trà My,21,1917.0,xã,15.0796,108.156,178.31
+49,True,516,Huyện,20956.0,Xã,True,False,Tỉnh Quảng Nam,Huyện Nam Trà My,Xã Trà Don,Thành phố Đà Nẵng,Nam Trà My,21,1917.0,xã,15.0796,108.156,178.31
 49,True,516,Huyện,20959.0,Xã,True,False,Tỉnh Quảng Nam,Huyện Nam Trà My,Xã Trà Vân,Thành phố Đà Nẵng,Trà Vân,21,1963.0,xã,15.0889,108.21,85.58
 49,True,516,Huyện,20962.0,Xã,True,False,Tỉnh Quảng Nam,Huyện Nam Trà My,Xã Trà Vinh,Thành phố Đà Nẵng,Trà Vân,21,1963.0,xã,15.0889,108.21,85.58
 49,True,517,Huyện,20965.0,Thị trấn,True,False,Tỉnh Quảng Nam,Huyện Núi Thành,Thị trấn Núi Thành,Thành phố Đà Nẵng,Núi Thành,21,1920.0,xã,15.4481,108.65,124.75
@@ -6627,14 +6599,12 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 49,True,518,Huyện,20364.0,Thị trấn,True,False,Tỉnh Quảng Nam,Huyện Phú Ninh,Thị trấn Phú Thịnh,Thành phố Đà Nẵng,Chiên Đàn,21,1882.0,xã,15.5474,108.394,48.63
 49,True,518,Huyện,20365.0,Xã,True,False,Tỉnh Quảng Nam,Huyện Phú Ninh,Xã Tam Thành,Thành phố Đà Nẵng,Tây Hồ,21,1943.0,xã,15.5884,108.383,75.67
 49,True,518,Huyện,20368.0,Xã,True,False,Tỉnh Quảng Nam,Huyện Phú Ninh,Xã Tam An,Thành phố Đà Nẵng,Tây Hồ,21,1943.0,xã,15.5884,108.383,75.67
-49,True,518,Huyện,20374.0,Xã,True,True,Tỉnh Quảng Nam,Huyện Phú Ninh,Xã Tam Đàn,Thành phố Đà Nẵng,Chiên Đàn,21,1882.0,xã,15.5474,108.394,48.63
-49,True,518,Huyện,20374.0,Xã,True,True,Tỉnh Quảng Nam,Huyện Phú Ninh,Xã Tam Đàn,Thành phố Đà Nẵng,Phú Ninh,21,1921.0,xã,15.47,108.427,131.35
+49,True,518,Huyện,20374.0,Xã,True,False,Tỉnh Quảng Nam,Huyện Phú Ninh,Xã Tam Đàn,Thành phố Đà Nẵng,Chiên Đàn,21,1882.0,xã,15.5474,108.394,48.63
 49,True,518,Huyện,20377.0,Xã,True,False,Tỉnh Quảng Nam,Huyện Phú Ninh,Xã Tam Lộc,Thành phố Đà Nẵng,Tây Hồ,21,1943.0,xã,15.5884,108.383,75.67
 49,True,518,Huyện,20380.0,Xã,True,False,Tỉnh Quảng Nam,Huyện Phú Ninh,Xã Tam Phước,Thành phố Đà Nẵng,Tây Hồ,21,1943.0,xã,15.5884,108.383,75.67
 49,True,518,Huyện,20386.0,Xã,True,False,Tỉnh Quảng Nam,Huyện Phú Ninh,Xã Tam Thái,Thành phố Đà Nẵng,Chiên Đàn,21,1882.0,xã,15.5474,108.394,48.63
 49,True,518,Huyện,20387.0,Xã,True,False,Tỉnh Quảng Nam,Huyện Phú Ninh,Xã Tam Đại,Thành phố Đà Nẵng,Phú Ninh,21,1921.0,xã,15.47,108.427,131.35
-49,True,518,Huyện,20392.0,Xã,True,True,Tỉnh Quảng Nam,Huyện Phú Ninh,Xã Tam Dân,Thành phố Đà Nẵng,Chiên Đàn,21,1882.0,xã,15.5474,108.394,48.63
-49,True,518,Huyện,20392.0,Xã,True,True,Tỉnh Quảng Nam,Huyện Phú Ninh,Xã Tam Dân,Thành phố Đà Nẵng,Phú Ninh,21,1921.0,xã,15.47,108.427,131.35
+49,True,518,Huyện,20392.0,Xã,True,False,Tỉnh Quảng Nam,Huyện Phú Ninh,Xã Tam Dân,Thành phố Đà Nẵng,Phú Ninh,21,1921.0,xã,15.47,108.427,131.35
 49,True,518,Huyện,20395.0,Xã,True,False,Tỉnh Quảng Nam,Huyện Phú Ninh,Xã Tam Lãnh,Thành phố Đà Nẵng,Phú Ninh,21,1921.0,xã,15.47,108.427,131.35
 51,True,522,Thành phố,21010.0,Phường,True,False,Tỉnh Quảng Ngãi,Thành phố Quảng Ngãi,Phường Lê Hồng Phong,Tỉnh Quảng Ngãi,Nghĩa Lộ,22,2025.0,phường,15.1186,108.785,17.07
 51,True,522,Thành phố,21013.0,Phường,True,False,Tỉnh Quảng Ngãi,Thành phố Quảng Ngãi,Phường Trần Phú,Tỉnh Quảng Ngãi,Nghĩa Lộ,22,2025.0,phường,15.1186,108.785,17.07
@@ -6660,8 +6630,7 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 51,True,522,Thành phố,21262.0,Xã,True,False,Tỉnh Quảng Ngãi,Thành phố Quảng Ngãi,Xã An Phú,Tỉnh Quảng Ngãi,An Phú,22,1968.0,xã,15.1214,108.863,34.7
 51,True,524,Huyện,21040.0,Thị trấn,True,False,Tỉnh Quảng Ngãi,Huyện Bình Sơn,Thị trấn Châu Ổ,Tỉnh Quảng Ngãi,Bình Sơn,22,1979.0,xã,15.3313,108.746,281.7
 51,True,524,Huyện,21043.0,Xã,True,False,Tỉnh Quảng Ngãi,Huyện Bình Sơn,Xã Bình Thuận,Tỉnh Quảng Ngãi,Vạn Tường,22,2060.0,xã,15.3351,108.822,109.28
-51,True,524,Huyện,21046.0,Xã,True,True,Tỉnh Quảng Ngãi,Huyện Bình Sơn,Xã Bình Thạnh,Tỉnh Quảng Ngãi,Bình Sơn,22,1979.0,xã,15.3313,108.746,281.7
-51,True,524,Huyện,21046.0,Xã,True,True,Tỉnh Quảng Ngãi,Huyện Bình Sơn,Xã Bình Thạnh,Tỉnh Quảng Ngãi,Đông Sơn,22,2001.0,xã,15.2417,108.851,115.83
+51,True,524,Huyện,21046.0,Xã,True,False,Tỉnh Quảng Ngãi,Huyện Bình Sơn,Xã Bình Thạnh,Tỉnh Quảng Ngãi,Bình Sơn,22,1979.0,xã,15.3313,108.746,281.7
 51,True,524,Huyện,21049.0,Xã,True,False,Tỉnh Quảng Ngãi,Huyện Bình Sơn,Xã Bình Đông,Tỉnh Quảng Ngãi,Vạn Tường,22,2060.0,xã,15.3351,108.822,109.28
 51,True,524,Huyện,21052.0,Xã,True,False,Tỉnh Quảng Ngãi,Huyện Bình Sơn,Xã Bình Chánh,Tỉnh Quảng Ngãi,Bình Sơn,22,1979.0,xã,15.3313,108.746,281.7
 51,True,524,Huyện,21055.0,Xã,True,False,Tỉnh Quảng Ngãi,Huyện Bình Sơn,Xã Bình Nguyên,Tỉnh Quảng Ngãi,Bình Sơn,22,1979.0,xã,15.3313,108.746,281.7
@@ -6675,8 +6644,7 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 51,True,524,Huyện,21082.0,Xã,True,False,Tỉnh Quảng Ngãi,Huyện Bình Sơn,Xã Bình Trung,Tỉnh Quảng Ngãi,Bình Sơn,22,1979.0,xã,15.3313,108.746,281.7
 51,True,524,Huyện,21085.0,Xã,True,False,Tỉnh Quảng Ngãi,Huyện Bình Sơn,Xã Bình Minh,Tỉnh Quảng Ngãi,Bình Minh,22,1978.0,xã,15.3139,108.652,36.7
 51,True,524,Huyện,21088.0,Xã,True,False,Tỉnh Quảng Ngãi,Huyện Bình Sơn,Xã Bình Long,Tỉnh Quảng Ngãi,Bình Sơn,22,1979.0,xã,15.3313,108.746,281.7
-51,True,524,Huyện,21091.0,Xã,True,True,Tỉnh Quảng Ngãi,Huyện Bình Sơn,Xã Bình Thanh,Tỉnh Quảng Ngãi,Bình Sơn,22,1979.0,xã,15.3313,108.746,281.7
-51,True,524,Huyện,21091.0,Xã,True,True,Tỉnh Quảng Ngãi,Huyện Bình Sơn,Xã Bình Thanh,Tỉnh Quảng Ngãi,Đông Sơn,22,2001.0,xã,15.2417,108.851,115.83
+51,True,524,Huyện,21091.0,Xã,True,False,Tỉnh Quảng Ngãi,Huyện Bình Sơn,Xã Bình Thanh,Tỉnh Quảng Ngãi,Đông Sơn,22,2001.0,xã,15.2417,108.851,115.83
 51,True,524,Huyện,21100.0,Xã,True,False,Tỉnh Quảng Ngãi,Huyện Bình Sơn,Xã Bình Chương,Tỉnh Quảng Ngãi,Bình Chương,22,1977.0,xã,15.2644,108.721,30.79
 51,True,524,Huyện,21103.0,Xã,True,False,Tỉnh Quảng Ngãi,Huyện Bình Sơn,Xã Bình Hiệp,Tỉnh Quảng Ngãi,Đông Sơn,22,2001.0,xã,15.2417,108.851,115.83
 51,True,524,Huyện,21106.0,Xã,True,False,Tỉnh Quảng Ngãi,Huyện Bình Sơn,Xã Bình Mỹ,Tỉnh Quảng Ngãi,Bình Chương,22,1977.0,xã,15.2644,108.721,30.79
@@ -7477,8 +7445,7 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 62,True,614,Huyện,23497.0,Xã,True,False,Tỉnh Kon Tum,Huyện Kon Rẫy,Xã Tân Lập,Tỉnh Quảng Ngãi,Kon Braih,22,2009.0,xã,14.4325,108.163,250.89
 62,True,615,Huyện,23500.0,Thị trấn,True,False,Tỉnh Kon Tum,Huyện Đăk Hà,Thị trấn Đăk Hà,Tỉnh Quảng Ngãi,Đăk Hà,22,1985.0,xã,14.4634,107.929,104.08
 62,True,615,Huyện,23503.0,Xã,True,False,Tỉnh Kon Tum,Huyện Đăk Hà,Xã Đăk Pxi,Tỉnh Quảng Ngãi,Đăk Pxi,22,1992.0,xã,14.719,108.005,325.35
-62,True,615,Huyện,23504.0,Xã,True,True,Tỉnh Kon Tum,Huyện Đăk Hà,Xã Đăk Long,Tỉnh Quảng Ngãi,Đăk Pxi,22,1992.0,xã,14.719,108.005,325.35
-62,True,615,Huyện,23504.0,Xã,False,True,Tỉnh Kon Tum,Huyện Đăk Hà,Xã Đăk Long,Tỉnh Quảng Ngãi,Đăk Long,22,1987.0,xã,14.9649,107.574,280.5
+62,True,615,Huyện,23504.0,Xã,True,False,Tỉnh Kon Tum,Huyện Đăk Hà,Xã Đăk Long,Tỉnh Quảng Ngãi,Đăk Pxi,22,1992.0,xã,14.719,108.005,325.35
 62,True,615,Huyện,23506.0,Xã,True,False,Tỉnh Kon Tum,Huyện Đăk Hà,Xã Đăk Hring,Tỉnh Quảng Ngãi,Đăk Mar,22,1988.0,xã,14.574,107.924,112.79
 62,True,615,Huyện,23509.0,Xã,True,False,Tỉnh Kon Tum,Huyện Đăk Hà,Xã Đăk Ui,Tỉnh Quảng Ngãi,Đăk Ui,22,1998.0,xã,14.586,108.009,132.52
 62,True,615,Huyện,23510.0,Xã,True,False,Tỉnh Kon Tum,Huyện Đăk Hà,Xã Đăk Ngọk,Tỉnh Quảng Ngãi,Đăk Ui,22,1998.0,xã,14.586,108.009,132.52
@@ -7652,15 +7619,14 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 64,True,632,Huyện,23896.0,Xã,True,False,Tỉnh Gia Lai,Huyện Chư Prông,Xã Thăng Hưng,Tỉnh Gia Lai,Bàu Cạn,24,2149.0,xã,13.8341,107.888,114.25
 64,True,632,Huyện,23899.0,Xã,True,False,Tỉnh Gia Lai,Huyện Chư Prông,Xã Bàu Cạn,Tỉnh Gia Lai,Bàu Cạn,24,2149.0,xã,13.8341,107.888,114.25
 64,True,632,Huyện,23902.0,Xã,True,False,Tỉnh Gia Lai,Huyện Chư Prông,Xã Ia Phìn,Tỉnh Gia Lai,Chư Prông,24,2166.0,xã,13.7786,107.94,124.77
-64,True,632,Huyện,23905.0,Xã,True,True,Tỉnh Gia Lai,Huyện Chư Prông,Xã Ia Băng,Tỉnh Gia Lai,Ia Tôr,24,2217.0,xã,13.7532,107.979,102.31
+64,True,632,Huyện,23905.0,Xã,True,False,Tỉnh Gia Lai,Huyện Chư Prông,Xã Ia Băng,Tỉnh Gia Lai,Ia Tôr,24,2217.0,xã,13.7532,107.979,102.31
 64,True,632,Huyện,23908.0,Xã,True,False,Tỉnh Gia Lai,Huyện Chư Prông,Xã Ia Tôr,Tỉnh Gia Lai,Ia Tôr,24,2217.0,xã,13.7532,107.979,102.31
 64,True,632,Huyện,23911.0,Xã,True,False,Tỉnh Gia Lai,Huyện Chư Prông,Xã Ia Boòng,Tỉnh Gia Lai,Ia Boòng,24,2190.0,xã,13.6794,107.84,196.07
-64,True,632,Huyện,23914.0,Xã,True,True,Tỉnh Gia Lai,Huyện Chư Prông,Xã Ia O,Tỉnh Gia Lai,Ia Boòng,24,2190.0,xã,13.6794,107.84,196.07
-64,True,632,Huyện,23914.0,Xã,False,True,Tỉnh Gia Lai,Huyện Chư Prông,Xã Ia O,Tỉnh Gia Lai,Ia O,24,2208.0,xã,13.9504,107.543,137.39
+64,True,632,Huyện,23914.0,Xã,True,False,Tỉnh Gia Lai,Huyện Chư Prông,Xã Ia O,Tỉnh Gia Lai,Ia Boòng,24,2190.0,xã,13.6794,107.84,196.07
 64,True,632,Huyện,23917.0,Xã,False,False,Tỉnh Gia Lai,Huyện Chư Prông,Xã Ia Púch,Tỉnh Gia Lai,Ia Púch,24,2213.0,xã,13.6198,107.692,267.3
 64,True,632,Huyện,23920.0,Xã,True,False,Tỉnh Gia Lai,Huyện Chư Prông,Xã Ia Me,Tỉnh Gia Lai,Ia Boòng,24,2190.0,xã,13.6794,107.84,196.07
 64,True,632,Huyện,23923.0,Xã,True,False,Tỉnh Gia Lai,Huyện Chư Prông,Xã Ia Vê,Tỉnh Gia Lai,Ia Pia,24,2211.0,xã,13.6004,107.898,238.59
-64,True,632,Huyện,23924.0,Xã,True,True,Tỉnh Gia Lai,Huyện Chư Prông,Xã Ia Bang,Tỉnh Gia Lai,Ia Tôr,24,2217.0,xã,13.7532,107.979,102.31
+64,True,632,Huyện,23924.0,Xã,True,False,Tỉnh Gia Lai,Huyện Chư Prông,Xã Ia Bang,Tỉnh Gia Lai,Ia Tôr,24,2217.0,xã,13.7532,107.979,102.31
 64,True,632,Huyện,23926.0,Xã,True,False,Tỉnh Gia Lai,Huyện Chư Prông,Xã Ia Pia,Tỉnh Gia Lai,Ia Pia,24,2211.0,xã,13.6004,107.898,238.59
 64,True,632,Huyện,23929.0,Xã,True,False,Tỉnh Gia Lai,Huyện Chư Prông,Xã Ia Ga,Tỉnh Gia Lai,Ia Pia,24,2211.0,xã,13.6004,107.898,238.59
 64,True,632,Huyện,23932.0,Xã,True,False,Tỉnh Gia Lai,Huyện Chư Prông,Xã Ia Lâu,Tỉnh Gia Lai,Ia Lâu,24,2203.0,xã,13.4617,107.87,215.02
@@ -8153,15 +8119,13 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 70,True,692,Huyện,25273.0,Xã,True,False,Tỉnh Bình Phước,Huyện Lộc Ninh,Xã Lộc Hòa,Tỉnh Đồng Nai,Lộc Thạnh,28,2630.0,xã,11.9365,106.576,125.5
 70,True,692,Huyện,25276.0,Xã,True,False,Tỉnh Bình Phước,Huyện Lộc Ninh,Xã Lộc An,Tỉnh Đồng Nai,Tân Tiến,28,2666.0,xã,11.9268,106.656,207.2
 70,True,692,Huyện,25279.0,Xã,True,False,Tỉnh Bình Phước,Huyện Lộc Ninh,Xã Lộc Tấn,Tỉnh Đồng Nai,Lộc Tấn,28,2628.0,xã,11.8815,106.519,183.36
-70,True,692,Huyện,25280.0,Xã,True,True,Tỉnh Bình Phước,Huyện Lộc Ninh,Xã Lộc Thạnh,Tỉnh Đồng Nai,Lộc Thạnh,28,2630.0,xã,11.9365,106.576,125.5
-70,True,692,Huyện,25280.0,Xã,True,True,Tỉnh Bình Phước,Huyện Lộc Ninh,Xã Lộc Thạnh,Tỉnh Đồng Nai,Lộc Thành,28,2629.0,xã,11.7661,106.494,206.1
+70,True,692,Huyện,25280.0,Xã,True,False,Tỉnh Bình Phước,Huyện Lộc Ninh,Xã Lộc Thạnh,Tỉnh Đồng Nai,Lộc Thạnh,28,2630.0,xã,11.9365,106.576,125.5
 70,True,692,Huyện,25282.0,Xã,True,False,Tỉnh Bình Phước,Huyện Lộc Ninh,Xã Lộc Hiệp,Tỉnh Đồng Nai,Lộc Quang,28,2627.0,xã,11.8443,106.716,105.0
 70,True,692,Huyện,25285.0,Xã,True,False,Tỉnh Bình Phước,Huyện Lộc Ninh,Xã Lộc Thiện,Tỉnh Đồng Nai,Lộc Tấn,28,2628.0,xã,11.8815,106.519,183.36
 70,True,692,Huyện,25288.0,Xã,True,False,Tỉnh Bình Phước,Huyện Lộc Ninh,Xã Lộc Thuận,Tỉnh Đồng Nai,Lộc Ninh,28,2626.0,xã,11.8389,106.635,67.4
 70,True,692,Huyện,25291.0,Xã,True,False,Tỉnh Bình Phước,Huyện Lộc Ninh,Xã Lộc Quang,Tỉnh Đồng Nai,Lộc Quang,28,2627.0,xã,11.8443,106.716,105.0
 70,True,692,Huyện,25292.0,Xã,True,False,Tỉnh Bình Phước,Huyện Lộc Ninh,Xã Lộc Phú,Tỉnh Đồng Nai,Lộc Quang,28,2627.0,xã,11.8443,106.716,105.0
-70,True,692,Huyện,25294.0,Xã,True,True,Tỉnh Bình Phước,Huyện Lộc Ninh,Xã Lộc Thành,Tỉnh Đồng Nai,Lộc Thạnh,28,2630.0,xã,11.9365,106.576,125.5
-70,True,692,Huyện,25294.0,Xã,True,True,Tỉnh Bình Phước,Huyện Lộc Ninh,Xã Lộc Thành,Tỉnh Đồng Nai,Lộc Thành,28,2629.0,xã,11.7661,106.494,206.1
+70,True,692,Huyện,25294.0,Xã,True,False,Tỉnh Bình Phước,Huyện Lộc Ninh,Xã Lộc Thành,Tỉnh Đồng Nai,Lộc Thành,28,2629.0,xã,11.7661,106.494,206.1
 70,True,692,Huyện,25297.0,Xã,True,False,Tỉnh Bình Phước,Huyện Lộc Ninh,Xã Lộc Thái,Tỉnh Đồng Nai,Lộc Ninh,28,2626.0,xã,11.8389,106.635,67.4
 70,True,692,Huyện,25300.0,Xã,True,False,Tỉnh Bình Phước,Huyện Lộc Ninh,Xã Lộc Điền,Tỉnh Đồng Nai,Lộc Hưng,28,2625.0,xã,11.7867,106.664,99.0
 70,True,692,Huyện,25303.0,Xã,True,False,Tỉnh Bình Phước,Huyện Lộc Ninh,Xã Lộc Hưng,Tỉnh Đồng Nai,Lộc Hưng,28,2625.0,xã,11.7867,106.664,99.0
@@ -8490,8 +8454,7 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 75,True,734,Huyện,26131.0,Xã,True,False,Tỉnh Đồng Nai,Huyện Tân Phú,Xã Tà Lài,Tỉnh Đồng Nai,Tà Lài,28,2657.0,xã,11.3537,107.391,83.3
 75,True,734,Huyện,26134.0,Xã,True,False,Tỉnh Đồng Nai,Huyện Tân Phú,Xã Phú Lập,Tỉnh Đồng Nai,Tà Lài,28,2657.0,xã,11.3537,107.391,83.3
 75,True,734,Huyện,26140.0,Xã,True,False,Tỉnh Đồng Nai,Huyện Tân Phú,Xã Phú Thịnh,Tỉnh Đồng Nai,Tà Lài,28,2657.0,xã,11.3537,107.391,83.3
-75,True,734,Huyện,26143.0,Xã,True,True,Tỉnh Đồng Nai,Huyện Tân Phú,Xã Thanh Sơn,Tỉnh Đồng Nai,Phú Lâm,28,2644.0,xã,11.3073,107.502,43.07
-75,True,734,Huyện,26143.0,Xã,False,True,Tỉnh Đồng Nai,Huyện Tân Phú,Xã Thanh Sơn,Tỉnh Đồng Nai,Thanh Sơn,28,2668.0,xã,11.2977,107.256,315.4
+75,True,734,Huyện,26143.0,Xã,True,False,Tỉnh Đồng Nai,Huyện Tân Phú,Xã Thanh Sơn,Tỉnh Đồng Nai,Phú Lâm,28,2644.0,xã,11.3073,107.502,43.07
 75,True,734,Huyện,26146.0,Xã,True,False,Tỉnh Đồng Nai,Huyện Tân Phú,Xã Phú Sơn,Tỉnh Đồng Nai,Phú Lâm,28,2644.0,xã,11.3073,107.502,43.07
 75,True,734,Huyện,26149.0,Xã,True,False,Tỉnh Đồng Nai,Huyện Tân Phú,Xã Phú Xuân,Tỉnh Đồng Nai,Tân Phú,28,2664.0,xã,11.275,107.441,38.6
 75,True,734,Huyện,26152.0,Xã,True,False,Tỉnh Đồng Nai,Huyện Tân Phú,Xã Phú Lộc,Tỉnh Đồng Nai,Tân Phú,28,2664.0,xã,11.275,107.441,38.6
@@ -9439,8 +9402,7 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 83,True,835,Huyện,29050.0,Thị trấn,True,False,Tỉnh Bến Tre,Huyện Bình Đại,Thị trấn Bình Đại,Tỉnh Vĩnh Long,Bình Đại,30,2868.0,xã,10.1865,106.712,44.7
 83,True,835,Huyện,29053.0,Xã,True,False,Tỉnh Bến Tre,Huyện Bình Đại,Xã Tam Hiệp,Tỉnh Vĩnh Long,Phú Thuận,30,2933.0,xã,10.2816,106.482,29.28
 83,True,835,Huyện,29056.0,Xã,True,False,Tỉnh Bến Tre,Huyện Bình Đại,Xã Long Định,Tỉnh Vĩnh Long,Phú Thuận,30,2933.0,xã,10.2816,106.482,29.28
-83,True,835,Huyện,29059.0,Xã,True,True,Tỉnh Bến Tre,Huyện Bình Đại,Xã Long Hòa,Tỉnh Vĩnh Long,Châu Hưng,30,2879.0,xã,10.2248,106.532,35.22
-83,True,835,Huyện,29059.0,Xã,False,True,Tỉnh Bến Tre,Huyện Bình Đại,Xã Long Hòa,Tỉnh Vĩnh Long,Long Hòa,30,2909.0,xã,9.86897,106.504,52.67
+83,True,835,Huyện,29059.0,Xã,True,False,Tỉnh Bến Tre,Huyện Bình Đại,Xã Long Hòa,Tỉnh Vĩnh Long,Châu Hưng,30,2879.0,xã,10.2248,106.532,35.22
 83,True,835,Huyện,29062.0,Xã,True,False,Tỉnh Bến Tre,Huyện Bình Đại,Xã Phú Thuận,Tỉnh Vĩnh Long,Phú Thuận,30,2933.0,xã,10.2816,106.482,29.28
 83,True,835,Huyện,29065.0,Xã,True,False,Tỉnh Bến Tre,Huyện Bình Đại,Xã Vang Quới Tây,Tỉnh Vĩnh Long,Lộc Thuận,30,2904.0,xã,10.2408,106.56,42.7
 83,True,835,Huyện,29068.0,Xã,True,False,Tỉnh Bến Tre,Huyện Bình Đại,Xã Vang Quới Đông,Tỉnh Vĩnh Long,Lộc Thuận,30,2904.0,xã,10.2408,106.56,42.7
@@ -9695,11 +9657,11 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 86,True,861,Thị xã,29771.0,Phường,True,True,Tỉnh Vĩnh Long,Thị xã Bình Minh,Phường Thành Phước,Tỉnh Vĩnh Long,Bình Minh,30,2869.0,phường,10.0832,105.823,23.86
 86,True,861,Thị xã,29771.0,Phường,True,True,Tỉnh Vĩnh Long,Thị xã Bình Minh,Phường Thành Phước,Tỉnh Vĩnh Long,Cái Vồn,30,2874.0,phường,10.0371,105.821,26.52
 86,True,861,Thị xã,29806.0,Xã,True,False,Tỉnh Vĩnh Long,Thị xã Bình Minh,Xã Thuận An,Tỉnh Vĩnh Long,Bình Minh,30,2869.0,phường,10.0832,105.823,23.86
-86,True,861,Thị xã,29809.0,Xã,True,True,Tỉnh Vĩnh Long,Thị xã Bình Minh,Xã Đông Thạnh,Tỉnh Vĩnh Long,Đông Thành,30,2887.0,phường,10.0365,105.861,44.35
+86,True,861,Thị xã,29809.0,Xã,True,False,Tỉnh Vĩnh Long,Thị xã Bình Minh,Xã Đông Thạnh,Tỉnh Vĩnh Long,Đông Thành,30,2887.0,phường,10.0365,105.861,44.35
 86,True,861,Thị xã,29812.0,Xã,True,False,Tỉnh Vĩnh Long,Thị xã Bình Minh,Xã Đông Bình,Tỉnh Vĩnh Long,Đông Thành,30,2887.0,phường,10.0365,105.861,44.35
 86,True,861,Thị xã,29813.0,Phường,True,False,Tỉnh Vĩnh Long,Thị xã Bình Minh,Phường Đông Thuận,Tỉnh Vĩnh Long,Đông Thành,30,2887.0,phường,10.0365,105.861,44.35
 86,True,861,Thị xã,29815.0,Xã,True,False,Tỉnh Vĩnh Long,Thị xã Bình Minh,Xã Mỹ Hòa,Tỉnh Vĩnh Long,Cái Vồn,30,2874.0,phường,10.0371,105.821,26.52
-86,True,861,Thị xã,29818.0,Xã,True,True,Tỉnh Vĩnh Long,Thị xã Bình Minh,Xã Đông Thành,Tỉnh Vĩnh Long,Đông Thành,30,2887.0,phường,10.0365,105.861,44.35
+86,True,861,Thị xã,29818.0,Xã,True,False,Tỉnh Vĩnh Long,Thị xã Bình Minh,Xã Đông Thành,Tỉnh Vĩnh Long,Đông Thành,30,2887.0,phường,10.0365,105.861,44.35
 86,True,862,Huyện,29821.0,Thị trấn,True,True,Tỉnh Vĩnh Long,Huyện Trà Ôn,Thị trấn Trà Ôn,Tỉnh Vĩnh Long,Ngãi Tứ,30,2921.0,xã,10.0181,105.926,69.12
 86,True,862,Huyện,29821.0,Thị trấn,True,True,Tỉnh Vĩnh Long,Huyện Trà Ôn,Thị trấn Trà Ôn,Tỉnh Vĩnh Long,Trà Ôn,30,2972.0,xã,9.94452,105.964,42.78
 86,True,862,Huyện,29824.0,Xã,True,False,Tỉnh Vĩnh Long,Huyện Trà Ôn,Xã Xuân Hiệp,Tỉnh Vĩnh Long,Hòa Bình,30,2895.0,xã,10.0384,106.061,26.54
@@ -9926,9 +9888,9 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 89,True,888,Huyện,30418.0,Xã,True,False,Tỉnh An Giang,Huyện Phú Tân,Xã Phú Long,Tỉnh An Giang,Phú Lâm,32,3145.0,xã,10.7272,105.251,43.07
 89,True,888,Huyện,30421.0,Xã,True,False,Tỉnh An Giang,Huyện Phú Tân,Xã Phú Lâm,Tỉnh An Giang,Phú Lâm,32,3145.0,xã,10.7272,105.251,43.07
 89,True,888,Huyện,30424.0,Xã,True,False,Tỉnh An Giang,Huyện Phú Tân,Xã Phú Hiệp,Tỉnh An Giang,Hòa Lạc,32,3119.0,xã,10.7107,105.201,41.11
-89,True,888,Huyện,30427.0,Xã,True,True,Tỉnh An Giang,Huyện Phú Tân,Xã Phú Thạnh,Tỉnh An Giang,Chợ Vàm,32,3105.0,xã,10.6897,105.286,67.48
+89,True,888,Huyện,30427.0,Xã,True,False,Tỉnh An Giang,Huyện Phú Tân,Xã Phú Thạnh,Tỉnh An Giang,Chợ Vàm,32,3105.0,xã,10.6897,105.286,67.48
 89,True,888,Huyện,30430.0,Xã,True,False,Tỉnh An Giang,Huyện Phú Tân,Xã Hòa Lạc,Tỉnh An Giang,Hòa Lạc,32,3119.0,xã,10.7107,105.201,41.11
-89,True,888,Huyện,30433.0,Xã,True,True,Tỉnh An Giang,Huyện Phú Tân,Xã Phú Thành,Tỉnh An Giang,Chợ Vàm,32,3105.0,xã,10.6897,105.286,67.48
+89,True,888,Huyện,30433.0,Xã,True,False,Tỉnh An Giang,Huyện Phú Tân,Xã Phú Thành,Tỉnh An Giang,Chợ Vàm,32,3105.0,xã,10.6897,105.286,67.48
 89,True,888,Huyện,30436.0,Xã,True,False,Tỉnh An Giang,Huyện Phú Tân,Xã Phú An,Tỉnh An Giang,Phú An,32,3142.0,xã,10.6401,105.311,57.35
 89,True,888,Huyện,30439.0,Xã,True,False,Tỉnh An Giang,Huyện Phú Tân,Xã Phú Xuân,Tỉnh An Giang,Phú An,32,3142.0,xã,10.6401,105.311,57.35
 89,True,888,Huyện,30442.0,Xã,True,False,Tỉnh An Giang,Huyện Phú Tân,Xã Hiệp Xương,Tỉnh An Giang,Bình Thạnh Đông,32,3097.0,xã,10.6009,105.259,61.7
@@ -10227,8 +10189,7 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 92,True,924,Huyện,31252.0,Xã,True,False,Thành phố Cần Thơ,Huyện Vĩnh Thạnh,Xã Thạnh Lộc,Thành phố Cần Thơ,Vĩnh Thạnh,33,3285.0,xã,10.2179,105.43,65.9
 92,True,925,Huyện,31222.0,Xã,True,False,Thành phố Cần Thơ,Huyện Cờ Đỏ,Xã Trung An,Thành phố Cần Thơ,Trung Nhứt,33,3271.0,phường,10.2336,105.51,30.84
 92,True,925,Huyện,31225.0,Xã,True,False,Thành phố Cần Thơ,Huyện Cờ Đỏ,Xã Trung Thạnh,Thành phố Cần Thơ,Trung Hưng,33,3270.0,xã,10.1766,105.499,61.07
-92,True,925,Huyện,31249.0,Xã,True,True,Thành phố Cần Thơ,Huyện Cờ Đỏ,Xã Thạnh Phú,Thành phố Cần Thơ,Nhu Gia,33,3234.0,xã,9.47039,105.855,75.59
-92,True,925,Huyện,31249.0,Xã,False,True,Thành phố Cần Thơ,Huyện Cờ Đỏ,Xã Thạnh Phú,Thành phố Cần Thơ,Thạnh Phú,33,3257.0,xã,10.1295,105.405,99.07
+92,True,925,Huyện,31249.0,Xã,True,False,Thành phố Cần Thơ,Huyện Cờ Đỏ,Xã Thạnh Phú,Thành phố Cần Thơ,Nhu Gia,33,3234.0,xã,9.47039,105.855,75.59
 92,True,925,Huyện,31255.0,Xã,True,False,Thành phố Cần Thơ,Huyện Cờ Đỏ,Xã Trung Hưng,Thành phố Cần Thơ,Trung Hưng,33,3270.0,xã,10.1766,105.499,61.07
 92,True,925,Huyện,31261.0,Thị trấn,True,False,Thành phố Cần Thơ,Huyện Cờ Đỏ,Thị trấn Cờ Đỏ,Thành phố Cần Thơ,Cờ Đỏ,33,3196.0,xã,10.0678,105.416,44.6265
 92,True,925,Huyện,31264.0,Xã,False,False,Thành phố Cần Thơ,Huyện Cờ Đỏ,Xã Thới Hưng,Thành phố Cần Thơ,Thới Hưng,33,3263.0,xã,10.124,105.519,69.92
@@ -10404,8 +10365,7 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 94,True,947,Huyện,31684.0,Thị trấn,True,False,Tỉnh Sóc Trăng,Huyện Mỹ Xuyên,Thị trấn Mỹ Xuyên,Thành phố Cần Thơ,Mỹ Xuyên,33,3228.0,phường,9.54742,105.918,48.34
 94,True,947,Huyện,31690.0,Xã,True,False,Tỉnh Sóc Trăng,Huyện Mỹ Xuyên,Xã Đại Tâm,Thành phố Cần Thơ,Mỹ Xuyên,33,3228.0,phường,9.54742,105.918,48.34
 94,True,947,Huyện,31693.0,Xã,True,False,Tỉnh Sóc Trăng,Huyện Mỹ Xuyên,Xã Tham Đôn,Thành phố Cần Thơ,Ngọc Tố,33,3231.0,xã,9.47663,105.939,112.53
-94,True,947,Huyện,31708.0,Xã,True,True,Tỉnh Sóc Trăng,Huyện Mỹ Xuyên,Xã Thạnh Phú,Thành phố Cần Thơ,Nhu Gia,33,3234.0,xã,9.47039,105.855,75.59
-94,True,947,Huyện,31708.0,Xã,False,True,Tỉnh Sóc Trăng,Huyện Mỹ Xuyên,Xã Thạnh Phú,Thành phố Cần Thơ,Thạnh Phú,33,3257.0,xã,10.1295,105.405,99.07
+94,True,947,Huyện,31708.0,Xã,True,False,Tỉnh Sóc Trăng,Huyện Mỹ Xuyên,Xã Thạnh Phú,Thành phố Cần Thơ,Nhu Gia,33,3234.0,xã,9.47039,105.855,75.59
 94,True,947,Huyện,31711.0,Xã,True,False,Tỉnh Sóc Trăng,Huyện Mỹ Xuyên,Xã Ngọc Đông,Thành phố Cần Thơ,Ngọc Tố,33,3231.0,xã,9.47663,105.939,112.53
 94,True,947,Huyện,31714.0,Xã,True,True,Tỉnh Sóc Trăng,Huyện Mỹ Xuyên,Xã Thạnh Quới,Thành phố Cần Thơ,Gia Hòa,33,3204.0,xã,9.43175,105.8,77.06
 94,True,947,Huyện,31714.0,Xã,True,True,Tỉnh Sóc Trăng,Huyện Mỹ Xuyên,Xã Thạnh Quới,Thành phố Cần Thơ,Thạnh Quới,33,3258.0,xã,10.2075,105.348,103.86

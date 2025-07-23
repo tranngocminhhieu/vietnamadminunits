@@ -3,6 +3,10 @@ from geopy.distance import distance
 from geopy.geocoders import ArcGIS
 from geopy.distance import geodesic
 
+from unidecode import unidecode
+import re
+import unicodedata
+
 geolocator = ArcGIS()
 
 def generate_square_polygon(center: tuple, area_km2: float):
@@ -51,3 +55,58 @@ def find_nearest_point(a_point: tuple, list_of_b_points: list):
     :return: (latitude, longitude)
     '''
     return min(list_of_b_points, key=lambda b: geodesic(a_point, b).meters)
+
+
+def unicode_normalize(text):
+    '''
+    - Chuyển Unicode tổ hợp sang Unicode dựng sẵn (lỗi gõ dấu bằng ký tự đặc biệt)
+    - Fix quote đặc biệt
+    - Fix dash dính liền
+    - Fix double space
+    :param text: str
+    :return: str or np.nan
+    '''
+    if isinstance(text, str):
+        text = unicodedata.normalize('NFC', text)
+        text = text.replace("’", "'").replace("‘", "'").replace("“", '"').replace("”", '"') # Normalize quotes
+        text = text.replace('-', ' - ')
+        text = re.sub(r'\s+', ' ', text)
+        return text.strip()
+    return text
+
+
+def key_normalize(text: str, keep: list=[]):
+    '''
+    Loại bỏ tất cả ký tự không phải chữ/số/keep
+    :param text: str
+    :param keep: list
+    :return: str or np.nan
+    '''
+    if isinstance(text, str):
+        keep_set = ''.join(re.escape(c) for c in keep)
+        pattern = rf"[^\w{keep_set}]+"  # \w là a-zA-Z0-9_
+        text = re.sub(pattern, '', unidecode(text)).lower()
+        text = re.sub(r'\s+', ' ', text)
+    return text
+
+
+def replace_from_right(text, old, new):
+    pos = text.rfind(old)
+    if pos != -1:
+        text = text[:pos] + new + text[pos + len(old):]
+    return text.strip()
+
+
+def extract_street(address, address_key):
+    remaining_parts = [part.strip() for part in address_key.split(',') if part.strip()]
+    for part in remaining_parts:
+        norm_part = key_normalize(part)
+        words = address.split(',')
+        for word in words:
+            if key_normalize(word).startswith(norm_part):
+                return word.strip().title()
+    return None
+
+
+if __name__ == '__main__':
+    print(key_normalize('Bà Rịa-   Vũng,Tàu', keep=[',', ' ']))

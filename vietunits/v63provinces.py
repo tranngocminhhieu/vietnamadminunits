@@ -108,4 +108,4 @@ def parse_address(address, keep_street=True):
     return unit
 
 if __name__ == '__main__':
-    print(parse_address('52 Đường Số 4, Linh Chiểu, Quận 9'))
+    print(parse_address('52 Đường Số 4, Linh Chiểu, q9'))

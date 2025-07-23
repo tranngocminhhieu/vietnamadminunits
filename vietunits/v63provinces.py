@@ -1,12 +1,14 @@
-from objects import Unit
+
 import pickle
 from pathlib import Path
 import re
 
 if __name__ == '__main__':
     from utils import key_normalize, extract_street, replace_from_right
+    from objects import Unit
 else:
     from .utils import key_normalize, extract_street, replace_from_right
+    from .objects import Unit
 
 # LOAD PICKLE DATA
 CURRENT_DIR = Path(__file__).parent
@@ -53,7 +55,9 @@ def parse_address(address, keep_street=True):
     if not province_key:
         return unit
     else:
+        unit.province_key = province_key
         unit.province = DICT_PROVINCE[province_key]['province']
+        unit.short_province = DICT_PROVINCE[province_key]['provinceShort']
 
 
     # Find district
@@ -70,7 +74,10 @@ def parse_address(address, keep_street=True):
     if not district_key:
         return unit
     else:
+        unit.district_key = district_key
         unit.district = DICT_DISTRICT[district_key]['district']
+        unit.short_district = DICT_DISTRICT[district_key]['districtShort']
+        unit.district_type = DICT_DISTRICT[district_key]['districtType']
 
 
     # Find ward
@@ -86,7 +93,10 @@ def parse_address(address, keep_street=True):
     if not ward_key:
         return unit
     else:
+        unit.ward_key = ward_key
         unit.ward = DICT_WARD[ward_key]['ward']
+        unit.short_ward = DICT_WARD[ward_key]['wardShort']
+        unit.ward_type = DICT_WARD[ward_key]['wardType']
 
 
     # Keep street

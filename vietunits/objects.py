@@ -48,7 +48,7 @@ class Unit:
             'district_type', 'ward_type',
         ]
 
-        lines = [f"{'Attribute':<15} | {'Value':<25}", '-' * 52]
+        lines = [f"{'Attribute':<15} | {'Value':<25}", '-' * 40]
         for attr in attributes:
             lines.append(f"{attr:<15} | {safe_format(getattr(self, attr)):<25}")
 

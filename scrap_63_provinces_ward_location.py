@@ -8,6 +8,7 @@ import numpy as np
 import pandas as pd
 from bs4 import BeautifulSoup
 from seleniumbase import Driver
+from tqdm import tqdm
 
 warnings.filterwarnings('ignore')
 
@@ -57,6 +58,7 @@ def get_location(address, driver):
 
 if __name__ == '__main__':
     df = pd.read_csv(BASE_DIR / 'data/danhmuc_and_sapnhap.csv')
+    df.sort_values(['isDividedWard'], ascending=False, inplace=True)
     df_63 = df[['province', 'district', 'ward']].drop_duplicates().reset_index(drop=True)
     df_63['address'] = np.where(df_63['ward'].notna(),
                                 df_63['ward'].fillna('') + ', ' + df_63['district'] + ', ' + df_63['province'],
@@ -66,7 +68,7 @@ if __name__ == '__main__':
     driver.get('https://developers-dot-devsite-v2-prod.appspot.com/maps/documentation/utils/geocoder?hl=vi')
 
     location_data = []
-    for index, row in df_63.iterrows():
+    for index, row in tqdm(df_63.iterrows(), total=df_63.shape[0]):
         address = row['address']
         location = get_location(address, driver)
         data = {

@@ -81,4 +81,4 @@ if __name__ == '__main__':
             df_data = pd.DataFrame(location_data)
             with sqlite3.connect(BASE_DIR / 'data/63_provinces_ward_location.db') as conn:
                 df_data.to_sql(name='location', con=conn, if_exists='append', index=False)
-            data_new_wards = []
+            location_data = []

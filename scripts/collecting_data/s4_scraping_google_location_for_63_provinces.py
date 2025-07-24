@@ -40,7 +40,7 @@ def get_location(address, driver):
     else:
         bounds = None
 
-    # Formated Address
+    # Formatted Address
     result_formatted_address = results_display.find(class_='result-formatted-address')
     if result_formatted_address:
         formatted_address = result_formatted_address.text.split('\n')[-1].strip()

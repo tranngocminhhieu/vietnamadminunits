@@ -10189,7 +10189,7 @@ provinceCode,isMergedProvince,districtCode,districtType,wardCode,wardType,isMerg
 92,True,924,Huyện,31252.0,Xã,True,False,Thành phố Cần Thơ,Huyện Vĩnh Thạnh,Xã Thạnh Lộc,Thành phố Cần Thơ,Vĩnh Thạnh,33,3285.0,xã,10.2179,105.43,65.9,,,
 92,True,925,Huyện,31222.0,Xã,True,False,Thành phố Cần Thơ,Huyện Cờ Đỏ,Xã Trung An,Thành phố Cần Thơ,Trung Nhứt,33,3271.0,phường,10.2336,105.51,30.84,,,
 92,True,925,Huyện,31225.0,Xã,True,False,Thành phố Cần Thơ,Huyện Cờ Đỏ,Xã Trung Thạnh,Thành phố Cần Thơ,Trung Hưng,33,3270.0,xã,10.1766,105.499,61.07,,,
-92,True,925,Huyện,31249.0,Xã,True,False,Thành phố Cần Thơ,Huyện Cờ Đỏ,Xã Thạnh Phú,Thành phố Cần Thơ,Nhu Gia,33,3234.0,xã,9.47039,105.855,75.59,,,
+92,True,925,Huyện,31249.0,Xã,False,False,Thành phố Cần Thơ,Huyện Cờ Đỏ,Xã Thạnh Phú,Thành phố Cần Thơ,Thạnh Phú,33,3257.0,xã,10.1295,105.405,99.07,,,
 92,True,925,Huyện,31255.0,Xã,True,False,Thành phố Cần Thơ,Huyện Cờ Đỏ,Xã Trung Hưng,Thành phố Cần Thơ,Trung Hưng,33,3270.0,xã,10.1766,105.499,61.07,,,
 92,True,925,Huyện,31261.0,Thị trấn,True,False,Thành phố Cần Thơ,Huyện Cờ Đỏ,Thị trấn Cờ Đỏ,Thành phố Cần Thơ,Cờ Đỏ,33,3196.0,xã,10.0678,105.416,44.6265,,,
 92,True,925,Huyện,31264.0,Xã,False,False,Thành phố Cần Thơ,Huyện Cờ Đỏ,Xã Thới Hưng,Thành phố Cần Thơ,Thới Hưng,33,3263.0,xã,10.124,105.519,69.92,,,

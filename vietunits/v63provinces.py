@@ -30,7 +30,7 @@ PATTERN_UNIQUE_DISTRICT = re.compile('|'.join(unique_district_keys), flags=re.IG
 
 # MAIN FUNCTION
 def parse_address(address, keep_street=True):
-    unit = Unit()
+    unit = Unit(show_district=True)
 
     address_key = key_normalize(address, keep=[','])
     district_key = None

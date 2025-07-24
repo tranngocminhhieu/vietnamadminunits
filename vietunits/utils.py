@@ -75,17 +75,18 @@ def unicode_normalize(text):
     return text
 
 
-def key_normalize(text: str, keep: list=[]):
+def key_normalize(text: str, keep: list=[], decode=True):
     '''
     Loại bỏ tất cả ký tự không phải chữ/số/keep
     :param text: str
     :param keep: list
+    :param decode: bool, bỏ dấu tiếng Việt hay không
     :return: str or np.nan
     '''
     if isinstance(text, str):
         keep_set = ''.join(re.escape(c) for c in keep)
         pattern = rf"[^\w{keep_set}]+"  # \w là a-zA-Z0-9_
-        text = re.sub(pattern, '', unidecode(text)).lower()
+        text = re.sub(pattern, '', unidecode(text) if decode else text).lower()
         text = re.sub(r'\s+', ' ', text)
     return text
 
@@ -109,4 +110,4 @@ def extract_street(address, address_key):
 
 
 if __name__ == '__main__':
-    print(key_normalize('Bà Rịa-   Vũng,Tàu', keep=[',', ' ']))
+    print(key_normalize('Bà Rịa-   Vũng,Tàu', keep=[',', ' '], decode=False))

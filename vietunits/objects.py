@@ -16,6 +16,8 @@ class Unit:
                  province_key=None,
                  district_key=None,
                  ward_key=None,
+
+                 show_district = False
                  ):
         self.address = address
         self.province = province
@@ -33,6 +35,8 @@ class Unit:
         self.district_key = district_key
         self.ward_key = ward_key
 
+        self.show_district = show_district
+
     def get_address(self):
         components = [self.street,  self.ward, self.district, self.province]
         components = [i for i in components if i]
@@ -47,6 +51,9 @@ class Unit:
             'short_province', 'short_district', 'short_ward',
             'district_type', 'ward_type',
         ]
+
+        if not self.show_district:
+            attributes = [a for a in attributes if 'district' not in  a]
 
         lines = [f"{'Attribute':<15} | {'Value':<25}", '-' * 40]
         for attr in attributes:

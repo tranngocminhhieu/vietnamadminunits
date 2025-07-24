@@ -42,7 +42,11 @@ if re_scrap:
     df_divided_ward.to_csv(BASE_DIR / 'data/df_divided_ward.csv', index=False)
 
 else:
-    df_divided_ward = pd.read_csv(BASE_DIR / 'data/df_divided_ward.csv')
+    df_divided_ward_saved = pd.read_csv(BASE_DIR / 'data/df_divided_ward.csv')
+    if df_divided_ward_saved.shape[0] != df_divided_ward.shape[0]:
+        raise Exception('File lưu không đúng số lượng với hiện tại')
+    else:
+        df_divided_ward = df_divided_ward_saved
 # END GET LOCATION FOR DIVIDED WARDS
 
 

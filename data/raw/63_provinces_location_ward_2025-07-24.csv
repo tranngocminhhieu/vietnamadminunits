@@ -1,4 +1,4 @@
-address,wardLat,wardLon,wardBounds,wardFormattedAddress
+address,latitude,longitude,bounds,geo_address
 "Xã Hòa Lộc, Huyện Mỏ Cày Bắc, Tỉnh Bến Tre",10.163164,106.316948,"10.140326,106.300535 – 10.18882,106.342249","Hòa Lộc, Bến Tre, Ben Tre, Vietnam"
 "Xã Phước Hưng, Huyện An Phú, Tỉnh An Giang",10.868549,105.084969,"10.819849,105.059499 – 10.883377,105.10059","Phước Hưng, An Phú District, An Giang, Vietnam"
 "Thị trấn Lai Cách, Huyện Cẩm Giàng, Tỉnh Hải Dương",20.936694,106.255156,"20.921299,106.233437 – 20.948375,106.283205","tt. Lai Cách, Hải Dương, Vietnam"

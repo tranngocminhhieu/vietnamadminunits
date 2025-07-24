@@ -59,16 +59,16 @@ def get_location(address, driver):
 
 if __name__ == '__main__':
     df = pd.read_csv(BASE_DIR / 'data/danhmuc_and_sapnhap.csv')
-    df.sort_values(['isDividedWard'], ascending=False, inplace=True)
 
-    level = 2
-    if level == 3:
+
+    level = 'district'
+    if level == 'ward':
         df_63 = df[['province', 'district', 'ward']].drop_duplicates().reset_index(drop=True)
         df_63['address'] = np.where(df_63['ward'].notna(),
                                     df_63['ward'].fillna('') + ', ' + df_63['district'] + ', ' + df_63['province'],
                                     df_63['district'] + ', ' + df_63['province'])
 
-    elif level == 2:
+    elif level == 'district':
         df_63 = df[['province', 'district']].drop_duplicates().reset_index(drop=True)
         df_63['address'] = df_63['district'] + ', ' + df_63['province']
 
@@ -79,6 +79,9 @@ if __name__ == '__main__':
 
     print(f"{df_63.shape[0]} addresses to scrape.")
 
+    date = datetime.today().strftime('%Y-%m-%d')
+    db_file = f'data/raw/63_provinces_location_{level}_{date}.db'
+    csv_file = f'data/raw/63_provinces_location_{level}_{date}.csv'
 
     driver = Driver(uc=True, headless=True)
     driver.get('https://developers-dot-devsite-v2-prod.appspot.com/maps/documentation/utils/geocoder?hl=vi')
@@ -95,6 +98,17 @@ if __name__ == '__main__':
 
         if ((index + 1) % 15 == 0) or ((index + 1) == len(df_63)):
             df_data = pd.DataFrame(location_data)
-            with sqlite3.connect(BASE_DIR / f'data/raw/63_provinces_location_level_{level}_{datetime.now().date()}.db') as conn:
+            with sqlite3.connect(BASE_DIR / db_file) as conn:
                 df_data.to_sql(name='location', con=conn, if_exists='append', index=False)
             location_data = []
+
+    with sqlite3.connect(BASE_DIR / db_file) as conn:
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
+        rows = cursor.execute('SELECT * FROM location')
+        records = [dict(r) for r in rows.fetchall()]
+
+    data = [json.loads(r['location']) for r in records]
+    df = pd.DataFrame(data)
+    df.drop_duplicates(inplace=True)
+    df.to_csv(BASE_DIR / csv_file, index=False)

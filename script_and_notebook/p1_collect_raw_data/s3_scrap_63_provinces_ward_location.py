@@ -61,8 +61,8 @@ if __name__ == '__main__':
     df = pd.read_csv(BASE_DIR / 'data/danhmuc_and_sapnhap.csv')
     df.sort_values(['isDividedWard'], ascending=False, inplace=True)
 
-    level = 1
-    if level == 2:
+    level = 2
+    if level == 3:
         df_63 = df[['province', 'district', 'ward']].drop_duplicates().reset_index(drop=True)
         df_63['address'] = np.where(df_63['ward'].notna(),
                                     df_63['ward'].fillna('') + ', ' + df_63['district'] + ', ' + df_63['province'],
@@ -80,7 +80,7 @@ if __name__ == '__main__':
     print(f"{df_63.shape[0]} addresses to scrape.")
 
 
-    driver = Driver(uc=True)
+    driver = Driver(uc=True, headless=True)
     driver.get('https://developers-dot-devsite-v2-prod.appspot.com/maps/documentation/utils/geocoder?hl=vi')
 
     location_data = []

@@ -1,4 +1,4 @@
-class Unit:
+class AdminUnit:
     def __init__(self,
                  address=None,
                  province=None,
@@ -16,6 +16,9 @@ class Unit:
                  province_key=None,
                  district_key=None,
                  ward_key=None,
+
+                 latitude = None,
+                 longitude = None,
 
                  show_district = False
                  ):
@@ -35,6 +38,9 @@ class Unit:
         self.district_key = district_key
         self.ward_key = ward_key
 
+        self.latitude = latitude
+        self.longitude = longitude
+
         self.show_district = show_district
 
     def get_address(self):
@@ -49,7 +55,7 @@ class Unit:
         attributes = [
             'province', 'district', 'ward', 'street',
             'short_province', 'short_district', 'short_ward',
-            'district_type', 'ward_type',
+            'district_type', 'ward_type', 'latitude', 'longitude',
         ]
 
         if not self.show_district:
@@ -59,4 +65,4 @@ class Unit:
         for attr in attributes:
             lines.append(f"{attr:<15} | {safe_format(getattr(self, attr)):<25}")
 
-        return f"Unit: {self.get_address()}\n" + '\n'.join(lines)
+        return f"Admin Unit: {self.get_address()}\n" + '\n'.join(lines)

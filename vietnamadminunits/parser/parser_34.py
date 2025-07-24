@@ -1,25 +1,24 @@
-
-import pickle
+import json
 from pathlib import Path
 import re
 
 if __name__ == '__main__':
     from utils import key_normalize, extract_street, replace_from_right
-    from objects import Unit
+    from objects import AdminUnit
 else:
     from .utils import key_normalize, extract_street, replace_from_right
-    from .objects import Unit
+    from .objects import AdminUnit
 
 # LOAD PICKLE DATA
-CURRENT_DIR = Path(__file__).parent
-with open(CURRENT_DIR / 'data/v34provinces/pickle_data.pkl', 'rb') as f:
-    pickle_data = pickle.load(f)
+MODULE_DIR = Path(__file__).parent.parent
+with open(MODULE_DIR / 'data/parser_34.json', 'r') as f:
+    parser_data = json.load(f)
 
-DICT_PROVINCE = pickle_data['DICT_PROVINCE']
-DICT_PROVINCE_WARD_NO_ACCENTED = pickle_data['DICT_PROVINCE_WARD_NO_ACCENTED']
-DICT_PROVINCE_WARD_ACCENTED = pickle_data['DICT_PROVINCE_WARD_ACCENTED']
-DICT_UNIQUE_WARD_PROVINCE_NO_ACCENTED = pickle_data['DICT_UNIQUE_WARD_PROVINCE_NO_ACCENTED']
-DICT_UNIQUE_WARD_PROVINCE_ACCENTED = pickle_data['DICT_UNIQUE_WARD_PROVINCE_ACCENTED']
+DICT_PROVINCE = parser_data['DICT_PROVINCE']
+DICT_PROVINCE_WARD_NO_ACCENTED = parser_data['DICT_PROVINCE_WARD_NO_ACCENTED']
+DICT_PROVINCE_WARD_ACCENTED = parser_data['DICT_PROVINCE_WARD_ACCENTED']
+DICT_UNIQUE_WARD_PROVINCE_NO_ACCENTED = parser_data['DICT_UNIQUE_WARD_PROVINCE_NO_ACCENTED']
+DICT_UNIQUE_WARD_PROVINCE_ACCENTED = parser_data['DICT_UNIQUE_WARD_PROVINCE_ACCENTED']
 
 
 province_keywords = sorted(sum([DICT_PROVINCE[k]['provinceKeywords'] for k in DICT_PROVINCE], []), key=len, reverse=True)
@@ -35,16 +34,16 @@ PATTERN_UNIQUE_WARD_PROVINCE_ACCENTED = re.compile('|'.join(unique_ward_accented
 
 
 # MAIN FUNCTION
-def parse_address(address, keep_street=True, level=2):
+def parse_address_34(address, keep_street=True, level=2):
     '''
     Parse an 34 provinces address to a unit.
 
     :param address: street, ward, province.
     :param keep_street: boolean.
     :param level: [1,2]
-    :return: Unit object.
+    :return: AdminUnit object.
     '''
-    unit = Unit()
+    unit = AdminUnit()
 
 
     address_key = key_normalize(address, keep=[','])
@@ -83,6 +82,8 @@ def parse_address(address, keep_street=True, level=2):
         unit.province_key = province_key
         unit.province = DICT_PROVINCE[province_key]['province']
         unit.short_province = DICT_PROVINCE[province_key]['provinceShort']
+        unit.latitude = DICT_PROVINCE[province_key]['provinceLat']
+        unit.longitude = DICT_PROVINCE[province_key]['provinceLon']
     if level == 1:
         return unit
 
@@ -114,6 +115,8 @@ def parse_address(address, keep_street=True, level=2):
         unit.ward = DICT_WARD[ward_key]['ward']
         unit.short_ward = DICT_WARD[ward_key]['wardShort']
         unit.ward_type = DICT_WARD[ward_key]['wardType']
+        unit.latitude = DICT_WARD[ward_key]['wardLat']
+        unit.longitude = DICT_WARD[ward_key]['wardLon']
 
         address_key = replace_from_right(address_key, key_normalize(ward_keyword), '')
 
@@ -126,4 +129,4 @@ def parse_address(address, keep_street=True, level=2):
     return unit
 
 if __name__ == '__main__':
-    print(parse_address('văn lang , thai nguyen'))
+    print(parse_address_34('văn lang , thai nguyen'))

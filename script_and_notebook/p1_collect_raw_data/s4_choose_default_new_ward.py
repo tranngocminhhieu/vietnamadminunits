@@ -4,7 +4,14 @@ import pandas as pd
 from seleniumbase import Driver
 from tqdm.notebook import tqdm
 
-from vietunits.utils import check_point_in_polygon, find_nearest_point
+import sys
+
+from pathlib import Path
+import sys
+BASE_DIR = Path().resolve().parent.parent
+sys.path.append((BASE_DIR / 'vietnamadminunits/parser').as_posix())
+
+from utils import check_point_in_polygon, find_nearest_point
 
 warnings.filterwarnings('ignore')
 from pathlib import Path

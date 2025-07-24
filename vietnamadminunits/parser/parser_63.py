@@ -1,24 +1,24 @@
-
-import pickle
+import json
 from pathlib import Path
 import re
 
 if __name__ == '__main__':
     from utils import key_normalize, extract_street, replace_from_right
-    from objects import Unit
+    from objects import AdminUnit
 else:
     from .utils import key_normalize, extract_street, replace_from_right
-    from .objects import Unit
+    from .objects import AdminUnit
+
 
 # LOAD PICKLE DATA
-CURRENT_DIR = Path(__file__).parent
-with open(CURRENT_DIR / 'data/v63provinces/pickle_data.pkl', 'rb') as f:
-    pickle_data = pickle.load(f)
+MODULE_DIR = Path(__file__).parent.parent
+with open(MODULE_DIR / 'data/parser_63.json', 'r') as f:
+    parser_data = json.load(f)
 
-DICT_PROVINCE = pickle_data['DICT_PROVINCE']
-DICT_PROVINCE_DISTRICT = pickle_data['DICT_PROVINCE_DISTRICT']
-DICT_UNIQUE_DISTRICT_PROVINCE = pickle_data['DICT_UNIQUE_DISTRICT_PROVINCE']
-DICT_PROVINCE_DISTRICT_WARD = pickle_data['DICT_PROVINCE_DISTRICT_WARD']
+DICT_PROVINCE = parser_data['DICT_PROVINCE']
+DICT_PROVINCE_DISTRICT = parser_data['DICT_PROVINCE_DISTRICT']
+DICT_UNIQUE_DISTRICT_PROVINCE = parser_data['DICT_UNIQUE_DISTRICT_PROVINCE']
+DICT_PROVINCE_DISTRICT_WARD = parser_data['DICT_PROVINCE_DISTRICT_WARD']
 
 
 province_keywords = sorted(sum([DICT_PROVINCE[k]['provinceKeywords'] for k in DICT_PROVINCE], []), key=len, reverse=True)
@@ -29,8 +29,8 @@ PATTERN_UNIQUE_DISTRICT = re.compile('|'.join(unique_district_keys), flags=re.IG
 
 
 # MAIN FUNCTION
-def parse_address(address, keep_street=True):
-    unit = Unit(show_district=True)
+def parse_address_63(address, keep_street=True, level=3):
+    unit = AdminUnit(show_district=True)
 
     address_key = key_normalize(address, keep=[','])
     district_key = None
@@ -59,6 +59,9 @@ def parse_address(address, keep_street=True):
         unit.province = DICT_PROVINCE[province_key]['province']
         unit.short_province = DICT_PROVINCE[province_key]['provinceShort']
 
+    if level == 1:
+        return unit
+
 
     # Find district
     DICT_DISTRICT = DICT_PROVINCE_DISTRICT[province_key]
@@ -78,6 +81,9 @@ def parse_address(address, keep_street=True):
         unit.district = DICT_DISTRICT[district_key]['district']
         unit.short_district = DICT_DISTRICT[district_key]['districtShort']
         unit.district_type = DICT_DISTRICT[district_key]['districtType']
+
+    if level == 2:
+        return unit
 
 
     # Find ward
@@ -108,4 +114,4 @@ def parse_address(address, keep_street=True):
     return unit
 
 if __name__ == '__main__':
-    print(parse_address('52 Đường Số 4, Linh Chiểu, q9'))
+    print(parse_address_63('52 Đường Số 4, Linh Chiểu, q9'))

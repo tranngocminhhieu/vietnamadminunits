@@ -3,10 +3,10 @@ from pathlib import Path
 import re
 
 if __name__ == '__main__':
-    from utils import key_normalize, extract_street, replace_from_right
+    from utils import key_normalize, extract_street, replace_from_right, unicode_normalize
     from objects import AdminUnit
 else:
-    from .utils import key_normalize, extract_street, replace_from_right
+    from .utils import key_normalize, extract_street, replace_from_right, unicode_normalize
     from .objects import AdminUnit
 
 # LOAD PICKLE DATA
@@ -45,7 +45,7 @@ def parse_address_34(address, keep_street=True, level=2):
     '''
     unit = AdminUnit()
 
-
+    address = unicode_normalize(address)
     address_key = key_normalize(address, keep=[','])
     address_key_accented = key_normalize(address, keep=[','], decode=False)
     ward_keyword = None

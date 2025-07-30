@@ -132,4 +132,4 @@ def parse_address_63(address, keep_street=True, level=3):
 
 if __name__ == '__main__':
     # print(parse_address_63('tân thạnh, tan thanh, long an'))
-    print(parse_address_63('h ky anh, ha tinh'))
+    print(parse_address_63('tx ky anh, ha tinh'))

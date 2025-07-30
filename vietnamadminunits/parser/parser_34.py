@@ -19,6 +19,7 @@ DICT_PROVINCE_WARD_NO_ACCENTED = parser_data['DICT_PROVINCE_WARD_NO_ACCENTED']
 DICT_PROVINCE_WARD_ACCENTED = parser_data['DICT_PROVINCE_WARD_ACCENTED']
 DICT_UNIQUE_WARD_PROVINCE_NO_ACCENTED = parser_data['DICT_UNIQUE_WARD_PROVINCE_NO_ACCENTED']
 DICT_UNIQUE_WARD_PROVINCE_ACCENTED = parser_data['DICT_UNIQUE_WARD_PROVINCE_ACCENTED']
+DICT_PROVINCE_WARD_SHORT_ACCENTED = parser_data['DICT_PROVINCE_WARD_SHORT_ACCENTED']
 
 
 province_keywords = sorted(sum([DICT_PROVINCE[k]['provinceKeywords'] for k in DICT_PROVINCE], []), key=len, reverse=True)
@@ -84,44 +85,53 @@ def parse_address_34(address, keep_street=True, level=2):
         unit.short_province = DICT_PROVINCE[province_key]['provinceShort']
         unit.latitude = DICT_PROVINCE[province_key]['provinceLat']
         unit.longitude = DICT_PROVINCE[province_key]['provinceLon']
-    if level == 1:
-        return unit
+
 
 
     # Find ward
-    DICT_WARD_NO_ACCENTED = DICT_PROVINCE_WARD_NO_ACCENTED.get(province_key)
-    DICT_WARD_ACCENTED = DICT_PROVINCE_WARD_ACCENTED.get(province_key)
+    if level == 2:
+        DICT_WARD_NO_ACCENTED = DICT_PROVINCE_WARD_NO_ACCENTED.get(province_key)
+        DICT_WARD_ACCENTED = DICT_PROVINCE_WARD_ACCENTED.get(province_key)
+        DICT_WARD_SHORT_ACCENTED = DICT_PROVINCE_WARD_SHORT_ACCENTED.get(province_key)
 
-    def find_ward(address_key, DICT_WARD):
-        ward_keywords = sorted(sum([DICT_WARD[k]['wardKeywords'] for k in DICT_WARD], []), key=len, reverse=True)
-        PATTERN_WARD = re.compile('|'.join(ward_keywords), flags=re.IGNORECASE)
-        match = PATTERN_WARD.search(address_key)
-        ward_keyword = match.group(0) if match else None
-        if not ward_keyword:
-            return None, None
-        ward_key = next((k for k, v in DICT_WARD.items() if ward_keyword and ward_keyword in [kw for kw in v['wardKeywords']]), None)
-        return ward_keyword, ward_key
+        def find_ward(address_key, DICT_WARD):
+            ward_keywords = sorted(sum([DICT_WARD[k]['wardKeywords'] for k in DICT_WARD], []), key=len, reverse=True)
+            PATTERN_WARD = re.compile('|'.join(ward_keywords), flags=re.IGNORECASE)
+            match = PATTERN_WARD.search(address_key)
+            ward_keyword = match.group(0) if match else None
+            if not ward_keyword:
+                return None, None
+            ward_key = next((k for k, v in DICT_WARD.items() if ward_keyword and ward_keyword in [kw for kw in v['wardKeywords']]), None)
+            return ward_keyword, ward_key
 
-    if not ward_key and DICT_WARD_NO_ACCENTED:
-        ward_keyword, ward_key = find_ward(address_key, DICT_WARD_NO_ACCENTED)
+        if not ward_key and DICT_WARD_NO_ACCENTED:
+            ward_keyword, ward_key = find_ward(address_key, DICT_WARD_NO_ACCENTED)
+            if ward_key:
+                DICT_WARD = DICT_WARD_NO_ACCENTED
 
-    if not ward_key and DICT_WARD_ACCENTED:
-        ward_keyword, ward_key = find_ward(address_key_accented, DICT_WARD_ACCENTED)
+        if not ward_key and DICT_WARD_ACCENTED:
+            ward_keyword, ward_key = find_ward(address_key_accented, DICT_WARD_ACCENTED)
+            if ward_key:
+                DICT_WARD = DICT_WARD_ACCENTED
 
-    if ward_key:
-        accented = ward_key and ward_key != key_normalize(ward_key)
-        DICT_WARD = DICT_WARD_ACCENTED if accented else DICT_WARD_NO_ACCENTED
-        unit.ward_key = ward_key
-        unit.ward = DICT_WARD[ward_key]['ward']
-        unit.short_ward = DICT_WARD[ward_key]['wardShort']
-        unit.ward_type = DICT_WARD[ward_key]['wardType']
-        unit.latitude = DICT_WARD[ward_key]['wardLat']
-        unit.longitude = DICT_WARD[ward_key]['wardLon']
+        if not ward_key and DICT_WARD_SHORT_ACCENTED:
+            ward_keyword, ward_key = find_ward(address_key_accented, DICT_WARD_SHORT_ACCENTED)
+            if ward_key:
+                DICT_WARD = DICT_WARD_SHORT_ACCENTED
 
-        address_key = replace_from_right(address_key, key_normalize(ward_keyword), '')
+        if ward_key:
+            unit.ward_key = ward_key
+            unit.ward = DICT_WARD[ward_key]['ward']
+            unit.short_ward = DICT_WARD[ward_key]['wardShort']
+            unit.ward_type = DICT_WARD[ward_key]['wardType']
+            unit.latitude = DICT_WARD[ward_key]['wardLat']
+            unit.longitude = DICT_WARD[ward_key]['wardLon']
+
+            address_key = replace_from_right(address_key, key_normalize(ward_keyword), '')
+
 
     # Keep street
-    if keep_street and ',' in address_key:
+    if keep_street and address_key.count(',') >= 2:
         street = extract_street(address=address, address_key=address_key)
     if street:
         unit.street = street
@@ -129,4 +139,4 @@ def parse_address_34(address, keep_street=True, level=2):
     return unit
 
 if __name__ == '__main__':
-    print(parse_address_34('văn lang , thai nguyen'))
+    print(parse_address_34('Alo alo, dong tien, thanh hoa'))

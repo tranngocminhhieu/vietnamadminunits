@@ -29,3 +29,6 @@ key = next((k for k, v in data.items() if keyword and keyword.lower() in [kw.low
 
 print(key) # thanhphohochiminh
 ```
+
+
+# Converter Idea

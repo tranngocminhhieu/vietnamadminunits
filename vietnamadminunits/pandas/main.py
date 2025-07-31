@@ -26,6 +26,9 @@ def standardize_admin_unit_columns(df, province: str, district: str=None, ward: 
     if mode == 34 and district:
         raise ValueError('Mode 34 not works with district.')
 
+    if mode == 63 and province and ward and not district:
+        raise ValueError('District column name must be provided to parse ward')
+
     admin_unit_columns = [ward, district, province] if mode == 63 else [ward, province]
     admin_unit_columns = [l for l in admin_unit_columns if l] # Remove None
     original_columns = df.columns.tolist()

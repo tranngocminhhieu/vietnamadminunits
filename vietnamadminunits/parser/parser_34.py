@@ -53,26 +53,34 @@ def parse_address_34(address, keep_street=True, level=2):
     ward_key = None
     street = None
 
+
     # Find province
-    match = PATTERN_PROVINCE.search(address_key)
-    province_keyword = match.group(0) if match else None
+    # match = PATTERN_PROVINCE.search(address_key)
+    # province_keyword = match.group(0) if match else None
+    province_keyword = next((m.group() for m in reversed(list(PATTERN_PROVINCE.finditer(address_key)))), None)
 
     # Xóa từ khóa ở chổ này là hợp lý (không mang xuống dưới), vì trường hợp 2 fallback ở dưới dành cho không tìm ra keyword trong address.
     if province_keyword:
-        address_key = replace_from_right(address_key, province_keyword, '')
+        # Ưu tiên address_key_accented trước vì address_key là tham số
+        address_key_accented = replace_from_right(text=address_key, old=province_keyword, new='', for_text=address_key_accented)
+        address_key = replace_from_right(text=address_key, old=province_keyword, new='')
 
     province_key = next((k for k, v in DICT_PROVINCE.items() if province_keyword and province_keyword in [kw for kw in v['provinceKeywords']]), None)
 
     if not province_key:
-        match = PATTERN_UNIQUE_WARD_PROVINCE_NO_ACCENTED.search(address_key)
-        ward_keyword = match.group(0) if match else None
+        # match = PATTERN_UNIQUE_WARD_PROVINCE_NO_ACCENTED.search(address_key)
+        # ward_keyword = match.group(0) if match else None
+        ward_keyword = next((m.group() for m in reversed(list(PATTERN_UNIQUE_WARD_PROVINCE_NO_ACCENTED.finditer(address_key)))), None)
+
         ward_key = next((k for k, v in DICT_UNIQUE_WARD_PROVINCE_NO_ACCENTED.items() if ward_keyword and ward_keyword in [kw for kw in v['wardKeywords']]), None)
         if ward_key:
             province_key = DICT_UNIQUE_WARD_PROVINCE_NO_ACCENTED[ward_key]['provinceKey']
 
     if not province_key:
-        match = PATTERN_UNIQUE_WARD_PROVINCE_ACCENTED.search(address_key_accented)
-        ward_keyword = match.group(0) if match else None
+        # match = PATTERN_UNIQUE_WARD_PROVINCE_ACCENTED.search(address_key_accented)
+        # ward_keyword = match.group(0) if match else None
+        ward_keyword = next((m.group() for m in reversed(list(PATTERN_UNIQUE_WARD_PROVINCE_ACCENTED.finditer(address_key_accented)))), None)
+
         ward_key = next((k for k, v in DICT_UNIQUE_WARD_PROVINCE_ACCENTED.items() if ward_keyword and ward_keyword in [kw for kw in v['wardKeywords']]), None)
         if ward_key:
             province_key = DICT_UNIQUE_WARD_PROVINCE_ACCENTED[ward_key]['provinceKey']
@@ -87,7 +95,6 @@ def parse_address_34(address, keep_street=True, level=2):
         unit.longitude = DICT_PROVINCE[province_key]['provinceLon']
 
 
-
     # Find ward
     if level == 2:
         DICT_WARD_NO_ACCENTED = DICT_PROVINCE_WARD_NO_ACCENTED.get(province_key)
@@ -97,8 +104,11 @@ def parse_address_34(address, keep_street=True, level=2):
         def find_ward(address_key, DICT_WARD):
             ward_keywords = sorted(sum([DICT_WARD[k]['wardKeywords'] for k in DICT_WARD], []), key=len, reverse=True)
             PATTERN_WARD = re.compile('|'.join(ward_keywords), flags=re.IGNORECASE)
-            match = PATTERN_WARD.search(address_key)
-            ward_keyword = match.group(0) if match else None
+
+            # match = PATTERN_WARD.search(address_key)
+            # ward_keyword = match.group(0) if match else None
+            ward_keyword = next((m.group() for m in reversed(list(PATTERN_WARD.finditer(address_key)))), None)
+
             if not ward_keyword:
                 return None, None
             ward_key = next((k for k, v in DICT_WARD.items() if ward_keyword and ward_keyword in [kw for kw in v['wardKeywords']]), None)
@@ -139,4 +149,4 @@ def parse_address_34(address, keep_street=True, level=2):
     return unit
 
 if __name__ == '__main__':
-    print(parse_address_34('Alo alo, dong tien, thanh hoa'))
+    print(parse_address_34('Xã Nguyễn, Tỉnh Cao Bằng'))

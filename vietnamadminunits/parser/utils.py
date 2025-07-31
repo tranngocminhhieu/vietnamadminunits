@@ -91,8 +91,9 @@ def key_normalize(text: str, keep: list=[], decode=True):
     return text
 
 
-def replace_from_right(text, old, new):
+def replace_from_right(text: str, old: str, new: str='', for_text: str=None):
     pos = text.rfind(old)
+    text = for_text if for_text else text
     if pos != -1:
         text = text[:pos] + new + text[pos + len(old):]
     return text.strip()

@@ -43,18 +43,29 @@ def parse_address_63(address, keep_street=True, level=3):
     street = None
 
     # Find province
-    match = PATTERN_PROVINCE.search(address_key)
-    province_keyword = match.group(0) if match else None
+
+    # match = PATTERN_PROVINCE.search(address_key)
+    # province_keyword = match.group(0) if match else None
+    # Failed with 'Huyện Quảng Bình, Tỉnh Hà Giang' -> 'Tỉnh Quảng Bình'
+    province_keyword = next((m.group() for m in reversed(list(PATTERN_PROVINCE.finditer(address_key)))), None)
+
     if province_keyword:
-        address_key = replace_from_right(address_key, province_keyword, '')
+        # Ưu tiên address_key_accented trước vì address_key là tham số
+        address_key_accented = replace_from_right(text=address_key, old=province_keyword, new='', for_text=address_key_accented)
+        address_key = replace_from_right(text=address_key, old=province_keyword, new='')
+
+
     province_key = next((k for k, v in DICT_PROVINCE.items() if province_keyword and province_keyword in [kw for kw in v['provinceKeywords']]), None)
 
     if not province_key:
-        match = PATTERN_UNIQUE_DISTRICT.search(address_key)
-        district_keyword = match.group(0) if match else None
+        district_keyword = next((m.group() for m in reversed(list(PATTERN_UNIQUE_DISTRICT.finditer(address_key)))), None)
+
         if district_keyword:
-            address_key = replace_from_right(address_key, district_keyword, '')
+            address_key_accented = replace_from_right(text=address_key, old=district_keyword, new='', for_text=address_key_accented)
+            address_key = replace_from_right(text=address_key, old=district_keyword, new='')
+
         district_key = next((k for k, v in DICT_UNIQUE_DISTRICT_PROVINCE.items() if district_keyword and district_keyword in [kw for kw in v['districtKeywords']]), None)
+
         if district_key:
             province_key = DICT_UNIQUE_DISTRICT_PROVINCE[district_key]['provinceKey']
 
@@ -72,10 +83,13 @@ def parse_address_63(address, keep_street=True, level=3):
         if not district_key:
             district_keywords = sorted(sum([DICT_DISTRICT[k]['districtKeywords'] for k in DICT_DISTRICT], []), key=len, reverse=True)
             PATTERN_DISTRICT = re.compile('|'.join(re.escape(k) for k in district_keywords), flags=re.IGNORECASE)
-            match = PATTERN_DISTRICT.search(address_key)
-            district_keyword = match.group(0) if match else None
+
+            district_keyword = next((m.group() for m in reversed(list(PATTERN_DISTRICT.finditer(address_key)))), None)
+
             if district_keyword:
-                address_key = replace_from_right(address_key, district_keyword, '')
+                address_key_accented = replace_from_right(text=address_key, old=district_keyword, new='', for_text=address_key_accented)
+                address_key = replace_from_right(text=address_key, old=district_keyword, new='')
+
             district_key = next((k for k, v in DICT_DISTRICT.items() if district_keyword and district_keyword in [kw for kw in v['districtKeywords']]), None)
 
         if not district_key:
@@ -86,6 +100,7 @@ def parse_address_63(address, keep_street=True, level=3):
             unit.short_district = DICT_DISTRICT[district_key]['districtShort']
             unit.district_type = DICT_DISTRICT[district_key]['districtType']
 
+
     if level == 3:
         # Find ward
         DICT_WARD_NO_ACCENTED =  DICT_PROVINCE_DISTRICT_WARD_NO_ACCENTED.get(province_key, {}).get(district_key)
@@ -95,8 +110,9 @@ def parse_address_63(address, keep_street=True, level=3):
         def find_ward(address_key, DICT_WARD):
             ward_keywords = sorted(sum([DICT_WARD[k]['wardKeywords'] for k in DICT_WARD], []), key=len, reverse=True)
             PATTERN_WARD = re.compile('|'.join(ward_keywords), flags=re.IGNORECASE)
-            match = PATTERN_WARD.search(address_key)
-            ward_keyword = match.group(0) if match else None
+
+            ward_keyword = next((m.group() for m in reversed(list(PATTERN_WARD.finditer(address_key)))), None)
+
             ward_key = next((k for k, v in DICT_WARD.items() if ward_keyword and ward_keyword in [kw for kw in v['wardKeywords']]), None)
             return ward_keyword, ward_key
 
@@ -120,7 +136,9 @@ def parse_address_63(address, keep_street=True, level=3):
             unit.ward = DICT_WARD[ward_key]['ward']
             unit.short_ward = DICT_WARD[ward_key]['wardShort']
             unit.ward_type = DICT_WARD[ward_key]['wardType']
-            address_key = replace_from_right(address_key, key_normalize(ward_keyword), '')
+
+            # Không dùng address_key_accented bên dưới nữa nên chỉ remove cho address_key
+            address_key = replace_from_right(text=address_key, old=key_normalize(ward_keyword), new='')
 
     # Keep street
     if keep_street and address_key.count(',') >= 3:
@@ -132,4 +150,4 @@ def parse_address_63(address, keep_street=True, level=3):
 
 if __name__ == '__main__':
     # print(parse_address_63('tân thạnh, tan thanh, long an'))
-    print(parse_address_63('tx ky anh, ha tinh'))
+    print(parse_address_63('Xã Minh Quán, Huyện Trấn Yên, Tỉnh Yên Bái'))

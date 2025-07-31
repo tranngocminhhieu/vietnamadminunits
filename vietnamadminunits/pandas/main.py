@@ -1,7 +1,7 @@
 from ..parser.parser_34 import parse_address_34
 from ..parser.parser_63 import parse_address_63
 
-def standardize_admin_unit_columns(df: pd.DataFrame, province: str, district: str=None, ward: str=None, mode: int=34, inplace=False, prefix: str='standardized_', suffix :str='', short_name=True) -> pd.DataFrame:
+def standardize_admin_unit_columns(df, province: str, district: str=None, ward: str=None, mode: int=34, inplace=False, prefix: str='standardized_', suffix :str='', short_name=True):
     '''
     Standardize the admin unit columns of a DataFrame.
 
@@ -60,12 +60,16 @@ def standardize_admin_unit_columns(df: pd.DataFrame, province: str, district: st
         else:
             df_address[ward if inplace else f"{prefix}{ward}{suffix}"] = df_address['admin_unit'].apply(lambda x: x.ward if x else None)
 
+
+    # Drop admin_unit column
+    df_address.drop(columns=['admin_unit'], inplace=True)
+
     # Drop old column if inplace
     if inplace:
         df.drop(columns=admin_unit_columns, inplace=True, errors='ignore')
 
     # Add standardized admin unit columns to original df
-    df = pd.merge(df, df_address, on='address', how='left')
+    df = df.merge(df_address, on='address', how='left')
 
     # Drop address column
     df.drop(columns=['address'], inplace=True)

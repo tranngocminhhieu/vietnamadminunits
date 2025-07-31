@@ -58,7 +58,7 @@ def get_location(address, driver):
     return data
 
 if __name__ == '__main__':
-    df = pd.read_csv(BASE_DIR / 'data/interim/danhmuc_and_sapnhap.csv')
+    df = pd.read_csv(BASE_DIR / 'data/interim/63_provinces_to_34_provinces_simple.csv')
 
 
     level = 'district'

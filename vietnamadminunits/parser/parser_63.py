@@ -75,6 +75,8 @@ def parse_address_63(address, keep_street=True, level=3):
         unit.province_key = province_key
         unit.province = DICT_PROVINCE[province_key]['province']
         unit.short_province = DICT_PROVINCE[province_key]['provinceShort']
+        unit.latitude = DICT_PROVINCE[province_key]['provinceLat']
+        unit.longitude = DICT_PROVINCE[province_key]['provinceLon']
 
 
     if level in [2,3]:
@@ -99,6 +101,8 @@ def parse_address_63(address, keep_street=True, level=3):
             unit.district = DICT_DISTRICT[district_key]['district']
             unit.short_district = DICT_DISTRICT[district_key]['districtShort']
             unit.district_type = DICT_DISTRICT[district_key]['districtType']
+            unit.latitude = DICT_DISTRICT[district_key]['districtLat']
+            unit.longitude = DICT_DISTRICT[district_key]['districtLon']
 
 
     if level == 3:
@@ -136,6 +140,8 @@ def parse_address_63(address, keep_street=True, level=3):
             unit.ward = DICT_WARD[ward_key]['ward']
             unit.short_ward = DICT_WARD[ward_key]['wardShort']
             unit.ward_type = DICT_WARD[ward_key]['wardType']
+            unit.latitude = DICT_WARD[ward_key]['wardLat']
+            unit.longitude = DICT_WARD[ward_key]['wardLon']
 
             # Không dùng address_key_accented bên dưới nữa nên chỉ remove cho address_key
             address_key = replace_from_right(text=address_key, old=key_normalize(ward_keyword), new='')

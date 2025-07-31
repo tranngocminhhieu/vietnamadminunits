@@ -92,6 +92,15 @@ def key_normalize(text: str, keep: list=[], decode=True):
 
 
 def replace_from_right(text: str, old: str, new: str='', for_text: str=None):
+    '''
+    Help remove keyword in address key.
+
+    :param text: Text to search.
+    :param old: Pattern to search.
+    :param new: Value to replace.
+    :param for_text: Actual text to replace. For example: text is no-accented but for_text is accented.
+    :return: New text
+    '''
     pos = text.rfind(old)
     text = for_text if for_text else text
     if pos != -1:

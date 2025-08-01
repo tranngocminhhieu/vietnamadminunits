@@ -30,7 +30,11 @@ PATTERN_UNIQUE_DISTRICT = re.compile('|'.join(unique_district_keys), flags=re.IG
 
 
 # MAIN FUNCTION
-def parse_address_63(address, keep_street=True, level=3):
+def parse_address_63(address: str, keep_street :bool=True, level :int=3) -> AdminUnit:
+
+    if level not in [1, 2, 3]:
+        raise ValueError('Level must be 1, 2, or 3')
+
     unit = AdminUnit(show_district=True)
 
     address = unicode_normalize(address)

@@ -35,7 +35,7 @@ PATTERN_UNIQUE_WARD_PROVINCE_ACCENTED = re.compile('|'.join(unique_ward_accented
 
 
 # MAIN FUNCTION
-def parse_address_34(address, keep_street=True, level=2):
+def parse_address_34(address: str, keep_street :bool=True, level: int=2) -> AdminUnit:
     '''
     Parse an 34 provinces address to a unit.
 
@@ -44,6 +44,11 @@ def parse_address_34(address, keep_street=True, level=2):
     :param level: [1,2]
     :return: AdminUnit object.
     '''
+
+
+    if level not in [1, 2]:
+        raise ValueError('Level must be 1, or 2')
+
     unit = AdminUnit()
 
     address = unicode_normalize(address)

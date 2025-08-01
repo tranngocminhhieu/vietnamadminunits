@@ -32,7 +32,7 @@ DICT_PROVINCE_WARD_DIVIDED = converter_data['DICT_PROVINCE_WARD_DIVIDED']
 
 
 # MAIN FUNCTION
-def convert_63_to_34(address: str):
+def convert_address_63_to_34(address: str):
 
     new_ward_key = None
 
@@ -88,7 +88,6 @@ def convert_63_to_34(address: str):
     new_address_components = [i for i in (old_unit.street, new_ward_key, new_province_key) if i]
     new_address = ','.join(new_address_components)
     new_unit = parse_address_34(new_address, keep_street=True, level=2)
-
 
     return new_unit
 

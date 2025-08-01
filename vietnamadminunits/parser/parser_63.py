@@ -10,7 +10,7 @@ else:
     from .objects import AdminUnit
 
 
-# LOAD PICKLE DATA
+# LOAD DATA
 MODULE_DIR = Path(__file__).parent.parent
 with open(MODULE_DIR / 'data/parser_63.json', 'r') as f:
     parser_data = json.load(f)

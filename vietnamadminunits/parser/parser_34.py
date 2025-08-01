@@ -9,7 +9,7 @@ else:
     from .utils import key_normalize, extract_street, replace_from_right, unicode_normalize
     from .objects import AdminUnit
 
-# LOAD PICKLE DATA
+# LOAD DATA
 MODULE_DIR = Path(__file__).parent.parent
 with open(MODULE_DIR / 'data/parser_34.json', 'r') as f:
     parser_data = json.load(f)
@@ -149,4 +149,5 @@ def parse_address_34(address, keep_street=True, level=2):
     return unit
 
 if __name__ == '__main__':
-    print(parse_address_34('Xã Nguyễn, Tỉnh Cao Bằng'))
+    # print(parse_address_34('Xã Nguyễn, Tỉnh Cao Bằng'))
+    print(parse_address_34('phuongandong,hcm'))

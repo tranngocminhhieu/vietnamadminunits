@@ -9,6 +9,11 @@ import unicodedata
 
 geolocator = ArcGIS()
 
+
+def get_geo_location(address):
+    return geolocator.geocode(address)
+
+
 def generate_square_polygon(center: tuple, area_km2: float):
     '''
     :param center: (latitude, longitude)

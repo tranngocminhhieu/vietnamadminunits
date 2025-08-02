@@ -33,7 +33,7 @@ def standardize_admin_unit_columns(df, province: str, district: str=None, ward: 
             warnings.warn('The names of the District or Ward columns are not provided. Therefore, only the Province level will be converted.', UserWarning)
     else:
         if parse_mode in [ParseMode.FROM_2025, ParseMode.FROM_2025.value] and district:
-            warnings.warn('Mode 34 is not support with the district level.', UserWarning)
+            warnings.warn('FROM_2025 mode is not support with the district level.', UserWarning)
 
         if parse_mode in [ParseMode.LEGACY, ParseMode.LEGACY.value] and ward and not district:
             raise ValueError('The name of the district column must be provided in order to parse the ward data.')

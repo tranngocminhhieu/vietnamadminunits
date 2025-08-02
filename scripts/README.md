@@ -1,4 +1,4 @@
-# 📜 Scripts Overview
+# Scripts Overview
 
 This directory contains utility scripts used throughout the project. Each subfolder is responsible for a specific stage in the data pipeline.
 

@@ -1,4 +1,4 @@
-# 📁 Data Directory Structure
+# Data Directory Structure
 
 This project organizes data into the following subdirectories for clarity and reproducibility:
 

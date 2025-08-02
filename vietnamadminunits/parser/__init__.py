@@ -25,8 +25,8 @@ def parse_address(address: str, mode: Union[str, ParseMode]=ParseMode.latest(), 
 
     :param address: The best structure is `(street), ward, (district), province`. Don't worry too much about case or spelling.
     :param mode: One of the `ParseMode` values. Use `'LEGACY'` for the 63-province format (pre-merger), or `'FROM_2025'` for the new 34-province format. Default is `ParseMode.latest()`.
-    :param keep_street: Keep the street after parsing, but this only works if the address includes enough commas: LEGACY mode requires at least 3 commas, while FROM_2025 mode requires at least 2.
-    :param level: Use levels `1` and `2` with `mode='FROM_2025'`, and levels `1`, `2`, or `3` with `mode='LEGACY'`, depending on the desired granularity.
+    :param keep_street: Keep the street after parsing, but this only works if the address includes enough commas: `'LEGACY'` mode requires at least 3 commas, while `'FROM_2025'` mode requires at least 2.
+    :param level: Use levels `1` and `2` with `'FROM_2025'` mode, and levels `1`, `2`, or `3` with `'LEGACY'` mode, depending on the desired granularity.
     :return: AdminUnit object.
     '''
 

@@ -3,21 +3,21 @@ from ..parser.parser_63 import parse_address_63
 from ..converter import convert_address
 import warnings
 
-def standardize_admin_unit_columns(df, province: str, district: str=None, ward: str=None, mode: int=34, inplace=False, prefix: str='standardized_', suffix :str='', short_name=True, convert_to_latest=False):
+def standardize_admin_unit_columns(df, province: str, district: str=None, ward: str=None, mode: int=34, inplace=False, prefix: str='standardized_', suffix :str='', short_name: bool=True, convert_to_latest: bool=False):
     '''
-    Standardize the admin unit columns of a DataFrame.
+    Standardizes province, district, and ward columns in a DataFrame using predefined administrative mappings.
 
-    :param df: pd.DataFrame.
+    :param df: `pandas.DataFrame` object.
     :param province: Province column name.
     :param district: District column name.
     :param ward: Ward column name.
-    :param mode: 34 or 63.
-    :param inplace: Replace values of old columns with standardized values.
-    :param prefix: Add prefix to column names if inplace = False.
-    :param suffix: Add suffix to column names if inplace = False.
-    :param short_name: Get short name or long name of admin unit.
-    :param convert_to_latest: Convert old admin unit to new admin unit.
-    :return: pd.DataFrame
+    :param mode: Modes `34` and `63` refer to administrative units. Mode `34` represents the new unit effective July 2025, while mode `63` refers to the former unit before the merger.
+    :param inplace: Replace the original columns with standardized values instead of adding new ones.
+    :param prefix: Add a prefix to the column names if `inplace=False`.
+    :param suffix: Add a suffix to the column names if `inplace=False`.
+    :param short_name: Use short or full names for standardized administrative units.
+    :param convert_to_latest: Convert old administrative units to the latest structure.
+    :return: `pandas.DataFrame` object.
     '''
 
     # INITIATIVE VARS
@@ -38,7 +38,7 @@ def standardize_admin_unit_columns(df, province: str, district: str=None, ward: 
             raise ValueError('Mode must be 34 or 63.')
 
         if mode == 34 and district:
-            arnings.warn('Mode 34 is not support with the district level.', UserWarning)
+            warnings.warn('Mode 34 is not support with the district level.', UserWarning)
 
         if mode == 63 and ward and not district:
             raise ValueError('The name of the district column must be provided in order to parse the ward data.')

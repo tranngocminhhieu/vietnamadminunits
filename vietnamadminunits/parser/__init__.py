@@ -5,10 +5,10 @@ def parse_address(address: str, mode: int=34, keep_street: bool=True, level: int
     '''
     Parse an address to an AdminUnit object.
 
-    :param address: street, ward, (district), province.
-    :param mode: 34 or 63.
-    :param keep_street: Keep street after parsing.
-    :param level: [1, 2] with 34 mode, and [1, 2, 3] with 63 mode.
+    :param address: The best structure is `(street), ward, (district), province`. Don't worry too much about case or spelling.
+    :param mode: Modes `34` and `63` refer to administrative units. Mode `34` represents the new unit effective July 2025, while mode `63` refers to the former unit before the merger.
+    :param keep_street: Keep the street after parsing, but this only works if the address includes enough commas: mode 63 requires at least 3 commas, while mode 34 requires at least 2.
+    :param level: Use levels `1` and `2` with `mode=34`, and levels `1`, `2`, or `3` with `mode=63`, depending on the desired granularity.
     :return: AdminUnit object.
     '''
     if mode == 34:

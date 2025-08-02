@@ -5,8 +5,10 @@ MODULE_DIR = Path(__file__).parent.parent
 
 def query(sql: str):
     '''
-    :param sql: SQL
-    :return: JSON
+    Retrieve administrative unit data from the database.
+
+    :param sql: SQL string
+    :return: Data as a list of JSON-like dictionaries. It is compatible with `pd.DataFrame`.
     '''
     with sqlite3.connect(MODULE_DIR / 'data/dataset.db') as conn:
         conn.row_factory = sqlite3.Row
@@ -15,15 +17,19 @@ def query(sql: str):
         records = [dict(r) for r in result.fetchall()]
         return records
 
-def get_data(fields='*', table: str='admin_units'):
+def get_data(fields='*', table: str='admin_units', limit: int=None):
     '''
-    :param fields: string or list.
-    :param table: admin_units or admin_units_63
-    :return: JSON
+    Retrieve administrative unit data from the database.
+
+    :param fields: Column name(s) to retrieve.
+    :param table: Table name, either `'admin_units'` (34 provinces) or `'admin_units_63'` (legacy 63 provinces).
+    :return: Data as a list of JSON-like dictionaries. It is compatible with `pd.DataFrame`.
     '''
     if isinstance(fields, list):
         fields = ','.join(fields)
     sql = f'SELECT DISTINCT {fields} FROM [{table}]'
+    if limit:
+        sql += f' LIMIT {limit}'
     records = query(sql)
     return records
 

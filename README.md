@@ -364,13 +364,13 @@ DICT_PROVINCE = {
     }
 }
 
-# Step 2: Build a regex pattern from keywords.
+# Step 2: Build a regex pattern from keywords, sorted by length (descending)
 province_keywords = sorted(sum([v['provinceKeywords'] for v in DICT_PROVINCE.values()], []), key=len, reverse=True)
 
 # Step 3: Compile a regex pattern to match any keyword
 PATTERN_PROVINCE = re.compile('|'.join(province_keywords), flags=re.IGNORECASE)
 
-# Step 4: Normalize address string and search for last-matching keyword.
+# Step 4: Normalize the input address (e.g. remove accents, convert to lowercase, etc.)
 address_key = 'hoangkiem,hn'
 
 # Step 5: Search for the last matching keyword in the address

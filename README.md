@@ -1,4 +1,4 @@
-# Vietnam Admin Units
+# Vietnam Administrative Units Parser & Converter
 A shared effort to standardize and convert Vietnam's administrative units across major restructuring events.
 
 ## Introduction
@@ -6,7 +6,7 @@ This project is a personal contribution to the open-data and developer community
 It aims to provide a reliable and up-to-date reference for Vietnam’s administrative units,  
 especially in light of the 2025 province restructuring.
 
-> I believe in building tools that help others solve problems faster — and this is one such attempt.
+> Built to simplify your workflow and support open-data collaboration.
 ## Project Structure
 
 ### 📊 Datasets
@@ -14,7 +14,7 @@ especially in light of the 2025 province restructuring.
 - Includes:
   - 63-province dataset.
   - 34-province dataset.
-  - Mapping from 63 to 34 provinces dataset.
+  - Mapping from 63-province to 34-province dataset.
 
 ### 🐍 Python package
 
@@ -116,7 +116,7 @@ longitude       | 106.63616
 ```
 
 ### 🔄 convert_address
-Converts an address written in the **old (63-province)** structure into an `AdminUnit` object using the **new (34-province)** system.
+Converts an address from the old 63-province format to a standardized 34-province `AdminUnit`.
 
 ```python
 from vietnamadminunits import convert_address
@@ -151,7 +151,7 @@ longitude       | 106.65
 ```
 
 ### 🐼 Pandas
-Standardizes province, district, and ward columns in a DataFrame using predefined administrative mappings.
+Standardizes administrative unit columns (`province`, `district`, `ward`) in a DataFrame.
 
 ```python
 from vietnamadminunits.pandas import standardize_admin_unit_columns
@@ -177,8 +177,7 @@ standardize_admin_unit_columns(
 - `ward`: Ward column name.
 - `mode`: Modes `34` and `63` refer to administrative units. Mode `34` represents the new unit effective July 2025, while mode `63` refers to the former unit before the merger.
 - `inplace`: Replace the original columns with standardized values instead of adding new ones.
-- `prefix`: Add a prefix to the column names if `inplace=False`.
-- `suffix`: Add a suffix to the column names if `inplace=False`.
+- `prefix`, `suffix` — Add to column names if `inplace=False`.
 - `short_name`: Use short or full names for standardized administrative units.
 - `convert_to_latest`: Convert old administrative units to the latest structure.
 
@@ -232,7 +231,7 @@ print(standardized_df.to_markdown(index=False))
 ```
 
 
-Standardize and convert legacy administrative unit columns to the new 34-province system.
+Standardize and convert 63-province format administrative unit columns to the new 34-province system.
 
 ```python
 data = [
@@ -293,7 +292,7 @@ get_data(fields='*', table='admin_units', limit=None)
 
 **Params**:
 - `fields`: Column name(s) to retrieve.
-- `table`: Table name, either `'admin_units'` (34 provinces) or `'admin_units_63'` (legacy 63 provinces).
+- `table`: Table name, either `'admin_units'` (34-province format) or `'admin_units_63'` (63-province format).
 
 **Returns**: Data as a list of JSON-like dictionaries. It is compatible with `pandas.DataFrame`.
 
@@ -329,22 +328,90 @@ print(data)
      - If only one new ward polygon contains the old ward’s location → that ward is set as default.
      - If multiple polygons match or none match → the new ward with the closest center point is selected as default.
 
-   - Although the resulting data is already reliable and highly usable, I originally intended to enrich it further by collecting **street names** that clearly fall within specific new wards. This would improve address resolution for wards that were split. However, due to the lack of trustworthy street-level data, this enhancement has not been implemented yet.
+   - Although the resulting data is already reliable and highly usable, there was an intent to enrich the dataset with precise street-level mappings for split wards.  
+However, due to lack of reliable sources, this has not yet been implemented.
 
 3. **Longevity of Legacy Data**  
-   - The **63-province dataset** and the **mapping from 63 to 34 provinces dataset** are considered stable and will not be updated unless there are spelling corrections.
+   - The **63-province dataset** and the **mapping from 63-province to 34-province dataset** are considered stable and will not be updated unless there are spelling corrections.
 
 4. **Maintaining the Latest Data**  
    - The **34-province dataset** will be kept up to date as the Vietnamese government announces changes to administrative boundaries.
 
-### Parser strategy
+### 🧠 Parser Strategy
+
+The parser resolves administrative units by matching address strings to known keywords.  
+Here's a simplified step-by-step demonstration of how the parser identifies a province from a given address:
+
+```python
+import re
+
+# Step 1: Define a keyword dictionary for each province.
+DICT_PROVINCE = {
+    'thudohanoi': {
+        'provinceKeywords': ['thudohanoi', 'hanoi', 'hn'],
+        'province': 'Thủ đô Hà Nội',
+        'provinceShort': 'Hà Nội',
+        'provinceLat': 21.0001,
+        'provinceLon': 105.698
+    },
+    'tinhtuyenquang': {
+        'provinceKeywords': ['tinhtuyenquang', 'tuyenquang'],
+        'province': 'Tỉnh Tuyên Quang',
+        'provinceShort': 'Tuyên Quang',
+        'provinceLat': 22.4897,
+        'provinceLon': 105.099
+    }
+}
+
+# Step 2: Build a regex pattern from keywords.
+province_keywords = sorted(sum([v['provinceKeywords'] for v in DICT_PROVINCE.values()], []), key=len, reverse=True)
+
+# Step 3: Compile a regex pattern to match any keyword
+PATTERN_PROVINCE = re.compile('|'.join(province_keywords), flags=re.IGNORECASE)
+
+# Step 4: Normalize address string and search for last-matching keyword.
+address_key = 'hoangkiem,hn'
+
+# Step 5: Search for the last matching keyword in the address
+province_keyword = next((m.group() for m in reversed(list(PATTERN_PROVINCE.finditer(address_key)))), None)
+
+# Step 6: Map keyword back to province key and metadata.
+province_key = next((k for k, v in DICT_PROVINCE.items() if province_keyword in v['provinceKeywords']), None)
+
+# Output
+print(province_key)                              # thudohanoi
+print(DICT_PROVINCE[province_key]['province'])   # Thủ đô Hà Nội
+```
 
 
+### 🔁 Converter Strategy
+
+The converter transforms an address written in the **old (63-province)** format into a corresponding `AdminUnit` object based on the **new (34-province)** structure.
+
+#### Step 1: Parse the old address  
+The old address is first parsed into an `AdminUnit` object using the 63-province format. This allows us to extract:
+- `province_key`
+- `district_key`
+- `ward_key`
+- `street` (if available)
+
+#### Step 2: Handle provinces and non-divided wards
+The mapping approach is identical to the [**Parser Strategy**](#-parser-strategy) described earlier — keyword matching is sufficient.
+
+#### Step 3: Handle divided wards (`isDividedWard=True`)
+If a ward has been split into multiple new wards:
+
+- **Without street information**:  
+  The converter defaults to the ward with `isDefaultNewWard=True`.
+
+- **With street information**:  
+  The converter uses [**geopy**](https://pypi.org/project/geopy/) to geocode the address into latitude/longitude.  
+  Then it compares this location with the centroids and polygons of new wards:
+
+  - If exactly one new ward contains the location → that ward is selected.
+  - If multiple wards match or none match → the new ward whose center is closest to the location is selected.
 
 
-
-### Converter strategy
-
-### Maintaining in the future
-
-
+## Contributing
+Contributions, issues and feature requests are welcome!  
+Feel free to submit a pull request or open an issue.

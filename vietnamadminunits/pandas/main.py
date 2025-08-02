@@ -5,7 +5,7 @@ import warnings
 
 def standardize_admin_unit_columns(df, province: str, district: str=None, ward: str=None, mode: int=34, inplace=False, prefix: str='standardized_', suffix :str='', short_name: bool=True, convert_to_latest: bool=False):
     '''
-    Standardizes province, district, and ward columns in a DataFrame using predefined administrative mappings.
+    Standardizes administrative unit columns (`province`, `district`, `ward`) in a DataFrame.
 
     :param df: `pandas.DataFrame` object.
     :param province: Province column name.

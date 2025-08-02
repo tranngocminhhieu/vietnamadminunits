@@ -2,9 +2,10 @@
 A shared effort to standardize and convert Vietnam's administrative units across major restructuring events.
 
 ## Introduction
-This project is a personal contribution to the open-data and developer community in Vietnam.  
-It aims to provide a reliable and up-to-date reference for Vietnam’s administrative units,  
-especially in light of the 2025 province restructuring.
+This project began as a personal initiative to help myself and others navigate the complexities of Vietnam's administrative unit changes, especially leading up to the 2025 restructuring.  
+After cleaning, mapping, and converting large amounts of data from various sources, I realized it could benefit a wider community.
+
+My hope is that this work not only saves you time but also helps bring more consistency and accuracy to your projects involving Vietnamese administrative data.
 
 > Built to simplify your workflow and support open-data collaboration.
 ## Project Structure

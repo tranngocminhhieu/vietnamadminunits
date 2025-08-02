@@ -41,9 +41,9 @@ parse_address(address, mode=ParseMode.latest(), keep_street=True, level=2)
 **Params**:
 
 - `address`: The best structure is `(street), ward, (district), province`. Don't worry too much about case or spelling.
-- `mode`: One of the `ParseMode` values. Use `LEGACY` for the 63-province format (pre-merger), or `FROM_2025` for the new 34-province format. Default is `ParseMode.latest()`.
-- `keep_street`: Keep the street after parsing, but this only works if the address includes enough commas: mode 63 requires at least 3 commas, while mode 34 requires at least 2.
-- `level`: Use levels `1` and `2` with `mode=34`, and levels `1`, `2`, or `3` with `mode=63`, depending on the desired granularity.
+- `mode`: One of the `ParseMode` values. Use `'LEGACY'` for the 63-province format (pre-merger), or `'FROM_2025'` for the new 34-province format. Default is `ParseMode.latest()`.
+- `keep_street`: Keep the street after parsing, but this only works if the address includes enough commas: LEGACY mode requires at least 3 commas, while FROM_2025 mode requires at least 2.
+- `level`: Use levels `1` and `2` with `mode='FROM_2025'`, and levels `1`, `2`, or `3` with `mode='LEGACY'`, depending on the desired granularity.
 
 **Returns**: `AdminUnit` object.
 
@@ -231,7 +231,7 @@ print(standardized_df.to_markdown(index=False))
 ```
 
 
-Standardize and convert 63-province format administrative unit columns to the new 34-province system.
+Standardize and convert 63-province format administrative unit columns to the new 34-province format.
 
 ```python
 data = [

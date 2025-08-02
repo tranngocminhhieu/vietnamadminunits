@@ -1,5 +1,5 @@
 # Vietnam Administrative Units Parser & Converter
-A shared effort to standardize and convert Vietnam's administrative units across major restructuring events.
+A Python library and open dataset for parsing, converting, and standardizing Vietnam's administrative units — built to support changes such as the 2025 province merger and beyond.
 
 ## Introduction
 This project began as a personal initiative to help myself and others navigate the complexities of Vietnam's administrative unit changes, especially leading up to the 2025 restructuring.  
@@ -33,15 +33,15 @@ pip install vietnamadminunits
 ### 🧾 parse_address
 Parse an address to an `AdminUnit` object.
 ```python
-from vietnamadminunits import parse_address
+from vietnamadminunits import parse_address, ParseMode
 
-parse_address(address, mode=34, keep_street=True, level=2)
+parse_address(address, mode=ParseMode.latest(), keep_street=True, level=2)
 ```
 
 **Params**:
 
 - `address`: The best structure is `(street), ward, (district), province`. Don't worry too much about case or spelling.
-- `mode`: Modes `34` and `63` refer to administrative units. Mode `34` represents the new unit effective July 2025, while mode `63` refers to the former unit before the merger.
+- `mode`: One of the `ParseMode` values. Use `LEGACY` for the 63-province format (pre-merger), or `FROM_2025` for the new 34-province format. Default is `ParseMode.latest()`.
 - `keep_street`: Keep the street after parsing, but this only works if the address includes enough commas: mode 63 requires at least 3 commas, while mode 34 requires at least 2.
 - `level`: Use levels `1` and `2` with `mode=34`, and levels `1`, `2`, or `3` with `mode=63`, depending on the desired granularity.
 
@@ -54,7 +54,7 @@ Parse an address with new administrative unit.
 ```python
 address = '70 Nguyễn Sỹ Sách, Tan Son, tp.HCM'
 
-admin_unit = parse_address(address=address, mode=34, keep_street=True, level=2)
+admin_unit = parse_address(address=address)
 
 print(admin_unit)
 ```
@@ -95,7 +95,7 @@ Parse an address with old administrative unit.
 ```python
 address = '70 nguyễn sỹ sách, p.15, Tân Bình, Tp.HCM' # Old administrative unit address structure
 
-admin_unit = parse_address(address=address, mode=63, keep_street=True, level=3) # Changed mode and level
+admin_unit = parse_address(address=address, mode='LEGACY', keep_street=True, level=3) # Use 'LEGACY' or ParseMode.LEGACY for mode
 
 print(admin_unit)
 ```
@@ -162,12 +162,12 @@ standardize_admin_unit_columns(
     province, 
     district=None, 
     ward=None, 
-    mode=34, 
+    parse_mode=ParseMode.latest(), 
+    convert_mode=None,
     inplace=False, 
     prefix='standardized_', 
     suffix='', 
     short_name=True, 
-    convert_to_latest=False
 )
 ```
 
@@ -176,11 +176,10 @@ standardize_admin_unit_columns(
 - `province`: Province column name.
 - `district`: District column name.
 - `ward`: Ward column name.
-- `mode`: Modes `34` and `63` refer to administrative units. Mode `34` represents the new unit effective July 2025, while mode `63` refers to the former unit before the merger.
+- `parse_mode`: One of the `ParseMode` values. Use `LEGACY` for the 63-province format (pre-merger), or `FROM_2025` for the new 34-province format. Default is `ParseMode.latest()`.
+- `convert_mode`: One of the `ConvertMode` values. Currently, only `CONVERT_2025` is supported.
 - `inplace`: Replace the original columns with standardized values instead of adding new ones.
 - `prefix`, `suffix` — Add to column names if `inplace=False`.
-- `short_name`: Use short or full names for standardized administrative units.
-- `convert_to_latest`: Convert old administrative units to the latest structure.
 
 
 **Returns**: `pandas.DataFrame` object.
@@ -263,10 +262,9 @@ standardized_df = standardize_admin_unit_columns(
     province='province', 
     district='district', 
     ward='ward', 
-    mode=63, 
+    convert_mode='CONVERT_2025',
     inplace=True, 
     short_name=True, 
-    convert_to_latest=True
 )
 
 print(standardized_df.to_markdown(index=False))

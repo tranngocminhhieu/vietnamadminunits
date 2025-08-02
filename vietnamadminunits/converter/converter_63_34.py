@@ -9,14 +9,12 @@ MODULE_DIR = Path(__file__).parent.parent
 
 if __name__ == '__main__':
     sys.path.append(MODULE_DIR.as_posix())
-    from parser.parser_63 import parse_address_63
-    from parser.parser_34 import parse_address_34
+    from parser import parse_address, ParseMode
     from parser.objects import AdminUnit
     from parser.utils import get_geo_location, check_point_in_polygon, find_nearest_point
 
 else:
-    from ..parser.parser_63 import parse_address_63
-    from ..parser.parser_34 import parse_address_34
+    from ..parser import parse_address, ParseMode
     from ..parser.objects import AdminUnit
     from ..parser.utils import get_geo_location, check_point_in_polygon, find_nearest_point
 
@@ -37,7 +35,7 @@ def convert_address_63_to_34(address: str):
     new_ward_key = None
 
     # Parse old address to old admin unit
-    old_unit = parse_address_63(address, keep_street=True, level=3)
+    old_unit = parse_address(address, mode=ParseMode.LEGACY, keep_street=True, level=3)
 
     # Get new province key and old province_district_ward key
     new_province_key = next((k for k, v in DICT_PROVINCE.items() if old_unit.province_key and old_unit.province_key in v), None)
@@ -87,12 +85,12 @@ def convert_address_63_to_34(address: str):
     # Convert to new admin unit
     new_address_components = [i for i in (old_unit.street, new_ward_key, new_province_key) if i]
     new_address = ','.join(new_address_components)
-    new_unit = parse_address_34(new_address, keep_street=True, level=2)
+    new_unit = parse_address(new_address, mode=ParseMode.FROM_2025, keep_street=True, level=2)
 
     return new_unit
 
 
 
 if __name__ == '__main__':
-    print(convert_63_to_34('Phường 9, Quận 5'))
+    print(convert_address_63_to_34('Phường 9, Quận 5'))
     # print(convert_63_to_34('Ho Chi Minh'))

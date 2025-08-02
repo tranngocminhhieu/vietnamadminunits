@@ -1,6 +1,7 @@
 # Vietnam Administrative Units Parser & Converter
 A Python library and open dataset for parsing, converting, and standardizing Vietnam's administrative units — built to support changes such as the 2025 province merger and beyond.
 
+![Made in Vietnam](https://raw.githubusercontent.com/webuild-community/badge/master/svg/made.svg)
 ## Introduction
 This project began as a personal initiative to help myself and others navigate the complexities of Vietnam's administrative unit changes, especially leading up to the 2025 restructuring.  
 After cleaning, mapping, and converting large amounts of data from various sources, I realized it could benefit a wider community.

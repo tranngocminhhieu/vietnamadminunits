@@ -1,4 +1,4 @@
-from .converter_63_34 import convert_address_63_to_34
+from .converter_2025 import convert_address_2025
 from enum import Enum
 from typing import Union
 
@@ -19,10 +19,11 @@ def convert_address(address: str, mode: Union[str, ConvertMode]=ConvertMode.CONV
     Converts an address written in the **old (63-province)** structure into an `AdminUnit` object using the **new (34-province)** system.
 
     :param address: The best structure is `(street), ward, district, province`. Don't worry too much about case or spelling.
+    :param mode: One of the `ConvertMode` values. Currently, only `'CONVERT_2025'` is supported.
     :return: AdminUnit object.
     '''
 
     if mode in [ConvertMode.CONVERT_2025, ConvertMode.CONVERT_2025.value]:
-        return convert_address_63_to_34(address)
+        return convert_address_2025(address)
     else:
         raise Exception(f"Invalid mode. Available modes are {ConvertMode.available(value=True)}.")

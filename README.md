@@ -54,7 +54,7 @@ Parse an address with new administrative unit.
 ```python
 address = '70 Nguyễn Sỹ Sách, Tan Son, tp.HCM'
 
-admin_unit = parse_address(address=address)
+admin_unit = parse_address(address)
 
 print(admin_unit)
 ```
@@ -95,7 +95,7 @@ Parse an address with old administrative unit.
 ```python
 address = '70 nguyễn sỹ sách, p.15, Tân Bình, Tp.HCM' # Old administrative unit address structure
 
-admin_unit = parse_address(address=address, mode='LEGACY', keep_street=True, level=3) # Use 'LEGACY' or ParseMode.LEGACY for mode
+admin_unit = parse_address(address, mode='LEGACY', level=3) # Use 'LEGACY' or ParseMode.LEGACY for mode
 
 print(admin_unit)
 ```
@@ -121,10 +121,13 @@ Converts an address from the old 63-province format to a standardized 34-provinc
 
 ```python
 from vietnamadminunits import convert_address
+
+convert_address(address, mode='CONVERT_2025')
 ```
 
 **Params**:
 - `address`: The best structure is `(street), ward, district, province`. Don't worry too much about case or spelling.
+- `mode`: One of the `ConvertMode` values. Currently, only `'CONVERT_2025'` is supported.
 
 **Returns**: `AdminUnit` object.
 
@@ -214,7 +217,7 @@ print(df.to_markdown(index=False))
 ```
 
 ```python
-standardized_df = standardize_admin_unit_columns(df=df, province='province', ward='ward', inplace=False, short_name=True)
+standardized_df = standardize_admin_unit_columns(df, province='province', ward='ward')
 
 print(standardized_df.to_markdown(index=False))
 ```
@@ -258,13 +261,12 @@ print(df.to_markdown(index=False))
 
 ```python
 standardized_df = standardize_admin_unit_columns(
-    df=df, 
+    df, 
     province='province', 
     district='district', 
     ward='ward', 
     convert_mode='CONVERT_2025',
     inplace=True, 
-    short_name=True, 
 )
 
 print(standardized_df.to_markdown(index=False))
@@ -291,7 +293,7 @@ get_data(fields='*', table='admin_units', limit=None)
 
 **Params**:
 - `fields`: Column name(s) to retrieve.
-- `table`: Table name, either `'admin_units'` (34-province format) or `'admin_units_63'` (63-province format).
+- `table`: Table name, either `'admin_units'` (34 provinces) or `'admin_units_legacy'` (legacy 63 provinces).
 
 **Returns**: Data as a list of JSON-like dictionaries. It is compatible with `pandas.DataFrame`.
 

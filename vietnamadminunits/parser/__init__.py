@@ -1,5 +1,5 @@
-from .parser_34 import parse_address_34
-from .parser_63 import parse_address_63
+from .parser_from_2025 import parse_address_from_2025
+from .parser_legacy import parse_address_legacy
 from enum import Enum
 from typing import Union
 
@@ -31,8 +31,8 @@ def parse_address(address: str, mode: Union[str, ParseMode]=ParseMode.latest(), 
     '''
 
     if mode in [ParseMode.FROM_2025, ParseMode.FROM_2025.value]:
-        return parse_address_34(address, keep_street=keep_street, level=level)
+        return parse_address_from_2025(address, keep_street=keep_street, level=level)
     elif mode in [ParseMode.LEGACY, ParseMode.LEGACY.value]:
-        return parse_address_63(address, keep_street=keep_street, level=level)
+        return parse_address_legacy(address, keep_street=keep_street, level=level)
     else:
         raise ValueError(f"Invalid mode. Available modes are {ParseMode.available(value=True)}.")

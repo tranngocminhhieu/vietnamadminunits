@@ -22,7 +22,7 @@ def get_data(fields='*', table: str='admin_units', limit: int=None):
     Retrieve administrative unit data from the database.
 
     :param fields: Column name(s) to retrieve.
-    :param table: Table name, either `'admin_units'` (34 provinces) or `'admin_units_63'` (legacy 63 provinces).
+    :param table: Table name, either `'admin_units'` (34 provinces) or `'admin_units_legacy'` (legacy 63 provinces).
     :return: Data as a list of JSON-like dictionaries. It is compatible with `pd.DataFrame`.
     '''
     if isinstance(fields, list):

@@ -12,7 +12,7 @@ def standardize_admin_unit_columns(df, province: str, district: str=None, ward: 
     :param district: District column name.
     :param ward: Ward column name.
     :param parse_mode: One of the `ParseMode` values. Use `'LEGACY'` for the 63-province format (pre-merger), or `'FROM_2025'` for the new 34-province format. Default is `ParseMode.latest()`.
-    :param convert_mode: One of the `ConvertMode` values. Currently, only `CONVERT_2025` is supported.
+    :param convert_mode: One of the `ConvertMode` values. Currently, only `'CONVERT_2025'` is supported.
     :param inplace: Replace the original columns with standardized values instead of adding new ones.
     :param prefix: Add a prefix to the column names if `inplace=False`.
     :param suffix: Add a suffix to the column names if `inplace=False`.

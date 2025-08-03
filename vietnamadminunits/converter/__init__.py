@@ -18,7 +18,7 @@ def convert_address(address: str, mode: Union[str, ConvertMode]=ConvertMode.CONV
     '''
     Converts an address written in the **old (63-province)** structure into an `AdminUnit` object using the **new (34-province)** system.
 
-    :param address: The best structure is `(street), ward, district, province`. Don't worry too much about case or spelling.
+    :param address: The best structure is `(street), ward, district, province`. Don't worry too much about case or accenting.
     :param mode: One of the `ConvertMode` values. Currently, only `'CONVERT_2025'` is supported.
     :return: AdminUnit object.
     '''

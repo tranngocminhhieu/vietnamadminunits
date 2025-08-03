@@ -2,6 +2,8 @@
 A Python library and open dataset for parsing, converting, and standardizing Vietnam's administrative units — built to support changes such as the 2025 province merger and beyond.
 
 ![Made in Vietnam](https://raw.githubusercontent.com/webuild-community/badge/master/svg/made.svg)
+[![Pypi](https://img.shields.io/pypi/v/vietnamadminunits?label=pip&logo=PyPI&logoColor=white)](https://pypi.org/project/vietnamadminunits)
+
 ## Introduction
 This project began as a personal initiative to help myself and others navigate the complexities of Vietnam's administrative unit changes, especially leading up to the 2025 restructuring.  
 After cleaning, mapping, and converting large amounts of data from various sources, I realized it could benefit a wider community.
@@ -41,7 +43,7 @@ parse_address(address, mode=ParseMode.latest(), keep_street=True, level=2)
 
 **Params**:
 
-- `address`: The best structure is `(street), ward, (district), province`. Don't worry too much about case or spelling.
+- `address`: The best structure is `(street), ward, (district), province`. Don't worry too much about case or accenting.
 - `mode`: One of the `ParseMode` values. Use `'LEGACY'` for the 63-province format (pre-merger), or `'FROM_2025'` for the new 34-province format. Default is `ParseMode.latest()`.
 - `keep_street`: Keep the street after parsing, but this only works if the address includes enough commas: `'LEGACY'` mode requires at least 3 commas, while `'FROM_2025'` mode requires at least 2.
 - `level`: Use levels `1` and `2` with `'FROM_2025'` mode, and levels `1`, `2`, or `3` with `'LEGACY'` mode, depending on the desired granularity.
@@ -50,7 +52,7 @@ parse_address(address, mode=ParseMode.latest(), keep_street=True, level=2)
 
 **Example**:
 
-Parse an address with new administrative unit.
+Parse a new address (from 2025).
 
 ```python
 address = '70 Nguyễn Sỹ Sách, Tan Son, tp.HCM'
@@ -91,7 +93,7 @@ print(admin_unit.short_province)
 Hồ Chí Minh
 ```
 
-Parse an address with old administrative unit.
+Parse an old address (before 2025).
 
 ```python
 address = '70 nguyễn sỹ sách, p.15, Tân Bình, Tp.HCM' # Old administrative unit address structure
@@ -127,7 +129,7 @@ convert_address(address, mode='CONVERT_2025')
 ```
 
 **Params**:
-- `address`: The best structure is `(street), ward, district, province`. Don't worry too much about case or spelling.
+- `address`: The best structure is `(street), ward, district, province`. Don't worry too much about case or accenting.
 - `mode`: One of the `ConvertMode` values. Currently, only `'CONVERT_2025'` is supported.
 
 **Returns**: `AdminUnit` object.

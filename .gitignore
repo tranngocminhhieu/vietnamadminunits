@@ -183,3 +183,6 @@ anaconda_projects
 .DS_Store
 .gitattributes
 downloaded_files
+scripts/module_testing/vn_kam_shopee_volume_by_district_2025-08-03T09_12_55.061012Z.csv
+scripts/module_testing/TT VN - Ops KPI & SLA - 506K SLA Clean.csv
+scripts/module_testing/external_testing.ipynb

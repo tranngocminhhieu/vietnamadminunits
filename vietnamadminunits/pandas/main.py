@@ -95,3 +95,45 @@ def standardize_admin_unit_columns(df, province: str, district: str=None, ward: 
         df = df[original_columns]
 
     return df
+
+
+def convert_address_column(df, address: str, convert_mode: Union[str, ConvertMode]=ConvertMode.CONVERT_2025, inplace=False, prefix: str='converted_', suffix :str='', short_name: bool=True):
+    '''
+    Convert an address column in a DataFrame.
+
+    :param df: pandas.DataFrame object.
+    :param address: Address column name. The address value must be in format `(street), ward, district, province`.
+    :param convert_mode: One of the `ConvertMode` values. Currently, only `'CONVERT_2025'` is supported.
+    :param inplace: Replace the original columns with converted values instead of adding new ones.
+    :param prefix: Add a prefix to the column names if `inplace=False`.
+    :param suffix: Add a suffix to the column names if `inplace=False`.
+    :param short_name: Use short or full names for administrative unit in address.
+    :return: `pandas.DataFrame` object.
+    '''
+
+    def convert_and_get_address(x):
+        admin_unit = convert_address(address=x, mode=convert_mode)
+        return admin_unit.get_address(short_name=short_name)
+
+    # INITIATIVE VARS
+    df = df.copy()
+    original_columns = df.columns.tolist()
+
+    # CREATE DISTINCT ADDRESS
+    df_address = df[[address]].drop_duplicates()
+
+    # CONVERT ADDRESS
+    df_address['new_address'] = df_address[address].fillna('').apply(convert_and_get_address)
+
+    # ADD NEW ADDRESS TO DF
+    df = df.merge(df_address, on=address, how='left')
+
+    # ARRANGEMENT
+    if inplace:
+        df.drop(columns=[address], inplace=True)
+        df.rename(columns={'new_address': address}, inplace=True)
+        df = df[original_columns]
+    else:
+        df.rename(columns={'new_address': f'{prefix}{address}{suffix}'}, inplace=True)
+
+    return df

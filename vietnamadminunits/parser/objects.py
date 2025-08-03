@@ -43,8 +43,8 @@ class AdminUnit:
 
         self.show_district = show_district
 
-    def get_address(self):
-        components = [self.street,  self.ward, self.district, self.province]
+    def get_address(self, short_name=False):
+        components = [self.street,  self.short_ward, self.short_district, self.short_province] if short_name else [self.street, self.ward, self.district, self.province]
         components = [i for i in components if i]
         return ', '.join(components)
 

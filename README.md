@@ -162,6 +162,8 @@ longitude       | 106.65
 ```
 
 ### 🐼 Pandas
+#### standardize_admin_unit_columns()
+
 Standardizes administrative unit columns (`province`, `district`, `ward`) in a DataFrame.
 
 ```python
@@ -211,19 +213,6 @@ data = [
 
 df = pd.DataFrame(data)
 
-print(df.to_markdown(index=False))
-```
-```text
-| province      | ward             |
-|:--------------|:-----------------|
-| Thủ đô Hà Nội | Phường Hồng Hà   |
-| Thủ đô Hà Nội | Phường Ba Đình   |
-| Thủ đô Hà Nội | Phường Ngọc Hà   |
-| Thủ đô Hà Nội | Phường Giảng Võ  |
-| Thủ đô Hà Nội | Phường Hoàn Kiếm |
-```
-
-```python
 standardized_df = standardize_admin_unit_columns(df, province='province', ward='ward')
 
 print(standardized_df.to_markdown(index=False))
@@ -240,7 +229,6 @@ print(standardized_df.to_markdown(index=False))
 
 ```
 
-
 Standardize and convert 63-province format administrative unit columns to the new 34-province format.
 
 ```python
@@ -254,40 +242,66 @@ data = [
 
 df = pd.DataFrame(data)
 
-print(df.to_markdown(index=False))
-```
-```text
-| province              | district   | ward                    |
-|:----------------------|:-----------|:------------------------|
-| Thành phố Hồ Chí Minh | Quận 1     | Phường Tân Định         |
-| Thành phố Hồ Chí Minh | Quận 1     | Phường Đa Kao           |
-| Thành phố Hồ Chí Minh | Quận 1     | Phường Bến Nghé         |
-| Thành phố Hồ Chí Minh | Quận 1     | Phường Bến Thành        |
-| Thành phố Hồ Chí Minh | Quận 1     | Phường Nguyễn Thái Bình |
-```
-
-```python
-standardized_df = standardize_admin_unit_columns(
-    df, 
-    province='province', 
-    district='district', 
-    ward='ward', 
-    convert_mode='CONVERT_2025',
-    inplace=True, 
-)
+standardized_df = standardize_admin_unit_columns(df, province='province', district='district', ward='ward', convert_mode='CONVERT_2025')
 
 print(standardized_df.to_markdown(index=False))
 ```
-
 ```text
-| province    | ward      |
-|:------------|:----------|
-| Hồ Chí Minh | Tân Định  |
-| Hồ Chí Minh | Sài Gòn   |
-| Hồ Chí Minh | Sài Gòn   |
-| Hồ Chí Minh | Bến Thành |
-| Hồ Chí Minh | Bến Thành |
+| province              | district   | ward                    | standardized_province   | standardized_ward   |
+|:----------------------|:-----------|:------------------------|:------------------------|:--------------------|
+| Thành phố Hồ Chí Minh | Quận 1     | Phường Tân Định         | Hồ Chí Minh             | Tân Định            |
+| Thành phố Hồ Chí Minh | Quận 1     | Phường Đa Kao           | Hồ Chí Minh             | Sài Gòn             |
+| Thành phố Hồ Chí Minh | Quận 1     | Phường Bến Nghé         | Hồ Chí Minh             | Sài Gòn             |
+| Thành phố Hồ Chí Minh | Quận 1     | Phường Bến Thành        | Hồ Chí Minh             | Bến Thành           |
+| Thành phố Hồ Chí Minh | Quận 1     | Phường Nguyễn Thái Bình | Hồ Chí Minh             | Bến Thành           |
 ```
+
+#### convert_address_column()
+Convert an address column in a DataFrame.
+
+```python
+from vietnamadminunits.pandas import convert_address_column
+
+convert_address_column(df, address, convert_mode='CONVERT_2025', inplace=False, prefix='converted_', suffix='', short_name=True)
+```
+**Params**:
+- `df`: pandas.DataFrame object.
+- `address`: Address column name. The address value must be in format `(street), ward, district, province`.
+- `convert_mode`: One of the `ConvertMode` values. Currently, only `'CONVERT_2025'` is supported.
+- `inplace`: Replace the original columns with converted values instead of adding new ones.
+- `prefix`: Add a prefix to the column names if `inplace=False`.
+- `suffix`: Add a suffix to the column names if `inplace=False`.
+- `short_name`: Use short or full names for administrative unit in address.
+
+**Returns**: `pandas.DataFrame` object.
+
+**Example**:
+```python
+data = {
+    'address': [
+        'Ngã 4 xóm ao dài, thôn Tự Khoát, Xã Ngũ Hiệp, Huyện Thanh Trì, Hà Nội',
+        '50 ngõ 133 thái hà, hà nội, Phường Trung Liệt, Quận Đống Đa, Hà Nội',
+        'P402 CT9A KĐT VIỆT HƯNG, Phường Đức Giang, Quận Long Biên, Hà Nội',
+        '169/8A, Thoại Ngọc Hầu, Phường Phú Thạnh, Quận Tân Phú, TP. Hồ Chí Minh',
+        '02 lê đại hành, phường 15, quận 11, tp.hcm, Phường 15, Quận 11, TP. Hồ Chí Minh'
+    ]
+}
+
+df = pd.DataFrame(data)
+
+converted_df = convert_address_column(df, address='address', short_name=False)
+print(converted_df.to_markdown(index=False))
+```
+```text
+| address                                                                         | converted_address                                        |
+|:--------------------------------------------------------------------------------|:---------------------------------------------------------|
+| Ngã 4 xóm ao dài, thôn Tự Khoát, Xã Ngũ Hiệp, Huyện Thanh Trì, Hà Nội           | Ngã 4 Xóm Ao Dài, Xã Thanh Trì, Thủ đô Hà Nội            |
+| 50 ngõ 133 thái hà, hà nội, Phường Trung Liệt, Quận Đống Đa, Hà Nội             | 50 Ngõ 133 Thái Hà, Phường Đống Đa, Thủ đô Hà Nội        |
+| P402 CT9A KĐT VIỆT HƯNG, Phường Đức Giang, Quận Long Biên, Hà Nội               | P402 Ct9A Kđt Việt Hưng, Phường Việt Hưng, Thủ đô Hà Nội |
+| 169/8A, Thoại Ngọc Hầu, Phường Phú Thạnh, Quận Tân Phú, TP. Hồ Chí Minh         | 169/8A, Phường Phú Thạnh, Thành phố Hồ Chí Minh          |
+| 02 lê đại hành, phường 15, quận 11, tp.hcm, Phường 15, Quận 11, TP. Hồ Chí Minh | 02 Lê Đại Hành, Phường Phú Thọ, Thành phố Hồ Chí Minh    |
+```
+
 
 ### 🗃️ database
 

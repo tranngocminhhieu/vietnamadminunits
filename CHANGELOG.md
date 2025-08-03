@@ -1,5 +1,5 @@
 # 2025-08-04 (Version 0.5.0)
-[ietnamadminunits/parser/objects.py](vietnamadminunits/parser/objects.py): Support `short_name` arg for `AdminUnit`'s `get_address()`.
+[vietnamadminunits/parser/objects.py](vietnamadminunits/parser/objects.py): Support `short_name` arg for `AdminUnit`'s `get_address()`.
 
 [vietnamadminunits/pandas/main.py](vietnamadminunits/pandas/main.py): Add a new function `convert_address_column()`.
 

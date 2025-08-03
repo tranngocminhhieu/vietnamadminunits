@@ -125,4 +125,5 @@ def extract_street(address, address_key):
 
 
 if __name__ == '__main__':
-    print(key_normalize('Bà Rịa-   Vũng,Tàu', keep=[',', ' '], decode=False))
+    # print(key_normalize('Bà Rịa-   Vũng,Tàu', keep=[',', ' '], decode=False))
+    print(find_nearest_point(a_point=(10.770063796439, 106.704416669302), list_of_b_points=[(10.7713, 106.694), (10.7805, 106.704)]))

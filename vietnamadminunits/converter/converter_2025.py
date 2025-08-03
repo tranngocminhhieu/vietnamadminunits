@@ -72,7 +72,8 @@ def convert_address_2025(address: str):
                     if is_contain:
                         containing_points.append(new_point)
 
-                nearest_point = find_nearest_point(a_point=old_point, list_of_b_points=containing_points)
+
+                nearest_point = find_nearest_point(a_point=old_point, list_of_b_points=new_ward_points)
 
                 if len(containing_points) == 1:
                     default_ward_point = containing_points[0]
@@ -92,5 +93,5 @@ def convert_address_2025(address: str):
 
 
 if __name__ == '__main__':
-    print(convert_address_2025('Phường 9, Quận 5'))
-    # print(convert_63_to_34('Ho Chi Minh'))
+    # print(convert_address_2025('Phường 9, Quận 5'))
+    print(convert_address_2025('11 Nguyễn Công Trứ, Phường Nguyễn Thái Bình, Quận 01 ,Thành Phố Hồ Chí Minh'))

@@ -32,6 +32,10 @@ Install via pip:
 ```shell
 pip install vietnamadminunits
 ```
+Update to latest version:
+```shell
+pip install --upgrade vietnamadminunits
+```
 
 ### 🧾 parse_address
 Parse an address to an `AdminUnit` object.

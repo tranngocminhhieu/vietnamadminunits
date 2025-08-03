@@ -159,5 +159,4 @@ def parse_address_legacy(address: str, keep_street :bool=True, level :int=3) -> 
     return unit
 
 if __name__ == '__main__':
-    # print(parse_address_63('tân thạnh, tan thanh, long an'))
-    print(parse_address_63('Xã Minh Quán, Huyện Trấn Yên, Tỉnh Yên Bái'))
+    print(parse_address_legacy('nguyen thai binh, quan 1, ho chi minh'))

@@ -2,8 +2,9 @@ from ..parser import parse_address, ParseMode
 from ..converter import convert_address, ConvertMode
 import warnings
 from typing import Union
+from tqdm import tqdm
 
-def standardize_admin_unit_columns(df, province: str, district: str=None, ward: str=None, parse_mode: Union[str, ParseMode]=ParseMode.latest(), convert_mode: Union[str, ConvertMode]=None, inplace=False, prefix: str='standardized_', suffix :str='', short_name: bool=True):
+def standardize_admin_unit_columns(df, province: str, district: str=None, ward: str=None, parse_mode: Union[str, ParseMode]=ParseMode.latest(), convert_mode: Union[str, ConvertMode]=None, inplace=False, prefix: str='standardized_', suffix :str='', short_name: bool=True, show_progress: bool=True):
     '''
     Standardizes administrative unit columns (`province`, `district`, `ward`) in a DataFrame.
 
@@ -17,6 +18,7 @@ def standardize_admin_unit_columns(df, province: str, district: str=None, ward: 
     :param prefix: Add a prefix to the column names if `inplace=False`.
     :param suffix: Add a suffix to the column names if `inplace=False`.
     :param short_name: Use short or full names for standardized administrative units.
+    :param show_progress: Show progress bar.
 
     :return: `pandas.DataFrame` object.
     '''
@@ -63,7 +65,11 @@ def standardize_admin_unit_columns(df, province: str, district: str=None, ward: 
         parser = lambda x: parse_address(address=x, mode=parse_mode, level=level, keep_street=False)
 
 
-    df_address['admin_unit'] = df_address['address'].apply(parser)
+    if show_progress:
+        tqdm.pandas(desc="Standardizing unique administrative units")
+        df_address['admin_unit'] = df_address['address'].progress_apply(parser)
+    else:
+        df_address['admin_unit'] = df_address['address'].apply(parser)
 
 
     # SPLIT ADMIN UNIT TO COLUMNS
@@ -97,7 +103,7 @@ def standardize_admin_unit_columns(df, province: str, district: str=None, ward: 
     return df
 
 
-def convert_address_column(df, address: str, convert_mode: Union[str, ConvertMode]=ConvertMode.CONVERT_2025, inplace=False, prefix: str='converted_', suffix :str='', short_name: bool=True):
+def convert_address_column(df, address: str, convert_mode: Union[str, ConvertMode]=ConvertMode.CONVERT_2025, inplace=False, prefix: str='converted_', suffix :str='', short_name: bool=True, show_progress: bool=True):
     '''
     Convert an address column in a DataFrame.
 
@@ -108,6 +114,7 @@ def convert_address_column(df, address: str, convert_mode: Union[str, ConvertMod
     :param prefix: Add a prefix to the column names if `inplace=False`.
     :param suffix: Add a suffix to the column names if `inplace=False`.
     :param short_name: Use short or full names for administrative unit in address.
+    :param show_progress: Show progress bar.
     :return: `pandas.DataFrame` object.
     '''
 
@@ -123,7 +130,11 @@ def convert_address_column(df, address: str, convert_mode: Union[str, ConvertMod
     df_address = df[[address]].drop_duplicates()
 
     # CONVERT ADDRESS
-    df_address['new_address'] = df_address[address].fillna('').apply(convert_and_get_address)
+    if show_progress:
+        tqdm.pandas(desc="Converting unique addresses")
+        df_address['new_address'] = df_address[address].fillna('').progress_apply(convert_and_get_address)
+    else:
+        df_address['new_address'] = df_address[address].fillna('').apply(convert_and_get_address)
 
     # ADD NEW ADDRESS TO DF
     df = df.merge(df_address, on=address, how='left')

@@ -1,3 +1,6 @@
+# 2025-08-04 (Version 0.7.0)
+[vietnamadminunits/pandas/main.py](vietnamadminunits/pandas/main.py): Support show progress bar with arg `show_progress`.
+
 # 2025-08-04 (Version 0.6.0)
 [vietnamadminunits/parser/__init__.py](vietnamadminunits/parser/__init__.py): Support `level=0` in `parse_address()` to choose the highest level automatically.
 

@@ -37,7 +37,7 @@ Update to latest version:
 pip install --upgrade vietnamadminunits
 ```
 
-### 🧾 parse_address
+### 🧾 parse_address()
 Parse an address to an `AdminUnit` object.
 ```python
 from vietnamadminunits import parse_address, ParseMode
@@ -123,7 +123,7 @@ latitude        | 10.823333
 longitude       | 106.63616                
 ```
 
-### 🔄 convert_address
+### 🔄 convert_address()
 Converts an address from the old 63-province format to a standardized 34-province `AdminUnit`.
 
 ```python
@@ -179,7 +179,8 @@ standardize_admin_unit_columns(
     inplace=False, 
     prefix='standardized_', 
     suffix='', 
-    short_name=True, 
+    short_name=True,
+    show_progress=True
 )
 ```
 
@@ -192,6 +193,8 @@ standardize_admin_unit_columns(
 - `convert_mode`: One of the `ConvertMode` values. Currently, only `'CONVERT_2025'` is supported.
 - `inplace`: Replace the original columns with standardized values instead of adding new ones.
 - `prefix`, `suffix` — Add to column names if `inplace=False`.
+- `short_name`: Use short or full names for administrative units.
+- `show_progress`: Show progress bar.
 
 
 **Returns**: `pandas.DataFrame` object.
@@ -262,7 +265,7 @@ Convert an address column in a DataFrame.
 ```python
 from vietnamadminunits.pandas import convert_address_column
 
-convert_address_column(df, address, convert_mode='CONVERT_2025', inplace=False, prefix='converted_', suffix='', short_name=True)
+convert_address_column(df, address, convert_mode='CONVERT_2025', inplace=False, prefix='converted_', suffix='', short_name=True, show_progress=True)
 ```
 **Params**:
 - `df`: pandas.DataFrame object.
@@ -272,6 +275,7 @@ convert_address_column(df, address, convert_mode='CONVERT_2025', inplace=False, 
 - `prefix`: Add a prefix to the column names if `inplace=False`.
 - `suffix`: Add a suffix to the column names if `inplace=False`.
 - `short_name`: Use short or full names for administrative unit in address.
+- `show_progress`: Show progress bar.
 
 **Returns**: `pandas.DataFrame` object.
 

@@ -221,7 +221,6 @@ standardized_df = standardize_admin_unit_columns(df, province='province', ward='
 print(standardized_df.to_markdown(index=False))
 ```
 
-```text
 | province      | ward             | standardized_province   | standardized_ward   |
 |:--------------|:-----------------|:------------------------|:--------------------|
 | Thủ đô Hà Nội | Phường Hồng Hà   | Hà Nội                  | Hồng Hà             |
@@ -230,7 +229,6 @@ print(standardized_df.to_markdown(index=False))
 | Thủ đô Hà Nội | Phường Giảng Võ  | Hà Nội                  | Giảng Võ            |
 | Thủ đô Hà Nội | Phường Hoàn Kiếm | Hà Nội                  | Hoàn Kiếm           |
 
-```
 
 Standardize and convert 63-province format administrative unit columns to the new 34-province format.
 
@@ -249,7 +247,7 @@ standardized_df = standardize_admin_unit_columns(df, province='province', distri
 
 print(standardized_df.to_markdown(index=False))
 ```
-```text
+
 | province              | district   | ward                    | standardized_province   | standardized_ward   |
 |:----------------------|:-----------|:------------------------|:------------------------|:--------------------|
 | Thành phố Hồ Chí Minh | Quận 1     | Phường Tân Định         | Hồ Chí Minh             | Tân Định            |
@@ -257,7 +255,7 @@ print(standardized_df.to_markdown(index=False))
 | Thành phố Hồ Chí Minh | Quận 1     | Phường Bến Nghé         | Hồ Chí Minh             | Sài Gòn             |
 | Thành phố Hồ Chí Minh | Quận 1     | Phường Bến Thành        | Hồ Chí Minh             | Bến Thành           |
 | Thành phố Hồ Chí Minh | Quận 1     | Phường Nguyễn Thái Bình | Hồ Chí Minh             | Bến Thành           |
-```
+
 
 #### convert_address_column()
 Convert an address column in a DataFrame.
@@ -296,7 +294,7 @@ df = pd.DataFrame(data)
 converted_df = convert_address_column(df, address='address', short_name=False)
 print(converted_df.to_markdown(index=False))
 ```
-```text
+
 | address                                                                         | converted_address                                        |
 |:--------------------------------------------------------------------------------|:---------------------------------------------------------|
 | Ngã 4 xóm ao dài, thôn Tự Khoát, Xã Ngũ Hiệp, Huyện Thanh Trì, Hà Nội           | Ngã 4 Xóm Ao Dài, Xã Thanh Trì, Thủ đô Hà Nội            |
@@ -304,7 +302,7 @@ print(converted_df.to_markdown(index=False))
 | P402 CT9A KĐT VIỆT HƯNG, Phường Đức Giang, Quận Long Biên, Hà Nội               | P402 Ct9A Kđt Việt Hưng, Phường Việt Hưng, Thủ đô Hà Nội |
 | 169/8A, Thoại Ngọc Hầu, Phường Phú Thạnh, Quận Tân Phú, TP. Hồ Chí Minh         | 169/8A, Phường Phú Thạnh, Thành phố Hồ Chí Minh          |
 | 02 lê đại hành, phường 15, quận 11, tp.hcm, Phường 15, Quận 11, TP. Hồ Chí Minh | 02 Lê Đại Hành, Phường Phú Thọ, Thành phố Hồ Chí Minh    |
-```
+
 
 
 ### 🗃️ database

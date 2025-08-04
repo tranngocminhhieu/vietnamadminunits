@@ -142,11 +142,12 @@ def parse_address_from_2025(address: str, keep_street :bool=True, level: int=2) 
             unit.latitude = DICT_WARD[ward_key]['wardLat']
             unit.longitude = DICT_WARD[ward_key]['wardLon']
 
+            # Không dùng address_key_accented bên dưới nữa nên chỉ remove cho address_key
             address_key = replace_from_right(address_key, key_normalize(ward_keyword), '')
 
 
     # Keep street
-    if keep_street and address_key.count(',') >= 2:
+    if keep_street and (ward_key or address_key.count(',') >= 2):
         street = extract_street(address=address, address_key=address_key)
     if street:
         unit.street = street
@@ -155,4 +156,4 @@ def parse_address_from_2025(address: str, keep_street :bool=True, level: int=2) 
 
 if __name__ == '__main__':
     # print(parse_address_34('Xã Nguyễn, Tỉnh Cao Bằng'))
-    print(parse_address_from_2025('phuongandong,hcm'))
+    print(parse_address_from_2025('123 ben thanh phuongandong 23,hcm'))

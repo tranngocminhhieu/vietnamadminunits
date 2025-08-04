@@ -151,7 +151,7 @@ def parse_address_legacy(address: str, keep_street :bool=True, level :int=3) -> 
             address_key = replace_from_right(text=address_key, old=key_normalize(ward_keyword), new='')
 
     # Keep street
-    if keep_street and address_key.count(',') >= 3:
+    if keep_street and (ward_key or address_key.count(',') >= 3):
         street = extract_street(address=address, address_key=address_key)
     if street:
         unit.street = street
@@ -159,4 +159,4 @@ def parse_address_legacy(address: str, keep_street :bool=True, level :int=3) -> 
     return unit
 
 if __name__ == '__main__':
-    print(parse_address_legacy('nguyen thai binh, quan 1, ho chi minh'))
+    print(parse_address_legacy('31 Lê DuẩnBến Nghé, Quận 1, Hồ Chí Minh'))

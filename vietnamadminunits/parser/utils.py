@@ -113,15 +113,30 @@ def replace_from_right(text: str, old: str, new: str='', for_text: str=None):
     return text.strip()
 
 
-def extract_street(address, address_key):
-    remaining_parts = [part.strip() for part in address_key.split(',') if part.strip()]
-    for part in remaining_parts:
-        norm_part = key_normalize(part)
-        words = address.split(',')
-        for word in words:
-            if key_normalize(word).startswith(norm_part):
-                return word.strip().title()
-    return None
+def extract_street(address: str, address_key: str):
+    first_address_key_part = address_key.split(',')[0].strip()
+    first_address_part = address.split(',')[0].strip()
+
+    first_address_part_norm = key_normalize(first_address_part)
+    first_address_key_part_norm = key_normalize(first_address_key_part)
+
+    # Tìm phần giao nhau giữa normalized key và normalized text
+    common_prefix = ''
+    for i in range(min(len(first_address_part_norm), len(first_address_key_part_norm))):
+        if first_address_part_norm[i] == first_address_key_part_norm[i]:
+            common_prefix += first_address_part_norm[i]
+        else:
+            break
+
+    # Dùng common_prefix để dò lại chuỗi gốc tương ứng trong first_address_part
+    match_result = ''
+    for char in first_address_part:
+        if key_normalize(match_result + char) == common_prefix[:len(key_normalize(match_result + char))]:
+            match_result += char
+        else:
+            break
+
+    return match_result.strip().title() if match_result else None
 
 
 if __name__ == '__main__':

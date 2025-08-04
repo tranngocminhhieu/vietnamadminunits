@@ -1,3 +1,55 @@
+# 2025-08-04 (Version 0.6.0)
+[vietnamadminunits/parser/__init__.py](vietnamadminunits/parser/__init__.py): Support `level=0` in `parse_address()` to choose the highest level automatically.
+
+[vietnamadminunits/parser/utils.py](vietnamadminunits/parser/utils.py): Improve accuracy of `extract_street()`.
+
+Old:
+```python
+def extract_street(address, address_key):
+    remaining_parts = [part.strip() for part in address_key.split(',') if part.strip()]
+    for part in remaining_parts:
+        norm_part = key_normalize(part)
+        words = address.split(',')
+        for word in words:
+            if key_normalize(word).startswith(norm_part):
+                return word.strip().title()
+    return None
+```
+
+New:
+```python
+def extract_street(address: str, address_key: str):
+    first_address_key_part = address_key.split(',')[0].strip()
+    first_address_part = address.split(',')[0].strip()
+
+    first_address_part_norm = key_normalize(first_address_part)
+    first_address_key_part_norm = key_normalize(first_address_key_part)
+
+    # Tìm phần giao nhau giữa normalized key và normalized text
+    common_prefix = ''
+    for i in range(min(len(first_address_part_norm), len(first_address_key_part_norm))):
+        if first_address_part_norm[i] == first_address_key_part_norm[i]:
+            common_prefix += first_address_part_norm[i]
+        else:
+            break
+
+    # Dùng common_prefix để dò lại chuỗi gốc tương ứng trong first_address_part
+    match_result = ''
+    for char in first_address_part:
+        if key_normalize(match_result + char) == common_prefix[:len(key_normalize(match_result + char))]:
+            match_result += char
+        else:
+            break
+
+    return match_result.strip().title() if match_result else None
+```
+
+[vietnamadminunits/parser/parser_legacy.py](vietnamadminunits/parser/parser_legacy.py):
+Allow bypass check comma count when ward_key is existed.
+
+[vietnamadminunits/parser/parser_from_2025.py](vietnamadminunits/parser/parser_from_2025.py):
+Allow bypass check comma count when ward_key is existed.
+
 # 2025-08-04 (Version 0.5.0)
 [vietnamadminunits/parser/objects.py](vietnamadminunits/parser/objects.py): Support `short_name` arg for `AdminUnit`'s `get_address()`.
 

@@ -1,0 +1,713 @@
+province,district
+Long An,Kiến Tường
+Sơn La,Vân Hồ
+Tiền Giang,Cai Lậy (Thị xã)
+Ninh Thuận,Bác Ái
+Lào Cai,Mường Khương
+Bắc Giang,Bắc Giang
+Phú Yên,Tuy Hòa
+Bình Phước,Chơn Thành
+Hải Phòng,Kiến An
+Ninh Bình,Gia Viễn
+Trà Vinh,Trà Cú
+Thái Nguyên,Thái Nguyên
+Hồ Chí Minh,Hóc Môn
+Bình Định,Phù Mỹ
+Đắk Nông,Cư Jút
+Thái Nguyên,Võ Nhai
+Thanh Hóa,Sầm Sơn
+Hải Phòng,Cát Hải
+Bến Tre,Bến Tre
+Đắk Nông,Đắk Mil
+An Giang,Châu Đốc
+Cao Bằng,Hạ Lang
+Bình Thuận,La Gi
+Cà Mau,Đầm Dơi
+Phú Yên,Tuy An
+Nghệ An,Quỳnh Lưu
+Cà Mau,Thới Bình
+Sơn La,Thuận Châu
+Bình Thuận,Bắc Bình
+Hòa Bình,Lạc Sơn
+Bà Rịa - Vũng Tàu,Vũng Tàu
+Cần Thơ,Cái Răng
+Hải Dương,Gia Lộc
+Bà Rịa - Vũng Tàu,Châu Đức
+Bình Dương,Dĩ An
+Yên Bái,Trấn Yên
+Cao Bằng,Bảo Lạc
+Hồ Chí Minh,Gò Vấp
+Hải Dương,Kinh Môn
+Đắk Nông,Đăk Glong
+Yên Bái,Văn Chấn
+Đồng Tháp,Thanh Bình
+Đồng Nai,Cẩm Mỹ
+Quảng Nam,Núi Thành
+Hưng Yên,Văn Lâm
+Kiên Giang,An Biên
+An Giang,Long Xuyên
+Đắk Lắk,Ea H'leo
+Quảng Ngãi,Tây Trà
+Hà Nam,Kim Bảng
+Ninh Bình,Hoa Lư
+Kiên Giang,Giồng Riềng
+Hà Nội,Quốc Oai
+Hà Giang,Quang Bình
+Gia Lai,Chư Prông
+Ninh Bình,Kim Sơn
+Hà Nội,Nam Từ Liêm
+Hải Phòng,Lê Chân
+Phú Yên,Sông Cầu
+Nghệ An,Anh Sơn
+Tây Ninh,Tân Biên
+Kiên Giang,Phú Quốc
+Trà Vinh,Trà Vinh
+Bến Tre,Ba Tri
+Phú Thọ,Thanh Thủy
+Hà Nội,Thạch Thất
+Vĩnh Long,Bình Minh
+Hà Tĩnh,Nghi Xuân
+Thừa Thiên Huế,Nam Đông
+Hải Phòng,Tiên Lãng
+Tuyên Quang,Nà Hang
+Lai Châu,Tân Uyên
+Hà Nội,Sơn Tây
+Đà Nẵng,Liên Chiểu
+Long An,Châu Thành
+Hải Phòng,An Lão
+Hậu Giang,Vị Thanh
+Quảng Nam,Hiệp Đức
+Lào Cai,Bắc Hà
+Hà Nội,Tây Hồ
+Ninh Thuận,Phan Rang-Tháp Chàm
+Đà Nẵng,Cẩm Lệ
+Bắc Giang,Lục Ngạn
+Hà Giang,Bắc Mê
+Đồng Nai,Long Khánh
+Quảng Ninh,Móng Cái
+Lào Cai,Si Ma Cai
+Hà Tĩnh,Can Lộc
+Lai Châu,Lai Châu
+Hồ Chí Minh,Quận 9
+Bình Định,Hoài Nhơn
+Lâm Đồng,Lâm Hà
+Đắk Lắk,Krông A Na
+Gia Lai,Pleiku
+Tây Ninh,Gò Dầu
+Yên Bái,Yên Bình
+Hải Dương,Tứ Kỳ
+Thanh Hóa,Vĩnh Lộc
+Đắk Lắk,Cư M'gar
+Nghệ An,Cửa Lò
+Sơn La,Mường La
+Bình Dương,Thuận An
+Kon Tum,Đắk Hà
+Vĩnh Phúc,Phúc Yên
+Nghệ An,Hưng Nguyên
+Lâm Đồng,Bảo Lộc
+Bà Rịa - Vũng Tàu,Bà Rịa
+Bình Dương,Bàu Bàng
+Hà Giang,Bắc Quang
+Hải Phòng,Hồng Bàng
+Quảng Nam,Phước Sơn
+Cao Bằng,Thông Nông
+Đà Nẵng,Thanh Khê
+Hòa Bình,Lương Sơn
+Hậu Giang,Châu Thành
+Quảng Bình,Minh Hóa
+Quảng Bình,Thành Phố Đồng Hới
+Bình Thuận,Tánh Linh
+Bình Phước,Bù Đăng
+Bắc Giang,Sơn Động
+Phú Thọ,Tân Sơn
+Thái Bình,Tiền Hải
+Thái Nguyên,Định Hóa
+Kiên Giang,Kiên Hải
+Hưng Yên,Kim Động
+Cao Bằng,Cao Bằng
+Bà Rịa - Vũng Tàu,Côn Đảo
+Nam Định,Mỹ Lộc
+Nghệ An,Quỳ Châu
+Cần Thơ,Ô Môn
+An Giang,Chợ Mới
+Ninh Bình,Yên Khánh
+Nam Định,Nam Trực
+Bình Dương,Bắc Tân Uyên
+Cao Bằng,Hà Quảng
+Bình Định,Vĩnh Thạnh
+Bắc Giang,Lạng Giang
+Gia Lai,Đăk Đoa
+Hà Nội,Đống Đa
+Thanh Hóa,Cẩm Thủy
+Đồng Nai,Vĩnh Cửu
+Vĩnh Long,Bình Tân
+Quảng Ninh,Quảng Yên
+Điện Biên,Điện Biên Đông
+Hậu Giang,Ngã Bảy
+Hòa Bình,Kim Bôi
+Sóc Trăng,Vĩnh Châu
+Hải Dương,Thanh Hà
+Cần Thơ,Phong Điền
+Thanh Hóa,Hoằng Hóa
+Bến Tre,Giồng Trôm
+Lạng Sơn,Chi Lăng
+Cao Bằng,Trà Lĩnh
+Bình Định,Phù Cát
+Long An,Cần Đước
+Lạng Sơn,Bình Gia
+Ninh Thuận,Ninh Sơn
+Cần Thơ,Ninh Kiều
+Đắk Nông,Đắk Song
+Hồ Chí Minh,Tân Phú
+Lâm Đồng,Cát Tiên
+Kon Tum,Kon Plông
+Quảng Nam,Nam Giang
+Quảng Trị,Cồn Cỏ
+Hưng Yên,Mỹ Hào
+Bình Dương,Phú Giáo
+Quảng Nam,Đại Lộc
+Hậu Giang,Long Mỹ
+Tuyên Quang,Chiêm Hóa
+Hải Dương,Chí Linh
+Bắc Giang,Yên Thế
+Hà Nội,Thanh Trì
+Nam Định,Nam Định
+Cần Thơ,Vĩnh Thạnh
+Cà Mau,Phú Tân
+Quảng Ninh,Ba Chẽ
+Quảng Ngãi,Lý Sơn
+Thanh Hóa,Bỉm Sơn
+Thái Bình,Đông Hưng
+Sơn La,Phù Yên
+Tiền Giang,Gò Công Đông
+Nam Định,Nghĩa Hưng
+Thanh Hóa,Thiệu Hóa
+Lâm Đồng,Đà Lạt
+Lâm Đồng,Đơn Dương
+Hồ Chí Minh,Nhà Bè
+Hậu Giang,Long Mỹ (Thi xa)
+Vĩnh Long,Vũng Liêm
+Đắk Lắk,Buôn Ma Thuột
+Vĩnh Long,Tam Bình
+Trà Vinh,Duyên Hải (Thị xã)
+Thanh Hóa,Hậu Lộc
+Phú Thọ,Thanh Ba
+Quảng Ninh,Cô Tô
+Thái Bình,Thái Bình
+Tiền Giang,Gò Công Tây
+Hòa Bình,Đà Bắc
+Quảng Trị,Vĩnh Linh
+Gia Lai,Đăk Pơ
+Bình Phước,Bình Long
+Gia Lai,Đức Cơ
+Tiền Giang,Chợ Gạo
+Tuyên Quang,Hàm Yên
+Hà Nam,Lý Nhân
+Bạc Liêu,Đông Hải
+Gia Lai,Ia Pa
+Đồng Tháp,Lai Vung
+Nghệ An,Diễn Châu
+Tiền Giang,Tân Phước
+Cao Bằng,Quảng Uyên
+Hà Tĩnh,Cẩm Xuyên
+Thanh Hóa,Tĩnh Gia
+Phú Yên,Sơn Hòa
+Long An,Mộc Hóa
+Cà Mau,Năm Căn
+Bình Định,Tuy Phước
+Bắc Kạn,Na Rì
+Thanh Hóa,Nga Sơn
+Phú Yên,Tây Hòa
+Bắc Kạn,Ngân Sơn
+Tây Ninh,Hòa Thành
+Quảng Ngãi,Ba Tơ
+Trà Vinh,Châu Thành
+Kon Tum,Sa Thầy
+Lâm Đồng,Bảo Lâm
+Quảng Bình,Quảng Ninh
+Hà Nội,Chương Mỹ
+Lai Châu,Phong Thổ
+Lâm Đồng,Đạ Tẻh
+Đồng Tháp,Châu Thành
+Đồng Tháp,Hồng Ngự
+Hải Phòng,An Dương
+Thái Nguyên,Sông Công
+Hồ Chí Minh,Bình Tân
+Cà Mau,Cái Nước
+Hồ Chí Minh,Quận 1
+Nghệ An,Thanh Chương
+Hồ Chí Minh,Quận 2
+Quảng Ngãi,Sơn Hà
+Bình Phước,Phước Long
+Thanh Hóa,Quan Sơn
+Hà Nội,Hà Đông
+Sơn La,Sông Mã
+Yên Bái,Yên Bái
+Phú Yên,Sông Hinh
+Đắk Lắk,Cư Kuin
+Lâm Đồng,Di Linh
+Bắc Ninh,Yên Phong
+Long An,Vĩnh Hưng
+Hòa Bình,Hòa Bình
+Đồng Tháp,Thành phố Hồng Ngự
+Long An,Thạnh Hóa
+Kiên Giang,Tân Hiệp
+Quảng Nam,Thăng Bình
+Long An,Tân An
+Hà Nội,Hòan Kiếm
+Hà Nội,Bắc Từ Liêm
+Thanh Hóa,Hà Trung
+Thanh Hóa,Thường Xuân
+Ninh Bình,Nho Quan
+Đồng Nai,Nhơn Trạch
+Bình Thuận,Đức Linh
+Điện Biên,Điện Biên
+Tiền Giang,Mỹ Tho
+Vĩnh Phúc,Vĩnh Yên
+Thái Nguyên,Phổ Yên
+Hòa Bình,Kỳ Sơn
+Quảng Ngãi,Đức Phổ
+Bình Định,Qui Nhơn
+Lào Cai,Văn Bàn
+Đà Nẵng,Hải Châu
+Vĩnh Phúc,Lập Thạch
+Quảng Ngãi,Tư Nghĩa
+Hưng Yên,Văn Giang
+Đồng Nai,Tân Phú
+Quảng Nam,Tây Giang
+Phú Thọ,Yên Lập
+Đồng Nai,Biên Hòa
+Ninh Thuận,Thuận Nam
+Hà Nội,Phúc Thọ
+Quảng Nam,Tam Kỳ
+Đắk Lắk,Krông Bông
+Nghệ An,Tương Dương
+Kon Tum,Tu Mơ Rông
+Thanh Hóa,Thanh Hóa
+Hà Giang,Đồng Văn
+Quảng Trị,Cam Lộ
+Nghệ An,Vinh
+Lai Châu,Mường Tè
+Hà Nội,Thường Tín
+Nghệ An,Quế Phong
+Quảng Nam,Điện Bàn
+Điện Biên,Điện Biên Phủ
+Bắc Ninh,Bắc Ninh
+Hà Nam,Phủ Lý
+Ninh Bình,Tam Điệp
+Thừa Thiên Huế,Hương Thủy
+Lạng Sơn,Đình Lập
+Hải Dương,Bình Giang
+Thanh Hóa,Như Xuân
+Quảng Ngãi,Mộ Đức
+Quảng Nam,Bắc Trà My
+Điện Biên,Thị Xã Mường Lay
+Nam Định,Trực Ninh
+Yên Bái,Mù Căng Chải
+Thừa Thiên Huế,Phong Điền
+Hà Nam,Thanh Liêm
+Đắk Nông,Krông Nô
+Yên Bái,Văn Yên
+Hà Giang,Xín Mần
+Tây Ninh,Dương Minh Châu
+Kiên Giang,Giang Thành
+Thanh Hóa,Thọ Xuân
+Cà Mau,U Minh
+Bình Thuận,Hàm Tân
+Nghệ An,Yên Thành
+Hải Phòng,Bạch Long Vĩ
+Hà Nội,Ba Đình
+Hà Tĩnh,Hương Sơn
+Đắk Nông,Tuy Đức
+Lào Cai,Lào Cai
+Điện Biên,Mường Nhé
+Hải Dương,Hải Dương
+Long An,Cần Giuộc
+Khánh Hòa,Trường Sa
+Hồ Chí Minh,Quận 8
+Đồng Nai,Trảng Bom
+Gia Lai,Phú Thiện
+Khánh Hòa,Khánh Vĩnh
+Thừa Thiên Huế,Phú Vang
+Bình Định,An Nhơn
+Thanh Hóa,Như Thanh
+Quảng Ngãi,Sơn Tịnh
+Bình Phước,Đồng Xoài
+Hồ Chí Minh,Thủ Đức
+Tây Ninh,Châu Thành
+Bình Phước,Bù Đốp
+Hà Tĩnh,Hương Khê
+Hải Dương,Thanh Miện
+Nghệ An,Đô Lương
+Lào Cai,Bảo Thắng
+Quảng Ngãi,Minh Long
+Hồ Chí Minh,Quận 7
+Thừa Thiên Huế,Hương Trà
+Nam Định,Ý Yên
+Hà Nội,Sóc Sơn
+Sóc Trăng,Trần Đề
+Long An,Đức Huệ
+Sơn La,Yên Châu
+Thanh Hóa,Mường Lát
+Khánh Hòa,Ninh Hòa
+Cao Bằng,Thạch An
+Hà Nội,Hòang Mai
+Quảng Bình,Bố Trạch
+Bến Tre,Chợ Lách
+Ninh Thuận,Ninh Hải
+Bình Thuận,Tuy Phong
+Vĩnh Phúc,Sông Lô
+Quảng Ngãi,Trà Bồng
+Nghệ An,Con Cuông
+Yên Bái,Nghĩa Lộ
+Thừa Thiên Huế,Phú Lộc
+Đắk Lắk,Thị Xã Buôn Hồ
+Lào Cai,Bát Xát
+Bắc Kạn,Pác Nặm
+Trà Vinh,Cầu Kè
+Khánh Hòa,Nha Trang
+Đồng Tháp,Tân Hồng
+Quảng Bình,Tuyên Hóa
+Lạng Sơn,Lạng Sơn
+Tuyên Quang,Sơn Dương
+Quảng Bình,Quảng Trạch
+Vĩnh Phúc,Tam Dương
+Vĩnh Long,Trà Ôn
+Kon Tum,Kon Tum
+Sóc Trăng,Mỹ Xuyên
+Hà Tĩnh,Hồng Lĩnh
+Quảng Trị,Gio Linh
+Lâm Đồng,Đam Rông
+Hà Nội,Đan Phượng
+Lâm Đồng,Đức Trọng
+Đồng Tháp,Cao Lãnh (Thành phố)
+An Giang,Phú Tân
+Hà Nội,Thanh Oai
+Kon Tum,Ngọc Hồi
+Bến Tre,Bình Đại
+Vĩnh Long,Long Hồ
+Bình Định,An Lão
+Long An,Bến Lức
+Hà Nam,Bình Lục
+Hà Nội,Ứng Hòa
+Quảng Ninh,Vân Đồn
+Hà Tĩnh,Hà Tĩnh
+Tiền Giang,Châu Thành
+Bạc Liêu,Hồng Dân
+Hòa Bình,Cao Phong
+Lạng Sơn,Lộc Bình
+Kiên Giang,Gò Quao
+An Giang,An Phú
+Sơn La,Bắc Yên
+Điện Biên,Mường Chà
+Sơn La,Sơn La
+Trà Vinh,Tiểu Cần
+Bình Định,Vân Canh
+Quảng Ninh,Hòanh Bồ
+Phú Thọ,Thanh Sơn
+Trà Vinh,Duyên Hải
+Thái Bình,Thái Thụy
+Gia Lai,Chư Păh
+Sóc Trăng,Mỹ Tú
+Sóc Trăng,Ngã Năm
+Quảng Ninh,Tiên Yên
+Bắc Ninh,Gia Bình
+Phú Thọ,Cẩm Khê
+Đà Nẵng,Ngũ Hành Sơn
+Vĩnh Phúc,Yên Lạc
+Hồ Chí Minh,Quận 3
+Đắk Lắk,Ea Kar
+Bắc Kạn,Chợ Đồn
+Bạc Liêu,Vĩnh Lợi
+Quảng Trị,Đông Hà
+Thái Bình,Kiến Xương
+Cần Thơ,Thới Lai
+Hà Giang,Mèo Vạc
+Nghệ An,Nghĩa Đàn
+Nghệ An,Kỳ Sơn
+Phú Yên,Đồng Xuân
+Long An,Tân Hưng
+Đắk Lắk,Lắk
+Hòa Bình,Mai Châu
+Bà Rịa - Vũng Tàu,Xuyên Mộc
+Lạng Sơn,Bắc Sơn
+Quảng Ninh,Cẩm Phả
+Trà Vinh,Cầu Ngang
+Hà Nội,Thanh Xuân
+Đồng Tháp,Lấp Vò
+Kiên Giang,Châu Thành
+Hưng Yên,Ân Thi
+Hồ Chí Minh,Bình Thạnh
+Tây Ninh,Trảng Bàng
+Yên Bái,Trạm Tấu
+Nghệ An,Nghi Lộc
+Hưng Yên,Tiên Lữ
+Phú Thọ,Phù Ninh
+Thanh Hóa,Lang Chánh
+Quảng Nam,Quế Sơn
+Đà Nẵng,Hòa Vang
+Nghệ An,Nam Đàn
+Hậu Giang,Châu Thành A
+Quảng Ngãi,Sơn Tây
+Tiền Giang,Tân Phú Đông
+Kiên Giang,An Minh
+Quảng Nam,Nam Trà My
+Sóc Trăng,Long Phú
+Phú Yên,Đông Hòa
+Hải Phòng,Dương Kinh
+Long An,Đức Hòa
+Khánh Hòa,Cam Lâm
+Hà Nội,Ba Vì
+Tiền Giang,Gò Công
+Thanh Hóa,Bá Thước
+Hải Phòng,Thủy Nguyên
+Gia Lai,Ia Grai
+Hồ Chí Minh,Tân Bình
+Hà Nội,Đông Anh
+Bắc Ninh,Thuận Thành
+Bình Thuận,Phan Thiết
+Lạng Sơn,Văn Lãng
+Bình Dương,Tân Uyên
+Bình Định,Hoài Ân
+Đắk Lắk,Buôn Đôn
+Hòa Bình,Tân Lạc
+Phú Thọ,Hạ Hòa
+Kiên Giang,U Minh Thượng
+Bà Rịa - Vũng Tàu,Đất Đỏ
+Cần Thơ,Cờ Đỏ
+Điện Biên,Tủa Chùa
+Kon Tum,Ia H' Drai
+Hà Giang,Quản Bạ
+Bắc Kạn,Ba Bể
+Phú Thọ,Đoan Hùng
+Hải Dương,Kim Thành
+Quảng Trị,Triệu Phong
+Phú Yên,Phú Hòa
+Hồ Chí Minh,Phú Nhuận
+Thanh Hóa,Yên Định
+Hồ Chí Minh,Quận 11
+Đắk Lắk,Krông Pắc
+Bắc Giang,Tân Yên
+Nghệ An,Tân Kỳ
+Bà Rịa - Vũng Tàu,Tân Thành
+Khánh Hòa,Diên Khánh
+Thừa Thiên Huế,A Lưới
+Thừa Thiên Huế,Quảng Điền
+Hồ Chí Minh,Quận 5
+Thanh Hóa,Đông Sơn
+Quảng Ninh,Đông Triều
+Bình Phước,Phú Riềng
+Sơn La,Quỳnh Nhai
+Cao Bằng,Nguyên Bình
+Thái Bình,Quỳnh Phụ
+Hồ Chí Minh,Quận 12
+Quảng Nam,Hội An
+Bình Định,Tây Sơn
+Hải Phòng,Kiến Thuỵ
+Hải Phòng,Ngô Quyền
+Đắk Lắk,Ea Súp
+Kiên Giang,Hòn Đất
+Bến Tre,Châu Thành
+Cà Mau,Cà Mau
+Hải Dương,Nam Sách
+An Giang,Tri Tôn
+Hòa Bình,Lạc Thủy
+Gia Lai,KBang
+Bình Thuận,Phú Quý
+Thái Nguyên,Phú Bình
+Hậu Giang,Phụng Hiệp
+Yên Bái,Lục Yên
+Long An,Tân Thạnh
+Bạc Liêu,Giá Rai
+Điện Biên,Mường Ảng
+Hà Giang,Hoàng Su Phì
+Gia Lai,Ayun Pa
+Hà Giang,Hà Giang
+Quảng Bình,Ba Đồn
+Kiên Giang,Hà Tiên
+Nghệ An,Thái Hòa
+Bắc Giang,Việt Yên
+Gia Lai,Chư Pưh
+Lai Châu,Than Uyên
+Gia Lai,An Khê
+Tây Ninh,Bến Cầu
+Gia Lai,Chư Sê
+Lai Châu,Nậm Nhùn
+Cao Bằng,Trùng Khánh
+Long An,Tân Trụ
+Thừa Thiên Huế,Huế
+Vĩnh Long,Vĩnh Long
+Bình Dương,Bến Cát
+Tây Ninh,Tân Châu
+Lâm Đồng,Lạc Dương
+Lạng Sơn,Tràng Định
+Sóc Trăng,Kế Sách
+Nam Định,Giao Thủy
+Đà Nẵng,Sơn Trà
+Vĩnh Phúc,Bình Xuyên
+Ninh Thuận,Ninh Phước
+Đắk Lắk,Krông Năng
+Bà Rịa - Vũng Tàu,Long Điền
+Đồng Nai,Long Thành
+Thanh Hóa,Quan Hóa
+Hòa Bình,Yên Thủy
+Kiên Giang,Kiên Lương
+Hải Dương,Ninh Giang
+Gia Lai,Krông Pa
+Lạng Sơn,Cao Lộc
+Hồ Chí Minh,Cần Giờ
+Hà Nội,Hoài Đức
+Hà Tĩnh,Vũ Quang
+Thanh Hóa,Quảng Xương
+Quảng Nam,Phú Ninh
+Cà Mau,Ngọc Hiển
+Bắc Ninh,Tiên Du
+Bình Thuận,Hàm Thuận Bắc
+An Giang,Tân Châu
+Khánh Hòa,Cam Ranh
+Đồng Nai,Định Quán
+Nam Định,Xuân Trường
+Kon Tum,Đắk Tô
+Bến Tre,Mỏ Cày Nam
+Quảng Trị,Hải Lăng
+Quảng Nam,Đông Giang
+Bạc Liêu,Bạc Liêu
+Hà Nội,Cầu Giấy
+An Giang,Tịnh Biên
+Bến Tre,Thạnh Phú
+Bắc Kạn,Thành Phố Bắc Kạn
+Bạc Liêu,Hòa Bình
+Lai Châu,Sìn Hồ
+Bạc Liêu,Phước Long
+Hà Nội,Phú Xuyên
+An Giang,Thoại Sơn
+Ninh Bình,Yên Mô
+Hồ Chí Minh,Bình Chánh
+Thái Bình,Hưng Hà
+Thái Nguyên,Phú Lương
+Bắc Giang,Hiệp Hòa
+Hải Phòng,Vĩnh Bảo
+Thái Nguyên,Đại Từ
+Đồng Tháp,Sa Đéc
+Đồng Tháp,Tháp Mười
+Sóc Trăng,Thạnh Trị
+Bình Dương,Dầu Tiếng
+Hà Nội,Mê Linh
+Đồng Nai,Xuân Lộc
+Bình Phước,Hớn Quản
+Sơn La,Mai Sơn
+Vĩnh Long,Mang Thít
+Bình Phước,Bù Gia Mập
+Quảng Ngãi,Nghĩa Hành
+Kiên Giang,Rạch Giá
+Tuyên Quang,Tuyên Quang
+Quảng Ninh,Đầm Hà
+Phú Thọ,Phú Thọ
+Cần Thơ,Thốt Nốt
+Kiên Giang,Vĩnh Thuận
+Vĩnh Phúc,Tam Đảo
+Thanh Hóa,Nông Cống
+Lâm Đồng,Đạ Huoai
+Kon Tum,Đắk Glei
+Bình Dương,Thủ Dầu Một
+Quảng Ngãi,Quảng Ngãi
+Quảng Trị,Quảng Trị
+Quảng Bình,Lệ Thủy
+Đắk Nông,Đắk R'Lấp
+Đồng Nai,Thống Nhất
+Quảng Trị,Đa Krông
+Bắc Kạn,Chợ Mới
+Bình Phước,Lộc Ninh
+Nam Định,Hải Hậu
+Hưng Yên,Khoái Châu
+Long An,Thủ Thừa
+Ninh Bình,Ninh Bình
+Hồ Chí Minh,Củ Chi
+Cao Bằng,Phục Hòa
+Nghệ An,Quỳ Hợp
+Hậu Giang,Vị Thủy
+Cần Thơ,Bình Thủy
+An Giang,Châu Thành
+Thanh Hóa,Triệu Sơn
+Tây Ninh,Tây Ninh
+Nam Định,Vụ Bản
+Hà Tĩnh,Kỳ Anh
+Hải Phòng,Đồ Sơn
+Bình Phước,Đồng Phú
+Vĩnh Phúc,Vĩnh Tường
+Hà Giang,Yên Minh
+Nghệ An,Hòang Mai
+Bến Tre,Mỏ Cày Bắc
+Gia Lai,Mang Yang
+Phú Thọ,Việt Trì
+Bắc Giang,Lục Nam
+Gia Lai,Kông Chro
+Hà Tĩnh,Thạch Hà
+Hà Nam,Duy Tiên
+Cà Mau,Trần Văn Thời
+Hồ Chí Minh,Quận 4
+Khánh Hòa,Khánh Sơn
+Cao Bằng,Bảo Lâm
+Hà Tĩnh,Kỳ Anh (Thị xã)
+Bắc Ninh,Quế Võ
+Lào Cai,Sa Pa
+Hà Nội,Mỹ Đức
+Hà Giang,Vị Xuyên
+Tiền Giang,Cai Lậy
+Thanh Hóa,Thạch Thành
+Đồng Tháp,Cao Lãnh
+Quảng Ninh,Uông Bí
+Ninh Thuận,Thuận Bắc
+Hải Dương,Cẩm Giàng
+Lai Châu,Tam Đường
+Đồng Tháp,Tam Nông
+Lạng Sơn,Hữu Lũng
+Quảng Ninh,Bình Liêu
+Thái Bình,Vũ Thư
+Quảng Trị,Hướng Hóa
+Hà Tĩnh,Đức Thọ
+Bắc Ninh,Lương Tài
+Tuyên Quang,Lâm Bình
+An Giang,Châu Phú
+Đắk Nông,Gia Nghĩa
+Phú Thọ,Lâm Thao
+Sơn La,Sốp Cộp
+Sóc Trăng,Cù Lao Dung
+Quảng Nam,Tiên Phước
+Hà Nội,Hai Bà Trưng
+Điện Biên,Nậm Pồ
+Thanh Hóa,Ngọc Lặc
+Quảng Ngãi,Bình Sơn
+Tuyên Quang,Yên Sơn
+Thái Nguyên,Đồng Hỷ
+Hưng Yên,Hưng Yên
+Cao Bằng,Hòa An
+Khánh Hòa,Vạn Ninh
+Đắk Lắk,M'Đrắk
+Phú Thọ,Tam Nông
+Quảng Nam,Duy Xuyên
+Bình Thuận,Hàm Thuận Nam
+Tiền Giang,Cái Bè
+Hà Nội,Long Biên
+Hà Nội,Gia Lâm
+Lào Cai,Bảo Yên
+Bắc Giang,Yên Dũng
+Hưng Yên,Phù Cừ
+Bắc Ninh,Từ Sơn
+Quảng Ninh,Hạ Long
+Sóc Trăng,Sóc Trăng
+Điện Biên,Tuần Giáo
+Quảng Ninh,Hải Hà
+Sơn La,Mộc Châu
+Hưng Yên,Yên Mỹ
+Quảng Nam,Nông Sơn
+Sóc Trăng,Châu Thành
+Đắk Lắk,Krông Búk
+Kon Tum,Kon Rẫy
+Hải Phòng,Hải An
+Hà Tĩnh,Lộc Hà
+Hồ Chí Minh,Quận 10
+Lạng Sơn,Văn Quan
+Bắc Kạn,Bạch Thông
+Trà Vinh,Càng Long
+Hồ Chí Minh,Quận 6

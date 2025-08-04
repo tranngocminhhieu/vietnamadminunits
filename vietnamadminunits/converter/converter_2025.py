@@ -86,7 +86,8 @@ def convert_address_2025(address: str):
     # Convert to new admin unit
     new_address_components = [i for i in (old_unit.street, new_ward_key, new_province_key) if i]
     new_address = ','.join(new_address_components)
-    new_unit = parse_address(new_address, mode=ParseMode.FROM_2025, keep_street=True, level=2)
+    level = 2 if new_ward_key else 1
+    new_unit = parse_address(new_address, mode=ParseMode.FROM_2025, keep_street=True, level=level)
 
     return new_unit
 
@@ -94,4 +95,4 @@ def convert_address_2025(address: str):
 
 if __name__ == '__main__':
     # print(convert_address_2025('Phường 9, Quận 5'))
-    print(convert_address_2025('11 Nguyễn Công Trứ, Phường Nguyễn Thái Bình, Quận 01 ,Thành Phố Hồ Chí Minh'))
+    print(convert_address_2025('Văn phòng bán hàng, Dự Án Vinhomes Royal Island Đảo Vũ Yên, Xã Thủy Triều, Huyện Thủy Nguyên, Hải Phòng'))

@@ -183,3 +183,5 @@ anaconda_projects
 .DS_Store
 .gitattributes
 downloaded_files
+
+scripts/module_testing/tmp

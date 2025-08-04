@@ -1,5 +1,5 @@
 # 2025-08-04 (Version 0.8.0)
-[vietnamadminunits/data/parser_legacy.json](vietnamadminunits/data/parser_legacy.json):Add more alias keywords for ward level in Hai Phong province.
+[vietnamadminunits/data/parser_legacy.json](vietnamadminunits/data/parser_legacy.json): Add more alias keywords for ward level.
 
 # 2025-08-04 (Version 0.7.0)
 [vietnamadminunits/pandas/main.py](vietnamadminunits/pandas/main.py): Support show progress bar with arg `show_progress`.

@@ -64,7 +64,7 @@ Vấn đề lớn của việc chuyển đổi chính là các ward cũ bị chi
 **Giải pháp**:
 
 **Bước 1**: Thu thập data location (latitude, longitude) và polygon.
-- Đối với 3321 ward mới thì đã có sẵn location và diện tích km2 ([sapnhap.bando.com.vn](https://sapnhap.bando.com.vn) ), có thể suy ra polygon.
+- Đối với 3321 ward mới thì đã có sẵn location và diện tích km2 ([sapnhap.bando.com.vn](https://sapnhap.bando.com.vn)), có thể suy ra polygon.
 - Đối với 10040 ward cũ thì thu thập location từ [Google Geocoding API](https://developers.google.com/maps/documentation/geocoding/overview).
 
 **Bước 2**: So sánh location của ward với polygon và location của ward mới.

@@ -89,36 +89,7 @@ def parse_address_legacy(address: str, keep_street :bool=True, level :int=3) -> 
     if level in [2,3]:
         DICT_DISTRICT = DICT_PROVINCE_DISTRICT[province_key]
 
-        if not district_key:
-            # Để phần này ở trên sẽ fix được những case:
-            # District vẫn còn nhưng vài ward bị đem wa district khác
-            # District bị chia thành 2 district mới.
-            # District có tên ngắn bị trùng, chỉ khác type
 
-            DICT_DISTRICT_DIVIDED = DICT_PROVINCE_DISTRICT_DIVIDED.get(province_key)
-            # Tìm district cũ (bị chia)
-            if DICT_DISTRICT_DIVIDED:
-                DICT_DISTRICT_DIVIDED = DICT_PROVINCE_DISTRICT_DIVIDED.get(province_key)
-                divided_district_keywords = sorted(sum([DICT_DISTRICT_DIVIDED[k]['dividedDistrictKeywords'] for k in DICT_DISTRICT_DIVIDED], []), key=len, reverse=True)
-                PATTERN_DISTRICT_DIVIDED = re.compile('|'.join(re.escape(k) for k in divided_district_keywords), flags=re.IGNORECASE)
-                divided_district_keyword = next((m.group() for m in reversed(list(PATTERN_DISTRICT_DIVIDED.finditer(address_key)))), None)
-                divided_district_key = next((k for k, v in DICT_DISTRICT_DIVIDED.items() if divided_district_keyword and divided_district_keyword in [kw for kw in v['dividedDistrictKeywords']]), None)
-
-                # Nếu có district cũ (bị chia), dựa vào wardKeyword để tìm districtKey
-                if divided_district_key:
-                    address_key_accented = replace_from_right(text=address_key, old=divided_district_keyword, new='', for_text=address_key_accented)
-                    address_key = replace_from_right(text=address_key, old=divided_district_keyword, new='')
-
-                    DICT_DISTRICT_WARD = DICT_DISTRICT_DIVIDED[divided_district_key]['districts']
-                    ward_keywords = sorted(sum([DICT_DISTRICT_WARD[k]['wardKeywords'] for k in DICT_DISTRICT_WARD], []), key=len, reverse=True)
-                    PATTERN_WARD = re.compile('|'.join(ward_keywords), flags=re.IGNORECASE)
-                    ward_keyword = next((m.group() for m in reversed(list(PATTERN_WARD.finditer(address_key)))), None)
-                    district_key = next((k for k, v in DICT_DISTRICT_WARD.items() if ward_keyword and ward_keyword in [kw for kw in v['wardKeywords']]), None)
-
-                    # Nếu không có ward, chọn district mặc định
-                    if not district_key:
-                        district_key = next(
-                            (k for k in DICT_DISTRICT_WARD if DICT_DISTRICT_WARD[k]['districtDefault'] == True), None)
 
 
         if not district_key:
@@ -133,6 +104,54 @@ def parse_address_legacy(address: str, keep_street :bool=True, level :int=3) -> 
                 address_key = replace_from_right(text=address_key, old=district_keyword, new='')
 
             district_key = next((k for k, v in DICT_DISTRICT.items() if district_keyword and district_keyword in [kw for kw in v['districtKeywords']]), None)
+
+
+
+        DICT_DISTRICT_DIVIDED = DICT_PROVINCE_DISTRICT_DIVIDED.get(province_key, {})
+        if not district_key:
+            # Fix được những case:
+            # District vẫn còn nhưng vài ward bị đem wa district khác
+            # District bị chia thành 2 district mới.
+            # District có tên ngắn bị trùng, chỉ khác type
+            # Để phần này ở trên sẽ bị sai với 'Xã Thạch Hạ, Thành Phố Hà Tĩnh, Hà Tĩnh'. Nó bắt trúng 'thachha' của ward mà nhầm của district
+
+            # Tìm district cũ (bị chia)
+            if DICT_DISTRICT_DIVIDED:
+                divided_district_keywords = sorted(sum([DICT_DISTRICT_DIVIDED[k]['dividedDistrictKeywords'] for k in DICT_DISTRICT_DIVIDED], []), key=len, reverse=True)
+                PATTERN_DISTRICT_DIVIDED = re.compile('|'.join(re.escape(k) for k in divided_district_keywords), flags=re.IGNORECASE)
+                divided_district_keyword = next((m.group() for m in reversed(list(PATTERN_DISTRICT_DIVIDED.finditer(address_key)))), None)
+                divided_district_key = next((k for k, v in DICT_DISTRICT_DIVIDED.items() if divided_district_keyword and divided_district_keyword in [kw for kw in v['dividedDistrictKeywords']]), None)
+
+                # print(divided_district_keyword)
+
+                # Nếu có district cũ (bị chia), dựa vào wardKeyword để tìm districtKey
+                if divided_district_key:
+                    address_key_accented = replace_from_right(text=address_key, old=divided_district_keyword, new='', for_text=address_key_accented)
+                    address_key = replace_from_right(text=address_key, old=divided_district_keyword, new='')
+
+                    DICT_DISTRICT_WARD = DICT_DISTRICT_DIVIDED[divided_district_key]['districts']
+                    ward_keywords = sorted(sum([DICT_DISTRICT_WARD[k]['wardKeywords'] for k in DICT_DISTRICT_WARD], []), key=len, reverse=True)
+                    PATTERN_WARD = re.compile('|'.join(ward_keywords), flags=re.IGNORECASE)
+                    ward_keyword = next((m.group() for m in reversed(list(PATTERN_WARD.finditer(address_key)))), None)
+                    district_key = next((k for k, v in DICT_DISTRICT_WARD.items() if ward_keyword and ward_keyword in [kw for kw in v['wardKeywords']]), None)
+                    
+                    # print(ward_keyword)
+
+                    # Nếu không có ward, chọn district mặc định
+                    if not district_key:
+                        district_key = next((k for k in DICT_DISTRICT_WARD if DICT_DISTRICT_WARD[k]['districtDefault'] == True), None)
+
+        elif district_key in DICT_DISTRICT_DIVIDED:
+            divided_district_key = district_key
+            district_key = None
+            DICT_DISTRICT_WARD = DICT_DISTRICT_DIVIDED[divided_district_key]['districts']
+            ward_keywords = sorted(sum([DICT_DISTRICT_WARD[k]['wardKeywords'] for k in DICT_DISTRICT_WARD], []), key=len, reverse=True)
+            PATTERN_WARD = re.compile('|'.join(ward_keywords), flags=re.IGNORECASE)
+            ward_keyword = next((m.group() for m in reversed(list(PATTERN_WARD.finditer(address_key)))), None)
+            district_key = next((k for k, v in DICT_DISTRICT_WARD.items() if ward_keyword and ward_keyword in [kw for kw in v['wardKeywords']]), None)
+            if not district_key:
+                district_key = next((k for k in DICT_DISTRICT_WARD if DICT_DISTRICT_WARD[k]['districtDefault'] == True), None)
+
 
 
         if district_key:

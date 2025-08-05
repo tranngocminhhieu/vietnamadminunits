@@ -48,7 +48,7 @@ def parse_address_legacy(address: str, keep_street :bool=True, level :int=3) -> 
     ward_keyword = None
     street = None
 
-    # Find province
+    # PARSE PROVINCE
 
     # match = PATTERN_PROVINCE.search(address_key)
     # province_keyword = match.group(0) if match else None
@@ -75,9 +75,8 @@ def parse_address_legacy(address: str, keep_street :bool=True, level :int=3) -> 
         if district_key:
             province_key = DICT_UNIQUE_DISTRICT_PROVINCE[district_key]['provinceKey']
 
-    if not province_key:
-        return unit
-    else:
+
+    if province_key:
         unit.province_key = province_key
         unit.province = DICT_PROVINCE[province_key]['province']
         unit.short_province = DICT_PROVINCE[province_key]['provinceShort']
@@ -129,9 +128,7 @@ def parse_address_legacy(address: str, keep_street :bool=True, level :int=3) -> 
                         district_key = next((k for k in DICT_DISTRICT_WARD if DICT_DISTRICT_WARD[k]['districtDefault']==True), None)
 
 
-        if not district_key:
-            return unit
-        else:
+        if district_key:
             unit.district_key = district_key
             unit.district = DICT_DISTRICT[district_key]['district']
             unit.short_district = DICT_DISTRICT[district_key]['districtShort']
@@ -184,7 +181,9 @@ def parse_address_legacy(address: str, keep_street :bool=True, level :int=3) -> 
             address_key = replace_from_right(text=address_key, old=key_normalize(ward_keyword), new='')
 
     # Keep street
-    if keep_street and (ward_key or address_key.count(',') >= 3):
+    special_zone = ['huyenbachlongvi', 'huyenconco', 'huyenhoangsa', 'huyenlyson', 'huyencondao']
+
+    if keep_street and (ward_key or (address_key.count(',') >= 3) or (district_key in special_zone)):
         street = extract_street(address=address, address_key=address_key)
     if street:
         unit.street = street
@@ -192,4 +191,4 @@ def parse_address_legacy(address: str, keep_street :bool=True, level :int=3) -> 
     return unit
 
 if __name__ == '__main__':
-    print(parse_address_legacy('Son La'))
+    print(parse_address_legacy('123 Abc ,,, Đà Nẵng'))

@@ -157,5 +157,4 @@ def parse_address_from_2025(address: str, keep_street :bool=True, level: int=2) 
     return unit
 
 if __name__ == '__main__':
-    # print(parse_address_34('Xã Nguyễn, Tỉnh Cao Bằng'))
-    print(parse_address_from_2025('Son La'))
+    print(parse_address_from_2025(''))

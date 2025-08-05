@@ -1,20 +1,25 @@
 # 2025-08-04 (Version 0.8.0)
-[vietnamadminunits/data/parser_legacy.json](vietnamadminunits/data/parser_legacy.json): Add more than 700 alias keywords for ward level.
+### [vietnamadminunits/data/parser_legacy.json](vietnamadminunits/data/parser_legacy.json)
+Add more than 700 alias keywords for ward level.
 
-[vietnamadminunits/parser/parser_legacy.py](vietnamadminunits/parser/parser_legacy.py):
+### [vietnamadminunits/parser/parser_legacy.py](vietnamadminunits/parser/parser_legacy.py)
 - Support old divided districts and duplicated short districts. Example:
   - "Kỳ Anh, Hà Tĩnh" -> "Thị xã Kỳ Anh, Tỉnh Hà Tĩnh"
   - "Kỳ Khang, Kỳ Anh, Hà Tĩnh" -> "Xã Kỳ Khang, Huyện Kỳ Anh, Tỉnh Hà Tĩnh"
-
 - Support `province_code`, `district_code`, `ward_code` attributes.
+- Support keep street with special zone.
 
-[vietnamadminunits/parser/objects.py](vietnamadminunits/parser/objects.py): AdminUnit have `province_code`, `district_code`, `ward_code` attributes
+### [vietnamadminunits/parser/objects.py](vietnamadminunits/parser/objects.py)
+AdminUnit have `province_code`, `district_code`, `ward_code` attributes
 
-[vietnamadminunits/parser/parser_from_2025.py](vietnamadminunits/parser/parser_from_2025.py):
-- Support `province_code`, `district_code`, `ward_code` attributes.
+### [vietnamadminunits/parser/parser_from_2025.py](vietnamadminunits/parser/parser_from_2025.py)
+Support `province_code`, `district_code`, `ward_code` attributes.
 
+### [vietnamadminunits/converter/converter_2025.py](vietnamadminunits/converter/converter_2025.py)
+Fix special zone.
 
-Update correct province code, ward code for from-2025 dataset and package data.
+### [vietnamadminunits/data/parser_from_2025.json](vietnamadminunits/data/parser_from_2025.json), [vietnamadminunits/data/dataset.db](vietnamadminunits/data/dataset.db)
+Correct provinceCode, wardCode. [Issue #1](https://github.com/tranngocminhhieu/vietnamadminunits/issues/1)
 
 # 2025-08-04 (Version 0.7.0)
 [vietnamadminunits/pandas/main.py](vietnamadminunits/pandas/main.py): Support show progress bar with arg `show_progress`.

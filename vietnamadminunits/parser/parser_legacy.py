@@ -22,6 +22,8 @@ DICT_PROVINCE_DISTRICT_WARD_NO_ACCENTED = parser_data['DICT_PROVINCE_DISTRICT_WA
 DICT_PROVINCE_DISTRICT_WARD_ACCENTED = parser_data['DICT_PROVINCE_DISTRICT_WARD_ACCENTED']
 DICT_PROVINCE_DISTRICT_WARD_SHORT_ACCENTED = parser_data['DICT_PROVINCE_DISTRICT_WARD_SHORT_ACCENTED']
 
+DICT_PROVINCE_DISTRICT_DIVIDED = parser_data['DICT_PROVINCE_DISTRICT_DIVIDED']
+
 province_keywords = sorted(sum([DICT_PROVINCE[k]['provinceKeywords'] for k in DICT_PROVINCE], []), key=len, reverse=True)
 PATTERN_PROVINCE = re.compile('|'.join(province_keywords), flags=re.IGNORECASE)
 
@@ -82,9 +84,8 @@ def parse_address_legacy(address: str, keep_street :bool=True, level :int=3) -> 
         unit.latitude = DICT_PROVINCE[province_key]['provinceLat']
         unit.longitude = DICT_PROVINCE[province_key]['provinceLon']
 
-
+    # Find district
     if level in [2,3]:
-        # Find district
         DICT_DISTRICT = DICT_PROVINCE_DISTRICT[province_key]
         if not district_key:
             district_keywords = sorted(sum([DICT_DISTRICT[k]['districtKeywords'] for k in DICT_DISTRICT], []), key=len, reverse=True)
@@ -98,6 +99,34 @@ def parse_address_legacy(address: str, keep_street :bool=True, level :int=3) -> 
 
             district_key = next((k for k, v in DICT_DISTRICT.items() if district_keyword and district_keyword in [kw for kw in v['districtKeywords']]), None)
 
+
+        if not district_key:
+            DICT_DISTRICT_DIVIDED = DICT_PROVINCE_DISTRICT_DIVIDED.get(province_key)
+
+            # Tìm district cũ (bị chia)
+            if DICT_DISTRICT_DIVIDED:
+                DICT_DISTRICT_DIVIDED = DICT_PROVINCE_DISTRICT_DIVIDED.get(province_key)
+                divided_district_keywords = sorted(sum([DICT_DISTRICT_DIVIDED[k]['dividedDistrictKeywords'] for k in DICT_DISTRICT_DIVIDED], []), key=len, reverse=True)
+                PATTERN_DISTRICT_DIVIDED = re.compile('|'.join(re.escape(k) for k in divided_district_keywords), flags=re.IGNORECASE)
+                divided_district_keyword = next((m.group() for m in reversed(list(PATTERN_DISTRICT_DIVIDED.finditer(address_key)))), None)
+                divided_district_key = next((k for k, v in DICT_DISTRICT_DIVIDED.items() if divided_district_keyword and divided_district_keyword in [kw for kw in v['dividedDistrictKeywords']]), None)
+
+                # Nếu có district cũ (bị chia), dựa vào wardKeyword để tìm districtKey
+                if divided_district_key:
+                    address_key_accented = replace_from_right(text=address_key, old=divided_district_keyword, new='', for_text=address_key_accented)
+                    address_key = replace_from_right(text=address_key, old=divided_district_keyword, new='')
+
+                    DICT_DISTRICT_WARD = DICT_DISTRICT_DIVIDED[divided_district_key]['districts']
+                    ward_keywords = sorted(sum([DICT_DISTRICT_WARD[k]['wardKeywords'] for k in DICT_DISTRICT_WARD], []), key=len, reverse=True)
+                    PATTERN_WARD = re.compile('|'.join(ward_keywords), flags=re.IGNORECASE)
+                    ward_keyword = next((m.group() for m in reversed(list(PATTERN_WARD.finditer(address_key)))), None)
+                    district_key = next((k for k, v in DICT_DISTRICT_WARD.items() if ward_keyword and ward_keyword in [kw for kw in v['wardKeywords']]), None)
+
+                    # Nếu không có ward, chọn district mặc định
+                    if not district_key:
+                        district_key = next((k for k in DICT_DISTRICT_WARD if DICT_DISTRICT_WARD[k]['districtDefault']==True), None)
+
+
         if not district_key:
             return unit
         else:
@@ -108,9 +137,9 @@ def parse_address_legacy(address: str, keep_street :bool=True, level :int=3) -> 
             unit.latitude = DICT_DISTRICT[district_key]['districtLat']
             unit.longitude = DICT_DISTRICT[district_key]['districtLon']
 
-
+    # Find ward
     if level == 3:
-        # Find ward
+
         DICT_WARD_NO_ACCENTED =  DICT_PROVINCE_DISTRICT_WARD_NO_ACCENTED.get(province_key, {}).get(district_key)
         DICT_WARD_ACCENTED = DICT_PROVINCE_DISTRICT_WARD_ACCENTED.get(province_key, {}).get(district_key)
         DICT_WARD_SHORT_ACCENTED = DICT_PROVINCE_DISTRICT_WARD_SHORT_ACCENTED.get(province_key, {}).get(district_key)
@@ -159,4 +188,4 @@ def parse_address_legacy(address: str, keep_street :bool=True, level :int=3) -> 
     return unit
 
 if __name__ == '__main__':
-    print(parse_address_legacy('Văn phòng bán hàng, Dự Án Vinhomes Royal Island Đảo Vũ Yên, Xã Thủy Triều, Huyện Thủy Nguyên, Hải Phòng'))
+    print(parse_address_legacy('ky khang ky anh, ha tinh'))

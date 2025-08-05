@@ -1,0 +1,15 @@
+﻿provinceKey,dividedDistrictKey,dividedDistrictKeyWords,districtKey,districtDefault
+thanhphohue,thanhphohue,"[""thanhphohue"",""hue""]",quanphuxuan,
+thanhphohue,thanhphohue,"[""thanhphohue"",""hue""]",quanthuanhoa,TRUE
+tinhhatinh,kyanh,"[""kyanh""]",huyenkyanh,
+tinhhatinh,kyanh,"[""kyanh""]",thixakyanh,TRUE
+tinhtiengiang,cailay,"[""cailay""]",huyencailay,
+tinhtiengiang,cailay,"[""cailay""]",thixacailay,TRUE
+tinhtravinh,duyenhai,"[""duyenhai""]",huyenduyenhai,
+tinhtravinh,duyenhai,"[""duyenhai""]",thixaduyenhai,TRUE
+tinhdongthap,caolanh,"[""caolanh""]",huyencaolanh,
+tinhdongthap,caolanh,"[""caolanh""]",thanhphocaolanh,TRUE
+tinhdongthap,hongngu,"[""hongngu""]",huyenhongngu,
+tinhdongthap,hongngu,"[""hongngu""]",thanhphohongngu,TRUE
+tinhhaugiang,longmy,"[""longmy""]",huyenlongmy,
+tinhhaugiang,longmy,"[""longmy""]",thixalongmy,TRUE

@@ -1,6 +1,10 @@
 # 2025-08-04 (Version 0.8.0)
 [vietnamadminunits/data/parser_legacy.json](vietnamadminunits/data/parser_legacy.json): Add more than 700 alias keywords for ward level.
 
+[vietnamadminunits/parser/parser_legacy.py](vietnamadminunits/parser/parser_legacy.py): Support old divided districts and duplicated short districts.
+Example:
+- "Kỳ Anh, Hà Tĩnh" -> "Thị xã Kỳ Anh, Tỉnh Hà Tĩnh"
+- "Kỳ Khang, Kỳ Anh, Hà Tĩnh" -> "Xã Kỳ Khang, Huyện Kỳ Anh, Tỉnh Hà Tĩnh"
 
 
 # 2025-08-04 (Version 0.7.0)

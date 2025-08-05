@@ -345,15 +345,8 @@ print(data)
 2. **Cleaning, Mapping & Enrichment**  
    The data was cleaned, normalized, enriched, and saved to [`data/processed/`](data/processed).  
    These finalized datasets are designed for community sharing and are directly used by the [`vietnamadminunits`](https://pypi.org/project/vietnamadminunits) Python package.
-
-   - For **wards that were split into multiple new wards**, a flag `isDefaultNewWard=True` is assigned to the most appropriate match.  
-     The matching strategy is based on the **location (latitude/longitude)** of the old ward:
-
-     - If only one new ward polygon contains the old ward’s location → that ward is set as default.
-     - If multiple polygons match or none match → the new ward with the closest center point is selected as default.
-
-   - Although the resulting data is already reliable and highly usable, there was an intent to enrich the dataset with precise street-level mappings for split wards.  
-However, due to lack of reliable sources, this has not yet been implemented.
+   
+   For **wards that were divided into multiple new wards**, a flag `isDefaultNewWard=True` is assigned to the most appropriate match using [this solution](CHALLENGES.md#convert-2025).
 
 3. **Longevity of Legacy Data**  
    - The **63-province dataset** and the **mapping from 63-province to 34-province dataset** are considered stable and will not be updated unless there are spelling corrections.
@@ -425,17 +418,10 @@ The mapping approach is identical to the [**Parser Strategy**](#-parser-strategy
 #### Step 3: Handle divided wards (`isDividedWard=True`)
 If a ward has been split into multiple new wards:
 
-- **Without street information**:  
-  The converter defaults to the ward with `isDefaultNewWard=True`.
+- **Without street information**: The converter defaults to the ward with `isDefaultNewWard=True`.
 
-- **With street information**:  
-  The converter uses [**geopy**](https://pypi.org/project/geopy/) to geocode the address into latitude/longitude.  
-  Then it compares this location with the centroids and polygons of new wards:
-
-  - If exactly one new ward contains the location → that ward is selected.
-  - If multiple wards match or none match → the new ward whose center is closest to the location is selected.
-
-
+- **With street information**: Use [this solution](CHALLENGES.md#convert-2025).
+  
 ## Contributing
 Contributions, issues and feature requests are welcome!  
 Feel free to submit a pull request or open an issue.

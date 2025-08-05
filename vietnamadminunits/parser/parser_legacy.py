@@ -88,22 +88,14 @@ def parse_address_legacy(address: str, keep_street :bool=True, level :int=3) -> 
     # Find district
     if level in [2,3]:
         DICT_DISTRICT = DICT_PROVINCE_DISTRICT[province_key]
-        if not district_key:
-            district_keywords = sorted(sum([DICT_DISTRICT[k]['districtKeywords'] for k in DICT_DISTRICT], []), key=len, reverse=True)
-            PATTERN_DISTRICT = re.compile('|'.join(re.escape(k) for k in district_keywords), flags=re.IGNORECASE)
-
-            district_keyword = next((m.group() for m in reversed(list(PATTERN_DISTRICT.finditer(address_key)))), None)
-
-            if district_keyword:
-                address_key_accented = replace_from_right(text=address_key, old=district_keyword, new='', for_text=address_key_accented)
-                address_key = replace_from_right(text=address_key, old=district_keyword, new='')
-
-            district_key = next((k for k, v in DICT_DISTRICT.items() if district_keyword and district_keyword in [kw for kw in v['districtKeywords']]), None)
-
 
         if not district_key:
+            # Để phần này ở trên sẽ fix được những case:
+            # District vẫn còn nhưng vài ward bị đem wa district khác
+            # District bị chia thành 2 district mới.
+            # District có tên ngắn bị trùng, chỉ khác type
+
             DICT_DISTRICT_DIVIDED = DICT_PROVINCE_DISTRICT_DIVIDED.get(province_key)
-
             # Tìm district cũ (bị chia)
             if DICT_DISTRICT_DIVIDED:
                 DICT_DISTRICT_DIVIDED = DICT_PROVINCE_DISTRICT_DIVIDED.get(province_key)
@@ -125,7 +117,22 @@ def parse_address_legacy(address: str, keep_street :bool=True, level :int=3) -> 
 
                     # Nếu không có ward, chọn district mặc định
                     if not district_key:
-                        district_key = next((k for k in DICT_DISTRICT_WARD if DICT_DISTRICT_WARD[k]['districtDefault']==True), None)
+                        district_key = next(
+                            (k for k in DICT_DISTRICT_WARD if DICT_DISTRICT_WARD[k]['districtDefault'] == True), None)
+
+
+        if not district_key:
+            # Đây mới là phần chính
+            district_keywords = sorted(sum([DICT_DISTRICT[k]['districtKeywords'] for k in DICT_DISTRICT], []), key=len, reverse=True)
+            PATTERN_DISTRICT = re.compile('|'.join(re.escape(k) for k in district_keywords), flags=re.IGNORECASE)
+
+            district_keyword = next((m.group() for m in reversed(list(PATTERN_DISTRICT.finditer(address_key)))), None)
+
+            if district_keyword:
+                address_key_accented = replace_from_right(text=address_key, old=district_keyword, new='', for_text=address_key_accented)
+                address_key = replace_from_right(text=address_key, old=district_keyword, new='')
+
+            district_key = next((k for k, v in DICT_DISTRICT.items() if district_keyword and district_keyword in [kw for kw in v['districtKeywords']]), None)
 
 
         if district_key:
@@ -191,4 +198,4 @@ def parse_address_legacy(address: str, keep_street :bool=True, level :int=3) -> 
     return unit
 
 if __name__ == '__main__':
-    print(parse_address_legacy('123 Abc ,,, Đà Nẵng'))
+    print(parse_address_legacy(''))

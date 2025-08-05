@@ -13,12 +13,16 @@ class AdminUnit:
                  district_type=None,
                  ward_type=None,
 
-                 province_key=None,
-                 district_key=None,
-                 ward_key=None,
+                 province_code=None,
+                 district_code=None,
+                 ward_code=None,
 
                  latitude = None,
                  longitude = None,
+
+                 province_key=None,
+                 district_key=None,
+                 ward_key=None,
 
                  show_district = False
                  ):
@@ -34,12 +38,17 @@ class AdminUnit:
 
         self.district_type = district_type
         self.ward_type = ward_type
-        self.province_key = province_key
-        self.district_key = district_key
-        self.ward_key = ward_key
+
+        self.province_code = province_code
+        self.district_code = district_code
+        self.ward_code = ward_code
 
         self.latitude = latitude
         self.longitude = longitude
+
+        self.province_key = province_key
+        self.district_key = district_key
+        self.ward_key = ward_key
 
         self.show_district = show_district
 
@@ -55,7 +64,9 @@ class AdminUnit:
         attributes = [
             'province', 'district', 'ward', 'street',
             'short_province', 'short_district', 'short_ward',
-            'district_type', 'ward_type', 'latitude', 'longitude',
+            'district_type', 'ward_type',
+            'province_code', 'district_code', 'ward_code',
+            'latitude', 'longitude',
         ]
 
         if not self.show_district:

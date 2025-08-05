@@ -81,8 +81,10 @@ def parse_address_legacy(address: str, keep_street :bool=True, level :int=3) -> 
         unit.province_key = province_key
         unit.province = DICT_PROVINCE[province_key]['province']
         unit.short_province = DICT_PROVINCE[province_key]['provinceShort']
+        unit.province_code = DICT_PROVINCE[province_key]['provinceCode']
         unit.latitude = DICT_PROVINCE[province_key]['provinceLat']
         unit.longitude = DICT_PROVINCE[province_key]['provinceLon']
+
 
     # Find district
     if level in [2,3]:
@@ -134,6 +136,7 @@ def parse_address_legacy(address: str, keep_street :bool=True, level :int=3) -> 
             unit.district = DICT_DISTRICT[district_key]['district']
             unit.short_district = DICT_DISTRICT[district_key]['districtShort']
             unit.district_type = DICT_DISTRICT[district_key]['districtType']
+            unit.district_code = DICT_DISTRICT[district_key]['districtCode']
             unit.latitude = DICT_DISTRICT[district_key]['districtLat']
             unit.longitude = DICT_DISTRICT[district_key]['districtLon']
 
@@ -173,6 +176,7 @@ def parse_address_legacy(address: str, keep_street :bool=True, level :int=3) -> 
             unit.ward = DICT_WARD[ward_key]['ward']
             unit.short_ward = DICT_WARD[ward_key]['wardShort']
             unit.ward_type = DICT_WARD[ward_key]['wardType']
+            unit.ward_code = DICT_WARD[ward_key]['wardCode']
             unit.latitude = DICT_WARD[ward_key]['wardLat']
             unit.longitude = DICT_WARD[ward_key]['wardLon']
 
@@ -188,4 +192,4 @@ def parse_address_legacy(address: str, keep_street :bool=True, level :int=3) -> 
     return unit
 
 if __name__ == '__main__':
-    print(parse_address_legacy('ky khang ky anh, ha tinh'))
+    print(parse_address_legacy('Son La'))

@@ -96,6 +96,7 @@ def parse_address_from_2025(address: str, keep_street :bool=True, level: int=2) 
         unit.province_key = province_key
         unit.province = DICT_PROVINCE[province_key]['province']
         unit.short_province = DICT_PROVINCE[province_key]['provinceShort']
+        unit.province_code = DICT_PROVINCE[province_key]['provinceCode']
         unit.latitude = DICT_PROVINCE[province_key]['provinceLat']
         unit.longitude = DICT_PROVINCE[province_key]['provinceLon']
 
@@ -139,6 +140,7 @@ def parse_address_from_2025(address: str, keep_street :bool=True, level: int=2) 
             unit.ward = DICT_WARD[ward_key]['ward']
             unit.short_ward = DICT_WARD[ward_key]['wardShort']
             unit.ward_type = DICT_WARD[ward_key]['wardType']
+            unit.ward_code = DICT_WARD[ward_key]['wardCode']
             unit.latitude = DICT_WARD[ward_key]['wardLat']
             unit.longitude = DICT_WARD[ward_key]['wardLon']
 
@@ -156,4 +158,4 @@ def parse_address_from_2025(address: str, keep_street :bool=True, level: int=2) 
 
 if __name__ == '__main__':
     # print(parse_address_34('Xã Nguyễn, Tỉnh Cao Bằng'))
-    print(parse_address_from_2025('123 ben thanh phuongandong 23,hcm'))
+    print(parse_address_from_2025('Son La'))

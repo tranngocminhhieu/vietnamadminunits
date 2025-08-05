@@ -62,6 +62,40 @@ def find_nearest_point(a_point: tuple, list_of_b_points: list):
     return min(list_of_b_points, key=lambda b: geodesic(a_point, b).meters)
 
 
+def correct_typos(text):
+    '''
+    :param text: str
+    :return: str or np.nan
+    '''
+
+    typos = {
+        r'\bHoà\b': 'Hòa',
+        r'\bHoá\b': 'Hóa',
+        r'\bHoả\b': 'Hỏa',
+        r'\bHoè\b': 'Hòe',
+        r'\bThuỷ\b': 'Thủy',
+        r'\bThuỵ\b': 'Thụy',
+        r'\bUý\b': 'Úy',
+        r'\bKhoá\b': 'Khóa',
+    }
+
+    if isinstance(text, str):
+        for typo in typos:
+            text = re.sub(typo, typos[typo], text)
+    return text
+
+
+
+def uppercase_first_letters(text: str, all_first_letters=False):
+    if isinstance(text, str):
+        if all_first_letters:
+            text = ' '.join(word[0].upper() + word[1:] if word else '' for word in text.split())
+        else:
+            text = text[0].upper() + text[1:]
+    return text
+
+
+
 def unicode_normalize(text):
     '''
     - Chuyển Unicode tổ hợp sang Unicode dựng sẵn (lỗi gõ dấu bằng ký tự đặc biệt)
@@ -76,6 +110,7 @@ def unicode_normalize(text):
         text = text.replace("’", "'").replace("‘", "'").replace("“", '"').replace("”", '"') # Normalize quotes
         text = text.replace('-', ' - ')
         text = re.sub(r'\s+', ' ', text)
+        text = re.sub(r'\'\s+', "'", text)
         return text.strip()
     return text
 

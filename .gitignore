@@ -185,3 +185,5 @@ anaconda_projects
 downloaded_files
 
 scripts/module_testing/tmp
+
+.vscode

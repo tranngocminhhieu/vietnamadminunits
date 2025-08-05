@@ -349,10 +349,10 @@ print(data)
    For **wards that were divided into multiple new wards**, a flag `isDefaultNewWard=True` is assigned to the most appropriate match using [this solution](CHALLENGES.md#convert-2025).
 
 3. **Longevity of Legacy Data**  
-   - The **63-province dataset** and the **mapping from 63-province to 34-province dataset** are considered stable and will not be updated unless there are spelling corrections.
+   The **63-province dataset** and the **mapping from 63-province to 34-province dataset** are considered stable and will not be updated unless there are spelling corrections.
 
 4. **Maintaining the Latest Data**  
-   - The **34-province dataset** will be kept up to date as the Vietnamese government announces changes to administrative boundaries.
+   The **34-province dataset** will be kept up to date as the Vietnamese government announces changes to administrative boundaries.
 
 ### 🧠 Parser Strategy
 

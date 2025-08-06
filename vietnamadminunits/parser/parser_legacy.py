@@ -134,7 +134,7 @@ def parse_address_legacy(address: str, keep_street :bool=True, level :int=3) -> 
                 divided_district_keyword = next((m.group() for m in reversed(list(PATTERN_DISTRICT_DIVIDED.finditer(address_key)))), None)
                 divided_district_key = next((k for k, v in DICT_DISTRICT_DIVIDED.items() if divided_district_keyword and divided_district_keyword in [kw for kw in v['dividedDistrictKeywords']]), None)
 
-                print(divided_district_keyword)
+                # print(divided_district_keyword)
 
                 # Nếu có district cũ (bị chia), dựa vào wardKeyword để tìm districtKey
                 if divided_district_key:
@@ -151,8 +151,8 @@ def parse_address_legacy(address: str, keep_street :bool=True, level :int=3) -> 
                     ward_keyword = next((m.group() for m in reversed(list(PATTERN_WARD.finditer(address_key)))), None)
                     district_key = next((k for k, v in DICT_DISTRICT_WARD.items() if ward_keyword and ward_keyword in [kw for kw in v['wardKeywords']]), None)
                     
-                    print(address_key)
-                    print(ward_keyword)
+                    # print(address_key)
+                    # print(ward_keyword)
 
                     # Nếu không có ward, chọn district mặc định
                     if not district_key:

@@ -86,13 +86,10 @@ def convert_address_2025(address: str):
                 new_ward_key = next((ward['newWardKey'] for ward in new_wards if (ward['newWardLat'], ward['newWardLon']) == default_ward_point), None)
 
 
-    print(old_unit)
-
     # Convert to new admin unit
     new_address_components = [i for i in (old_unit.street, new_ward_key, new_province_key) if i]
     new_address = ','.join(new_address_components)
 
-    print(new_address)
     level = 2 if new_ward_key else 1
     new_unit = parse_address(new_address, mode=ParseMode.FROM_2025, keep_street=True, level=level)
 

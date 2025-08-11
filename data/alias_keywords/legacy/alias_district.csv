@@ -16,8 +16,8 @@ tinhdongthap,thanhphohongngu,thixahongngu,
 tinhdongthap,thanhphohongngu,txhongngu,
 tinhnamdinh,thanhphonamdinh,huyenmyloc,https://baochinhphu.vn/nam-dinh-sap-xep-2-don-vi-hanh-chinh-cap-huyen-va-79-don-vi-hanh-chinh-cap-xa-102240731011800921.htm
 tinhnamdinh,thanhphonamdinh,myloc,https://baochinhphu.vn/nam-dinh-sap-xep-2-don-vi-hanh-chinh-cap-huyen-va-79-don-vi-hanh-chinh-cap-xa-102240731011800921.htm
-tinhthanhhoa,thanhphothanhhoa,huyendongson,
-tinhthanhhoa,thanhphothanhhoa,dongson,
+tinhthanhhoa,thanhphothanhhoa,huyendongson,https://baochinhphu.vn/nhap-toan-bo-huyen-dong-son-vao-thanh-pho-thanh-hoa-102241105185820863.htm
+tinhthanhhoa,thanhphothanhhoa,dongson,https://baochinhphu.vn/nhap-toan-bo-huyen-dong-son-vao-thanh-pho-thanh-hoa-102241105185820863.htm
 tinhthanhhoa,thixanghison,huyentinhgia,
 tinhthanhhoa,thixanghison,tinhgia,
 tinhbariavungtau,thanhphophumy,huyentanthanh,
@@ -28,9 +28,9 @@ tinhbariavungtau,huyenlongdat,huyenlongdien,
 tinhbariavungtau,huyenlongdat,longdien,
 tinhbacgiang,thanhphobacgiang,huyenyendung,
 tinhbacgiang,thanhphobacgiang,yendung,
-tinhninhbinh,thanhphohoalu,thanhphoninhbinh,
-tinhninhbinh,thanhphohoalu,tpninhbinh,
-tinhninhbinh,thanhphohoalu,ninhbinh,
+tinhninhbinh,thanhphohoalu,thanhphoninhbinh,https://baochinhphu.vn/sap-xep-don-vi-hanh-chinh-cap-huyen-xa-tinh-ninh-binh-102241216144803103.htm
+tinhninhbinh,thanhphohoalu,tpninhbinh,https://baochinhphu.vn/sap-xep-don-vi-hanh-chinh-cap-huyen-xa-tinh-ninh-binh-102241216144803103.htm
+tinhninhbinh,thanhphohoalu,ninhbinh,https://baochinhphu.vn/sap-xep-don-vi-hanh-chinh-cap-huyen-xa-tinh-ninh-binh-102241216144803103.htm
 tinhlamdong,huyendahuoai,huyencattien,
 tinhlamdong,huyendahuoai,cattien,
 tinhlamdong,huyendahuoai,huyendateh,
@@ -56,3 +56,4 @@ tinhquangngai,huyentrabong,taytra,
 tinhnghean,thanhphovinh,thixacualo,https://xaydungchinhsach.chinhphu.vn/nghi-quyet-1243-nq-ubtvqh-sap-xep-don-vi-hanh-chinh-tinh-nghe-an-11924110306185815.htm
 tinhnghean,thanhphovinh,txcualo,https://xaydungchinhsach.chinhphu.vn/nghi-quyet-1243-nq-ubtvqh-sap-xep-don-vi-hanh-chinh-tinh-nghe-an-11924110306185815.htm
 tinhnghean,thanhphovinh,cualo,https://xaydungchinhsach.chinhphu.vn/nghi-quyet-1243-nq-ubtvqh-sap-xep-don-vi-hanh-chinh-tinh-nghe-an-11924110306185815.htm
+tinhninhbinh,thanhphohoalu,huyenhoalu,https://baochinhphu.vn/sap-xep-don-vi-hanh-chinh-cap-huyen-xa-tinh-ninh-binh-102241216144803103.htm

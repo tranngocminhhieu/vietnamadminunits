@@ -3,20 +3,13 @@ import sys
 from pathlib import Path
 import re
 
-from distributed.comm.inproc import new_address
 
 MODULE_DIR = Path(__file__).parent.parent
 
-if __name__ == '__main__':
-    sys.path.append(MODULE_DIR.as_posix())
-    from parser import parse_address, ParseMode
-    from parser.objects import AdminUnit
-    from parser.utils import get_geo_location, check_point_in_polygon, find_nearest_point
 
-else:
-    from ..parser import parse_address, ParseMode
-    from ..parser.objects import AdminUnit
-    from ..parser.utils import get_geo_location, check_point_in_polygon, find_nearest_point
+from ..parser import parse_address, ParseMode
+from ..parser.objects import AdminUnit
+from ..parser.utils import get_geo_location, check_point_in_polygon, find_nearest_point
 
 
 # LOAD DATA

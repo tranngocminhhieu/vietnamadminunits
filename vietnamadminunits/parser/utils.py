@@ -148,32 +148,40 @@ def replace_from_right(text: str, old: str, new: str='', for_text: str=None):
     return text.strip()
 
 
-def extract_street(address: str, address_key: str):
-    first_address_key_part = address_key.split(',')[0].strip()
-    first_address_part = address.split(',')[0].strip()
 
-    first_address_part_norm = key_normalize(first_address_part)
-    first_address_key_part_norm = key_normalize(first_address_key_part)
+def extract_street(address: str, address_key: str, highest_level_keyword=None):
+    """
+    Trích xuất tên đường từ địa chỉ.
+    :param address: Địa chỉ gốc (có thể đầy đủ hoặc thiếu dấu phẩy).
+    :param address_key: Địa chỉ đã được chuẩn hóa thành key, là phần còn lại sau khi đã parse address.
+    :param highest_level_keyword: Từ khóa cuối cùng để xác định phạm vi cắt (nếu có).
+    :return: Tên đường đã được chuẩn hóa (title case) hoặc None.
+    """
 
-    # Tìm phần giao nhau giữa normalized key và normalized text
-    common_prefix = ''
-    for i in range(min(len(first_address_part_norm), len(first_address_key_part_norm))):
-        if first_address_part_norm[i] == first_address_key_part_norm[i]:
-            common_prefix += first_address_part_norm[i]
-        else:
-            break
+    # Lấy phần "key" của tên đường trong address_key
+    if highest_level_keyword:
+        street_key_part = address_key.split(highest_level_keyword)[0]
+    else:
+        street_key_part = address_key.split(',')[0].strip()
 
-    # Dùng common_prefix để dò lại chuỗi gốc tương ứng trong first_address_part
+    # Chuẩn hóa để so sánh
+    address_norm = key_normalize(address)
+    street_key_norm = key_normalize(street_key_part)
+
+    # Tìm phần giao đầu (common prefix) giữa address_norm và street_key_norm
+    common_prefix = ''.join(
+        address_norm[i] for i in range(min(len(address_norm), len(street_key_norm)))
+        if address_norm[i] == street_key_norm[i]
+    )
+
+    # Dùng common_prefix để dò lại chuỗi gốc tương ứng trong address
     match_result = ''
-    for char in first_address_part:
-        if key_normalize(match_result + char) == common_prefix[:len(key_normalize(match_result + char))]:
-            match_result += char
+    for char in address:
+        temp = match_result + char
+        if key_normalize(temp) == common_prefix[:len(key_normalize(temp))]:
+            match_result = temp
         else:
             break
 
-    return match_result.strip().title() if match_result else None
-
-
-if __name__ == '__main__':
-    # print(key_normalize('Bà Rịa-   Vũng,Tàu', keep=[',', ' '], decode=False))
-    print(find_nearest_point(a_point=(10.770063796439, 106.704416669302), list_of_b_points=[(10.7713, 106.694), (10.7805, 106.704)]))
+    # Xóa dấu phẩy & khoảng trắng cuối, chuẩn hóa lại chữ
+    return re.sub(r'[\s,]+$', '', match_result).strip().title() if match_result else None

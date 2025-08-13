@@ -16,10 +16,10 @@ class ConvertMode(Enum):
 
 def convert_address(address: str, mode: Union[str, ConvertMode]=ConvertMode.CONVERT_2025):
     '''
-    Converts an address written in the **old (63-province)** structure into an `AdminUnit` object using the **new (34-province)** system.
+    Converts an address from the 63-province format to a standardized 34-province `AdminUnit`.
 
-    :param address: The best structure is `(street), ward, district, province`. Don't worry too much about case or accenting.
-    :param mode: One of the `ConvertMode` values. Currently, only `'CONVERT_2025'` is supported.
+    :param address: Best format *"(street), ward, district, province"*. Case is ignored, accents are usually ignored except in rare cases.
+    :param mode: Currently, only `'CONVERT_2025'` is supported.
     :return: AdminUnit object.
     '''
 

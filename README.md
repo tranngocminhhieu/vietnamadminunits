@@ -14,7 +14,7 @@ My hope is that this work not only saves you time but also helps bring more cons
 ## Project Structure
 
 ### 📊 Datasets
-- Located in [`data/processed/`](data/processed).
+- Located in [data/processed/](data/processed).
 - Includes:
   - 63-province dataset.
   - 34-province dataset.
@@ -33,7 +33,7 @@ Install via pip:
 ```shell
 pip install vietnamadminunits
 ```
-Update to latest version:
+Update to the latest version:
 ```shell
 pip install --upgrade vietnamadminunits
 ```
@@ -41,17 +41,18 @@ pip install --upgrade vietnamadminunits
 ### 🧾 parse_address()
 Parse an address to an `AdminUnit` object.
 ```python
-from vietnamadminunits import parse_address, ParseMode
+from vietnamadminunits import parse_address
+# from vietnamadminunits import ParseMode -- It helps to choose mode quickly
 
-parse_address(address, mode=ParseMode.latest(), keep_street=True, level=2)
+parse_address(address, mode='FROM_2025', keep_street=True, level=0)
 ```
 
 **Params**:
 
-- `address`: The best structure is `(street), ward, (district), province`. Don't worry too much about case or accenting.
-- `mode`: One of the `ParseMode` values. Use `'LEGACY'` for the 63-province format (pre-merger), or `'FROM_2025'` for the new 34-province format. Default is `ParseMode.latest()`.
-- `keep_street`: Keep the street after parsing, but this only works if the address includes enough commas: `'LEGACY'` mode requires at least 3 commas, while `'FROM_2025'` mode requires at least 2.
-- `level`: Use levels `1` and `2` with `'FROM_2025'` mode, and levels `1`, `2`, or `3` with `'LEGACY'` mode, depending on the desired granularity.
+- `address`: Best format *"(street), ward, (district), province"*. Case is ignored, accents are usually ignored except in rare cases.
+- `mode`: `'FROM_2025'` (34-province) or `'LEGACY'` (63-province). Default `ParseMode.latest()`.
+- `keep_street`: Keep the street in the result, works only if there are enough commas: 2+ for *FROM_2025* mode, 3+ for *LEGACY* mode.
+- `level`: *FROM_2025* mode accepts `1` or `2`. *LEGACY* mode accepts `1`, `2`, or `3`. Default `0` for highest level automatically.
 
 **Returns**: `AdminUnit` object.
 
@@ -60,10 +61,8 @@ parse_address(address, mode=ParseMode.latest(), keep_street=True, level=2)
 Parse a new address (from 2025).
 
 ```python
-address = '70 Nguyễn Sỹ Sách, Tan Son, tp.HCM'
-
+address = '70 nguyễn sỹ sách, tan son, hcm'
 admin_unit = parse_address(address)
-
 print(admin_unit)
 ```
 
@@ -77,8 +76,10 @@ street          | 70 Nguyễn Sỹ Sách
 short_province  | Hồ Chí Minh              
 short_ward      | Tân Sơn                  
 ward_type       | Phường                   
+province_code   | 79                       
+ward_code       | 27007                    
 latitude        | 10.8224                  
-longitude       | 106.65                                 
+longitude       | 106.65                          
 ```
 
 Use `AdminUnit`'s attributions.
@@ -101,31 +102,32 @@ Hồ Chí Minh
 Parse an old address (before 2025).
 
 ```python
-address = '70 nguyễn sỹ sách, p.15, Tân Bình, Tp.HCM' # Old administrative unit address structure
-
+address = 'đường 15, long bình, quận 9, hcm' # Old address
 admin_unit = parse_address(address, mode='LEGACY', level=3) # Use 'LEGACY' or ParseMode.LEGACY for mode
-
 print(admin_unit)
 ```
 ```text
-Admin Unit: 70 Nguyễn Sỹ Sách, Phường 15, Quận Tân Bình, Thành phố Hồ Chí Minh
+Admin Unit: Đường 15, Phường Long Bình, Thành phố Thủ Đức, Thành phố Hồ Chí Minh
 Attribute       | Value                    
 ----------------------------------------
 province        | Thành phố Hồ Chí Minh    
-district        | Quận Tân Bình            
-ward            | Phường 15                
-street          | 70 Nguyễn Sỹ Sách        
+district        | Thành phố Thủ Đức        
+ward            | Phường Long Bình         
+street          | Đường 15                 
 short_province  | Hồ Chí Minh              
-short_district  | Tân Bình                 
-short_ward      | Phường 15                
-district_type   | Quận                     
+short_district  | Thủ Đức                  
+short_ward      | Long Bình                
+district_type   | Thành phố                
 ward_type       | Phường                   
-latitude        | 10.823333                
-longitude       | 106.63616                
+province_code   | 79                       
+district_code   | 769                      
+ward_code       | 26830                    
+latitude        | 10.890938                
+longitude       | 106.828313              
 ```
 
 ### 🔄 convert_address()
-Converts an address from the old 63-province format to a standardized 34-province `AdminUnit`.
+Converts an address from the 63-province format to a standardized 34-province `AdminUnit`.
 
 ```python
 from vietnamadminunits import convert_address
@@ -134,38 +136,38 @@ convert_address(address, mode='CONVERT_2025')
 ```
 
 **Params**:
-- `address`: The best structure is `(street), ward, district, province`. Don't worry too much about case or accenting.
-- `mode`: One of the `ConvertMode` values. Currently, only `'CONVERT_2025'` is supported.
+- `address`: Best format *"(street), ward, district, province"*. Case is ignored, accents are usually ignored except in rare cases.
+- `mode`: Currently, only `'CONVERT_2025'` is supported.
 
 **Returns**: `AdminUnit` object.
 
 **Example**:
 
 ```python
-address = '70 nguyễn sỹ sách, p.15, Tân Bình, Tp.HCM' # Old administrative unit address structure
-
+address = '59 nguyễn sỹ sách , p15, tan binh, hcm' # Old address
 admin_unit = convert_address(address)
-
 print(admin_unit)
 ```
 ```text
-Admin Unit: 70 Nguyễn Sỹ Sách, Phường Tân Sơn, Thành phố Hồ Chí Minh
+Admin Unit: 59 Nguyễn Sỹ Sách, Phường Tân Sơn, Thành phố Hồ Chí Minh
 Attribute       | Value                    
 ----------------------------------------
 province        | Thành phố Hồ Chí Minh    
 ward            | Phường Tân Sơn           
-street          | 70 Nguyễn Sỹ Sách        
+street          | 59 Nguyễn Sỹ Sách        
 short_province  | Hồ Chí Minh              
 short_ward      | Tân Sơn                  
 ward_type       | Phường                   
+province_code   | 79                       
+ward_code       | 27007                    
 latitude        | 10.8224                  
-longitude       | 106.65                   
+longitude       | 106.65                    
 ```
 
 ### 🐼 Pandas
 #### standardize_admin_unit_columns()
 
-Standardizes administrative unit columns (`province`, `district`, `ward`) in a DataFrame.
+Standardizes administrative unit columns *(province, district, ward)* in a DataFrame.
 
 ```python
 from vietnamadminunits.pandas import standardize_admin_unit_columns
@@ -190,12 +192,12 @@ standardize_admin_unit_columns(
 - `province`: Province column name.
 - `district`: District column name.
 - `ward`: Ward column name.
-- `parse_mode`: One of the `ParseMode` values. Use `'LEGACY'` for the 63-province format (pre-merger), or `'FROM_2025'` for the new 34-province format. Default is `ParseMode.latest()`.
-- `convert_mode`: One of the `ConvertMode` values. Currently, only `'CONVERT_2025'` is supported.
-- `inplace`: Replace the original columns with standardized values instead of adding new ones.
-- `prefix`, `suffix` — Add to column names if `inplace=False`.
-- `short_name`: Use short or full names for administrative units.
-- `show_progress`: Show progress bar.
+- `parse_mode`: `'FROM_2025'` (34-province) or `'LEGACY'` (63-province). Default `ParseMode.latest()`.
+- `convert_mode`: Currently, only `'CONVERT_2025'` is supported. Using this will ignore `parse_mode`. Default `None`.
+- `inplace`:  Replace the original columns with standardized values; otherwise add new columns. Default `False`.
+- `prefix`, `suffix` — Added to new column names if `inplace=False`.
+- `short_name`: Use short or full names for administrative units. Default `True`.
+- `show_progress`: Display a progress bar during processing. Default `True`.
 
 
 **Returns**: `pandas.DataFrame` object.
@@ -208,54 +210,50 @@ Standardize administrative unit columns in a DataFrame.
 import pandas as pd
 
 data = [
-    {'province': 'Thủ đô Hà Nội', 'ward': 'Phường Hồng Hà'},
-    {'province': 'Thủ đô Hà Nội', 'ward': 'Phường Ba Đình'},
-    {'province': 'Thủ đô Hà Nội', 'ward': 'Phường Ngọc Hà'},
-    {'province': 'Thủ đô Hà Nội', 'ward': 'Phường Giảng Võ'},
-    {'province': 'Thủ đô Hà Nội', 'ward': 'Phường Hoàn Kiếm'},
+    {'province': 'ha noi', 'ward': 'hong ha'},
+    {'province': 'hà nội', 'ward': 'ba đình'},
+    {'province': 'Hà Nội', 'ward': 'Ngọc Hà'},
+    {'province': 'ha noi', 'ward': 'giang vo'},
+    {'province': 'ha noi', 'ward': 'hoan kiem'},
 ]
 
 df = pd.DataFrame(data)
-
-standardized_df = standardize_admin_unit_columns(df, province='province', ward='ward')
-
-print(standardized_df.to_markdown(index=False))
+sd_df = standardize_admin_unit_columns(df, province='province', ward='ward')
+print(sd_df.to_markdown(index=False))
 ```
 
-| province      | ward             | standardized_province   | standardized_ward   |
-|:--------------|:-----------------|:------------------------|:--------------------|
-| Thủ đô Hà Nội | Phường Hồng Hà   | Hà Nội                  | Hồng Hà             |
-| Thủ đô Hà Nội | Phường Ba Đình   | Hà Nội                  | Ba Đình             |
-| Thủ đô Hà Nội | Phường Ngọc Hà   | Hà Nội                  | Ngọc Hà             |
-| Thủ đô Hà Nội | Phường Giảng Võ  | Hà Nội                  | Giảng Võ            |
-| Thủ đô Hà Nội | Phường Hoàn Kiếm | Hà Nội                  | Hoàn Kiếm           |
+| province   | ward      | standardized_province   | standardized_ward   |
+|:-----------|:----------|:------------------------|:--------------------|
+| ha noi     | hồng hà   | Hà Nội                  | Hồng Hà             |
+| hà nội     | ba đình   | Hà Nội                  | Ba Đình             |
+| Hà Nội     | Ngọc Hà   | Hà Nội                  | Ngọc Hà             |
+| ha noi     | giảng võ  | Hà Nội                  | Giảng Võ            |
+| ha noi     | hoàn kiếm | Hà Nội                  | Hoàn Kiếm           |
 
 
 Standardize and convert 63-province format administrative unit columns to the new 34-province format.
 
 ```python
 data = [
-    {'province': 'Thành phố Hồ Chí Minh', 'district': 'Quận 1', 'ward': 'Phường Tân Định'},
-    {'province': 'Thành phố Hồ Chí Minh', 'district': 'Quận 1', 'ward': 'Phường Đa Kao'},
-    {'province': 'Thành phố Hồ Chí Minh', 'district': 'Quận 1', 'ward': 'Phường Bến Nghé'},
-    {'province': 'Thành phố Hồ Chí Minh', 'district': 'Quận 1', 'ward': 'Phường Bến Thành'},
-    {'province': 'Thành phố Hồ Chí Minh', 'district': 'Quận 1', 'ward': 'Phường Nguyễn Thái Bình'}
+    {'province': 'Hải Dương', 'district': 'Thị Xã Kinh Môn', 'ward': 'Xã Lê Ninh'},
+    {'province': 'Quảng Ngãi', 'district': 'Huyện Tư Nghĩa', 'ward': 'Thị Trấn La Hà'},
+    {'province': 'HCM', 'district': 'Quận 1', 'ward': 'Phường Bến Nghé'},
+    {'province': 'Hòa Bình', 'district': 'Huyện Kim Bôi', 'ward': 'Xã Xuân Thủy'},
+    {'province': 'Lạng Sơn', 'district': 'Huyện Hữu Lũng', 'ward': 'Xã Thiện Tân'}
 ]
 
 df = pd.DataFrame(data)
-
 standardized_df = standardize_admin_unit_columns(df, province='province', district='district', ward='ward', convert_mode='CONVERT_2025')
-
 print(standardized_df.to_markdown(index=False))
 ```
 
-| province              | district   | ward                    | standardized_province   | standardized_ward   |
-|:----------------------|:-----------|:------------------------|:------------------------|:--------------------|
-| Thành phố Hồ Chí Minh | Quận 1     | Phường Tân Định         | Hồ Chí Minh             | Tân Định            |
-| Thành phố Hồ Chí Minh | Quận 1     | Phường Đa Kao           | Hồ Chí Minh             | Sài Gòn             |
-| Thành phố Hồ Chí Minh | Quận 1     | Phường Bến Nghé         | Hồ Chí Minh             | Sài Gòn             |
-| Thành phố Hồ Chí Minh | Quận 1     | Phường Bến Thành        | Hồ Chí Minh             | Bến Thành           |
-| Thành phố Hồ Chí Minh | Quận 1     | Phường Nguyễn Thái Bình | Hồ Chí Minh             | Bến Thành           |
+| province   | district        | ward            | standardized_province   | standardized_ward   |
+|:-----------|:----------------|:----------------|:------------------------|:--------------------|
+| Hải Dương  | Thị Xã Kinh Môn | Xã Lê Ninh      | Hải Phòng               | Bắc An Phụ          |
+| Quảng Ngãi | Huyện Tư Nghĩa  | Thị Trấn La Hà  | Quảng Ngãi              | Tư Nghĩa            |
+| HCM        | Quận 1          | Phường Bến Nghé | Hồ Chí Minh             | Sài Gòn             |
+| Hòa Bình   | Huyện Kim Bôi   | Xã Xuân Thủy    | Phú Thọ                 | Nật Sơn             |
+| Lạng Sơn   | Huyện Hữu Lũng  | Xã Thiện Tân    | Lạng Sơn                | Thiện Tân           |
 
 
 #### convert_address_column()
@@ -267,14 +265,13 @@ from vietnamadminunits.pandas import convert_address_column
 convert_address_column(df, address, convert_mode='CONVERT_2025', inplace=False, prefix='converted_', suffix='', short_name=True, show_progress=True)
 ```
 **Params**:
-- `df`: pandas.DataFrame object.
-- `address`: Address column name. The address value must be in format `(street), ward, district, province`.
-- `convert_mode`: One of the `ConvertMode` values. Currently, only `'CONVERT_2025'` is supported.
-- `inplace`: Replace the original columns with converted values instead of adding new ones.
-- `prefix`: Add a prefix to the column names if `inplace=False`.
-- `suffix`: Add a suffix to the column names if `inplace=False`.
-- `short_name`: Use short or full names for administrative unit in address.
-- `show_progress`: Show progress bar.
+- `df`: `pandas.DataFrame` object.
+- `address`: Address column name. Best value format *"(street), ward, district, province"*.
+- `convert_mode`: Currently, only `'CONVERT_2025'` is supported.
+- `inplace`: Replace the original columns with standardized values; otherwise add new columns. Default `False`.
+- `prefix`, `suffix` — Added to new column names if `inplace=False`.
+- `short_name`: Use short or full names for administrative units. Default `True`.
+- `show_progress`: Display a progress bar during processing. Default `True`.
 
 **Returns**: `pandas.DataFrame` object.
 
@@ -317,7 +314,7 @@ get_data(fields='*', table='admin_units', limit=None)
 
 **Params**:
 - `fields`: Column name(s) to retrieve.
-- `table`: Table name, either `'admin_units'` (34 provinces) or `'admin_units_legacy'` (legacy 63 provinces).
+- `table`: Table name, either `'admin_units'` (34-province) or `'admin_units_legacy'` (63-province).
 
 **Returns**: Data as a list of JSON-like dictionaries. It is compatible with `pandas.DataFrame`.
 
@@ -344,7 +341,7 @@ print(data)
    - [Google Geocoding API](https://developers.google.com/maps/documentation/geocoding/overview)
 
 2. **Cleaning, Mapping & Enrichment**  
-   The data was cleaned, normalized, enriched, and saved to [`data/processed/`](data/processed).  
+   The data was cleaned, normalized, enriched, and saved to [data/processed/](data/processed).  
    These finalized datasets are designed for community sharing and are directly used by the [`vietnamadminunits`](https://pypi.org/project/vietnamadminunits) Python package.
    
    For **wards that were divided into multiple new wards**, a flag `isDefaultNewWard=True` is assigned to the most appropriate match using [this solution](CHALLENGES.md#convert-2025).
@@ -414,7 +411,7 @@ The old address is first parsed into an `AdminUnit` object using the 63-province
 - `street` (if available)
 
 #### Step 2: Handle provinces and non-divided wards
-The mapping approach is identical to the [**Parser Strategy**](#-parser-strategy) described earlier — keyword matching is sufficient.
+The mapping approach is identical to the [Parser Strategy](#-parser-strategy) described earlier — keyword matching is sufficient.
 
 #### Step 3: Handle divided wards (`isDividedWard=True`)
 If a ward has been split into multiple new wards:

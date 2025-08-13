@@ -6,19 +6,19 @@ from tqdm import tqdm
 
 def standardize_admin_unit_columns(df, province: str, district: str=None, ward: str=None, parse_mode: Union[str, ParseMode]=ParseMode.latest(), convert_mode: Union[str, ConvertMode]=None, inplace=False, prefix: str='standardized_', suffix :str='', short_name: bool=True, show_progress: bool=True):
     '''
-    Standardizes administrative unit columns (`province`, `district`, `ward`) in a DataFrame.
+    Standardizes administrative unit columns *(province, district, ward)* in a DataFrame.
 
     :param df: `pandas.DataFrame` object.
     :param province: Province column name.
     :param district: District column name.
     :param ward: Ward column name.
-    :param parse_mode: One of the `ParseMode` values. Use `'LEGACY'` for the 63-province format (pre-merger), or `'FROM_2025'` for the new 34-province format. Default is `ParseMode.latest()`.
-    :param convert_mode: One of the `ConvertMode` values. Currently, only `'CONVERT_2025'` is supported.
-    :param inplace: Replace the original columns with standardized values instead of adding new ones.
-    :param prefix: Add a prefix to the column names if `inplace=False`.
-    :param suffix: Add a suffix to the column names if `inplace=False`.
-    :param short_name: Use short or full names for standardized administrative units.
-    :param show_progress: Show progress bar.
+    :param parse_mode: `'FROM_2025'` (34-province) or `'LEGACY'` (63-province). Default `ParseMode.latest()`.
+    :param convert_mode: Currently, only `'CONVERT_2025'` is supported. Using this will ignore `parse_mode`. Default `None`.
+    :param inplace: Replace the original columns with standardized values; otherwise add new columns. Default `False`.
+    :param prefix: Added to new column names if `inplace=False`.
+    :param suffix: Added to new column names if `inplace=False`.
+    :param short_name: Use short or full names for administrative units. Default `True`.
+    :param show_progress: Display a progress bar during processing. Default `True`.
 
     :return: `pandas.DataFrame` object.
     '''
@@ -107,14 +107,15 @@ def convert_address_column(df, address: str, convert_mode: Union[str, ConvertMod
     '''
     Convert an address column in a DataFrame.
 
-    :param df: pandas.DataFrame object.
-    :param address: Address column name. The address value must be in format `(street), ward, district, province`.
-    :param convert_mode: One of the `ConvertMode` values. Currently, only `'CONVERT_2025'` is supported.
-    :param inplace: Replace the original columns with converted values instead of adding new ones.
-    :param prefix: Add a prefix to the column names if `inplace=False`.
-    :param suffix: Add a suffix to the column names if `inplace=False`.
-    :param short_name: Use short or full names for administrative unit in address.
-    :param show_progress: Show progress bar.
+    :param df: `pandas.DataFrame` object.
+    :param address: Address column name. Best value format *"(street), ward, district, province"*.
+    :param convert_mode: Currently, only `'CONVERT_2025'` is supported.
+    :param inplace: Replace the original columns with standardized values; otherwise add new columns. Default `False`.
+    :param prefix: Added to new column names if `inplace=False`.
+    :param suffix: Added to new column names if `inplace=False`.
+    :param short_name: Use short or full names for administrative units. Default `True`.
+    :param show_progress: Display a progress bar during processing. Default `True`.
+
     :return: `pandas.DataFrame` object.
     '''
 

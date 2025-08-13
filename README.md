@@ -24,6 +24,7 @@ My hope is that this work not only saves you time but also helps bring more cons
 
 - Core logic is in the [`vietnamadminunits`](vietnamadminunits/) package.
 - Includes `parse_address()`, `convert_address()` and more functions.
+- Quick test link: [Google Colab](https://colab.research.google.com/drive/1Qe30zBqPjMTyLKp80OmPbDG4eyeBLzhL).
 
 ## Usage
 

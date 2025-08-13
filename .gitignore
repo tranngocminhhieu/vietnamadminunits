@@ -187,3 +187,5 @@ downloaded_files
 scripts/module_testing/tmp
 
 .vscode
+
+scripts/testing_package/data/output/*

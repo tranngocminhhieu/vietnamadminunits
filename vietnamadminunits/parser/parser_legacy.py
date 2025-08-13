@@ -90,7 +90,7 @@ def parse_address_legacy(address: str, keep_street :bool=True, level :int=3) -> 
     if level in [2,3]:
 
 
-        tmp_hidden_keywords = [ # Nếu có từ khóa này nó sẽ nhầm vào các quận của Huế
+        tmp_hidden_keywords = [ # Nếu có từ khóa này nó sẽ nhầm vào các quận của Huế trong trường hợp district là Thành phố Huế (cũ)
             'phuongthuanhoa', # Quận Thuận Hóa, Thành phố Huế
             'phuongthuybieu', # Thị xã Hương Thủy, Thành phố Huế
             'phuongthuyvan', # Thị xã Hương Thủy, Thành phố Huế

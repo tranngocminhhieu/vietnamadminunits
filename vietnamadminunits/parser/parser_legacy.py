@@ -83,8 +83,7 @@ def parse_address_legacy(address: str, keep_street :bool=True, level :int=3) -> 
         district_key = next((k for k, v in DICT_UNIQUE_DISTRICT_PROVINCE.items() if district_keyword and district_keyword in [kw for kw in v['districtKeywords']]), None)
 
         # Suy district_key ra province_key
-        if district_key:
-            province_key = DICT_UNIQUE_DISTRICT_PROVINCE[district_key]['provinceKey']
+        province_key = DICT_UNIQUE_DISTRICT_PROVINCE.get(district_key, {}).get('provinceKey')
 
         # Nếu tìm ra district_keyword thì lặp tức xóa nó khỏi địa chỉ để tránh level sau bắt nhầm từ khóa
         if district_keyword:

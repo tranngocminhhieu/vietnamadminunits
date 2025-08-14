@@ -69,7 +69,7 @@ def parse_address_from_2025(address: str, keep_street :bool=True, level: int=2) 
         address_key = replace_from_right(text=address_key, old=province_keyword, new='')
 
 
-    # 2nd attempt: Nếu không tìm được province_keyword thì tìm ward_keyword (NO_ACCENTED), đây là những ward mà tên của nó là duy nhất, có thể suy ra được province.
+    # 2nd attempt: Nếu không tìm được province_keyword thì tìm ward_keyword (NO_ACCENTED), đây là những ward mà tên của nó là duy nhất, có thể suy ra được province
     if not province_key:
         ward_keyword = next((m.group() for m in reversed(list(PATTERN_UNIQUE_WARD_PROVINCE_NO_ACCENTED.finditer(address_key)))), None)
 
@@ -77,11 +77,10 @@ def parse_address_from_2025(address: str, keep_street :bool=True, level: int=2) 
         ward_key = next((k for k, v in DICT_UNIQUE_WARD_PROVINCE_NO_ACCENTED.items() if ward_keyword and ward_keyword in [kw for kw in v['wardKeywords']]), None)
 
         # Suy ward_key ra province_key
-        if ward_key:
-            province_key = DICT_UNIQUE_WARD_PROVINCE_NO_ACCENTED[ward_key]['provinceKey']
+        province_key = DICT_UNIQUE_WARD_PROVINCE_NO_ACCENTED.get(ward_key, {}).get('provinceKey')
 
 
-    # 3rd attempt: Nếu không tìm được province_keyword thì tìm ward_keyword (ACCENTED), đây là những ward mà tên của nó là duy nhất, có thể suy ra được province.
+    # 3rd attempt: Nếu không tìm được province_keyword thì tìm ward_keyword (ACCENTED), đây là những ward mà tên của nó là duy nhất, có thể suy ra được province
     if not province_key:
         ward_keyword = next((m.group() for m in reversed(list(PATTERN_UNIQUE_WARD_PROVINCE_ACCENTED.finditer(address_key_accented)))), None)
 
@@ -89,8 +88,7 @@ def parse_address_from_2025(address: str, keep_street :bool=True, level: int=2) 
         ward_key = next((k for k, v in DICT_UNIQUE_WARD_PROVINCE_ACCENTED.items() if ward_keyword and ward_keyword in [kw for kw in v['wardKeywords']]), None)
 
         # Suy ward_key ra province_key
-        if ward_key:
-            province_key = DICT_UNIQUE_WARD_PROVINCE_ACCENTED[ward_key]['provinceKey']
+        province_key = DICT_UNIQUE_WARD_PROVINCE_ACCENTED.get(ward_key, {}).get('provinceKey')
 
 
     # Gán thông tin của province vào unit

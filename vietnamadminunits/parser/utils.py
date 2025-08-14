@@ -158,9 +158,9 @@ def extract_street(address: str, address_key: str, highest_level_keyword=None):
     :return: Tên đường đã được chuẩn hóa (title case) hoặc None.
     """
 
-    # Lấy phần "key" của tên đường trong address_key
+    # Lấy phần trước dấu phẩy của highest_level_keyword trong address_key
     if highest_level_keyword:
-        street_key_part = address_key.split(highest_level_keyword)[0]
+        street_key_part = ','.join(address_key.split(highest_level_keyword)[0].split(',')[:-1])
     else:
         street_key_part = address_key.split(',')[0].strip()
 

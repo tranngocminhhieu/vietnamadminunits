@@ -84,7 +84,7 @@ def convert_address_2025(address: str):
                 if len(containing_points) == 1:
                     default_ward_point = containing_points[0]
                 
-                # Còn lạ thì chọn ward mới gần nhất
+                # Còn lại thì chọn ward mới gần nhất
                 else:
                     default_ward_point = nearest_point
 

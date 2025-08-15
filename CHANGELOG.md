@@ -1,7 +1,8 @@
-# 2025-08-14 (Version 1.0.0)
+# 2025-08-15 (Version 1.0.0 - 1.0.2)
 - Added 2000 alias keywords for legacy ward.
 - Optimize, clean code, add comments to code.
 - `parse_address()` will keep fully street if the highest level is found.
+- Improve `extract_street()` in [vietnamadminunits/parser/utils.py](vietnamadminunits/parser/utils.py)
 
 # 2025-08-06 (Version 0.8.0 - 0.9.0)
 ### [vietnamadminunits/data/parser_legacy.json](vietnamadminunits/data/parser_legacy.json)

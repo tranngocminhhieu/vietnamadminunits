@@ -160,7 +160,8 @@ def extract_street(address: str, address_key: str, highest_level_keyword=None):
 
     # Lấy phần trước dấu phẩy của highest_level_keyword trong address_key
     if highest_level_keyword:
-        street_key_part = ','.join(address_key.split(highest_level_keyword)[0].split(',')[:-1])
+        street_key_parts = address_key.split(highest_level_keyword)[0].split(',')
+        street_key_part = ','.join(street_key_parts[:-1] if len(street_key_parts)>1 else street_key_parts)
     else:
         street_key_part = address_key.split(',')[0].strip()
 
@@ -184,4 +185,4 @@ def extract_street(address: str, address_key: str, highest_level_keyword=None):
             break
 
     # Xóa dấu phẩy & khoảng trắng cuối, chuẩn hóa lại chữ
-    return re.sub(r'[\s,]+$', '', match_result).strip().title() if match_result else None
+    return re.sub(r'[\s,.]+$', '', match_result).strip().title() if match_result else None

@@ -79,6 +79,9 @@ def parse_address_from_2025(address: str, keep_street :bool=True, level: int=2) 
         # Suy ward_key ra province_key
         province_key = DICT_UNIQUE_WARD_PROVINCE_NO_ACCENTED.get(ward_key, {}).get('provinceKey')
 
+        if province_key:
+            DICT_WARD = DICT_PROVINCE_WARD_NO_ACCENTED.get(province_key) # Không dấu
+
 
     # 3rd attempt: Nếu không tìm được province_keyword thì tìm ward_keyword (ACCENTED), đây là những ward mà tên của nó là duy nhất, có thể suy ra được province
     if not province_key:
@@ -89,6 +92,9 @@ def parse_address_from_2025(address: str, keep_street :bool=True, level: int=2) 
 
         # Suy ward_key ra province_key
         province_key = DICT_UNIQUE_WARD_PROVINCE_ACCENTED.get(ward_key, {}).get('provinceKey')
+
+        if province_key:
+            DICT_WARD = DICT_PROVINCE_WARD_ACCENTED.get(province_key) # Có dấu
 
 
     # Gán thông tin của province vào unit
@@ -102,7 +108,7 @@ def parse_address_from_2025(address: str, keep_street :bool=True, level: int=2) 
 
 
     # ----- PARSE WARD -----
-    if level == 2:
+    if level == 2 and province_key:
 
         # Có đến 3 bộ ward
         DICT_WARD_NO_ACCENTED = DICT_PROVINCE_WARD_NO_ACCENTED.get(province_key) # Không dấu

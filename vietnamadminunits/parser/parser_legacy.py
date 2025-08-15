@@ -102,7 +102,7 @@ def parse_address_legacy(address: str, keep_street :bool=True, level :int=3) -> 
 
 
     # ----- PARSE DISTRICT -----
-    if level in [2,3]:
+    if level in [2,3] and province_key:
         
         # Tạm ẩn một số phường vì nó gây nhiễu, nhầm từ khóa
         tmp_hidden_keywords = [ # Nếu có từ khóa này nó sẽ nhầm vào các quận của Huế trong trường hợp district là Thành phố Huế (cũ)
@@ -208,7 +208,7 @@ def parse_address_legacy(address: str, keep_street :bool=True, level :int=3) -> 
 
 
     # ----- PARSE WARD -----
-    if level == 3:
+    if level == 3 and district_key:
         
         # Trả lại từ khóa đã tạm ẩn trước khi tìm ward
         if tmp_hidden_keyword:

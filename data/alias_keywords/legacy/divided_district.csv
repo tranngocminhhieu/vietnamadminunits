@@ -27,3 +27,13 @@ thanhphohaiphong,quananduong,"[""quananduong"",""anduong""]",quanhongbang,,https
 thanhphohaiphong,quananduong,"[""quananduong"",""anduong""]",quananduong,TRUE,https://haiphong.gov.vn/quan-hong-bang/tu-ngay-01-01-2025-03-xa-dai-ban-an-hong-an-hung-thuoc-huyen-an-duong-nhap-vao-quan-hong-bang-717110
 tinhcaobang,huyentralinh,"[""huyentralinh"",""tralinh""]",huyenquanghoa,,https://vi.wikipedia.org/wiki/Tr%C3%A0_L%C4%A9nh_(huy%E1%BB%87n)
 tinhcaobang,huyentralinh,"[""huyentralinh"",""tralinh""]",huyentrungkhanh,TRUE,https://vi.wikipedia.org/wiki/Tr%C3%A0_L%C4%A9nh_(huy%E1%BB%87n)
+tinhhaiduong,huyenthanhha,"[""huyenthanhha"", ""thanhha""]",thanhphohaiduong,,https://vi.wikipedia.org/wiki/L%E1%BB%8Bch_s%E1%BB%AD_h%C3%A0nh_ch%C3%ADnh_H%E1%BA%A3i_D%C6%B0%C6%A1ng
+tinhhaiduong,huyenthanhha,"[""huyenthanhha"", ""thanhha""]",huyenthanhha,TRUE,https://vi.wikipedia.org/wiki/L%E1%BB%8Bch_s%E1%BB%AD_h%C3%A0nh_ch%C3%ADnh_H%E1%BA%A3i_D%C6%B0%C6%A1ng
+tinhhaiduong,huyentuky,"[""huyentuky"",""tuky""]",thanhphohaiduong,,https://vi.wikipedia.org/wiki/L%E1%BB%8Bch_s%E1%BB%AD_h%C3%A0nh_ch%C3%ADnh_H%E1%BA%A3i_D%C6%B0%C6%A1ng
+tinhhaiduong,huyentuky,"[""huyentuky"",""tuky""]",huyentuky,TRUE,https://vi.wikipedia.org/wiki/L%E1%BB%8Bch_s%E1%BB%AD_h%C3%A0nh_ch%C3%ADnh_H%E1%BA%A3i_D%C6%B0%C6%A1ng
+tinhhaiduong,huyengialoc,"[""huyengialoc"",""gialoc""]",thanhphohaiduong,,https://vi.wikipedia.org/wiki/L%E1%BB%8Bch_s%E1%BB%AD_h%C3%A0nh_ch%C3%ADnh_H%E1%BA%A3i_D%C6%B0%C6%A1ng
+tinhhaiduong,huyengialoc,"[""huyengialoc"",""gialoc""]",huyengialoc,TRUE,https://vi.wikipedia.org/wiki/L%E1%BB%8Bch_s%E1%BB%AD_h%C3%A0nh_ch%C3%ADnh_H%E1%BA%A3i_D%C6%B0%C6%A1ng
+tinhlaichau,huyentamduong,"[""huyentamduong"",""tamduong""]",thanhpholaichau,,https://vi.wikipedia.org/wiki/L%E1%BB%8Bch_s%E1%BB%AD_h%C3%A0nh_ch%C3%ADnh_Lai_Ch%C3%A2u
+tinhlaichau,huyentamduong,"[""huyentamduong"",""tamduong""]",huyentamduong,TRUE,https://vi.wikipedia.org/wiki/L%E1%BB%8Bch_s%E1%BB%AD_h%C3%A0nh_ch%C3%ADnh_Lai_Ch%C3%A2u
+tinhlaocai,huyenbatxat,"[""huyenbatxat"",""batxat""]",thanhpholaocai,,https://vi.wikipedia.org/wiki/L%E1%BB%8Bch_s%E1%BB%AD_h%C3%A0nh_ch%C3%ADnh_L%C3%A0o_Cai
+tinhlaocai,huyenbatxat,"[""huyenbatxat"",""batxat""]",huyenbatxat,TRUE,https://vi.wikipedia.org/wiki/L%E1%BB%8Bch_s%E1%BB%AD_h%C3%A0nh_ch%C3%ADnh_L%C3%A0o_Cai

@@ -2,13 +2,13 @@
 
 ## PARSE LEGACY ADMIN UNITS
 
-### Có nhiều cuộc sáp nhập ward trong khoảng 2024-10 và 2025-02
+### Có nhiều cuộc sáp nhập ward trong khoảng 2018 và 2024
 
 Không phải sáp nhập 34 tỉnh thành, mà là sáp nhập trong khi vẫn còn 63 tỉnh thành.
 
-Nhờ data admin units của Shopee mới thấy nhiều tên cũ còn sử dụng.
-
-**Giải pháp**: Tìm kiếm trên Google với từ khóa _"{tên tỉnh} sáp nhập {danh sách tên phường cũ}"_, dựa vào thông tin trên các trang uy tính để bổ sung danh sách alias keywords.
+**Giải pháp**:
+- Tìm kiếm trên Google với từ khóa _"{tên tỉnh} sáp nhập {danh sách tên phường cũ}"_ hoặc "lịch sử hành chính _{tên tỉnh}_", dựa vào thông tin trên các trang uy tính để bổ sung danh sách alias keywords.
+- Đối với các ward bị chia thì chọn ward mới có phần chia nhiều người dân nhất.
 
 **Triển khai**: [data/alias_keywords/legacy/alias_ward.csv](data/alias_keywords/legacy/alias_ward.csv)
 

@@ -104,19 +104,21 @@ def parse_address_legacy(address: str, keep_street :bool=True, level :int=3) -> 
     # ----- PARSE DISTRICT -----
     if level in [2,3] and province_key:
         
-        # Tạm ẩn một số phường vì nó gây nhiễu, nhầm từ khóa
-        tmp_hidden_keywords = [ # Nếu có từ khóa này nó sẽ nhầm vào các quận của Huế trong trường hợp district là Thành phố Huế (cũ)
-            'phuongthuanhoa', # Quận Thuận Hóa, Thành phố Huế
-            'phuongthuybieu', # Thị xã Hương Thủy, Thành phố Huế
-            'phuongthuyvan', # Thị xã Hương Thủy, Thành phố Huế
-            'phuongthuyxuan', # Thị xã Hương Thủy, Thành phố Huế
-        ]
+        if province_key == 'thanhphohue':
+            # Tạm ẩn một số phường vì nó gây nhiễu, nhầm từ khóa
+            tmp_hidden_keywords = [ # Nếu có từ khóa này nó sẽ nhầm vào các quận của Huế trong trường hợp district là Thành phố Huế (cũ)
+                'phuongthuanhoa', # Quận Thuận Hóa, Thành phố Huế
+                'phuongthuybieu', # Thị xã Hương Thủy, Thành phố Huế
+                'phuongthuyvan', # Thị xã Hương Thủy, Thành phố Huế
+                'phuongthuyxuan', # Thị xã Hương Thủy, Thành phố Huế
+            ]
+            if any(word in address_key_accented for word in ['thuậnhòa', 'thuậnhoà']): # Quận Thuận Hóa, Thành phố Huế
+                tmp_hidden_keywords.append('thuanhoa') # VN chỉ có duy nhất một district là thuanhoa thôi
 
-        PATTERN_TMP_HIDDEN = re.compile('|'.join(re.escape(k) for k in tmp_hidden_keywords), flags=re.IGNORECASE)
-        tmp_hidden_keyword = next((m.group() for m in list(PATTERN_TMP_HIDDEN.finditer(address_key))), None) # No need to reverse because it is a ward keyword
-        if tmp_hidden_keyword:
-            address_key = address_key.replace(tmp_hidden_keyword, 'TMP_HIDDEN_KEYWORD')
-
+            PATTERN_TMP_HIDDEN = re.compile('|'.join(re.escape(k) for k in tmp_hidden_keywords), flags=re.IGNORECASE)
+            tmp_hidden_keyword = next((m.group() for m in list(PATTERN_TMP_HIDDEN.finditer(address_key))), None) # No need to reverse because it is a ward keyword
+            if tmp_hidden_keyword:
+                address_key = address_key.replace(tmp_hidden_keyword, 'TMP_HIDDEN_KEYWORD')
 
         # 1st attempt: Bắt đầu một cách đơn giản nhất cho phần lớn district
         DICT_DISTRICT = DICT_PROVINCE_DISTRICT[province_key]

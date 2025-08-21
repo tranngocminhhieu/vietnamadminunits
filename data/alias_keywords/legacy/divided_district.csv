@@ -37,3 +37,10 @@ tinhlaichau,huyentamduong,"[""huyentamduong"",""tamduong""]",thanhpholaichau,,ht
 tinhlaichau,huyentamduong,"[""huyentamduong"",""tamduong""]",huyentamduong,TRUE,https://vi.wikipedia.org/wiki/L%E1%BB%8Bch_s%E1%BB%AD_h%C3%A0nh_ch%C3%ADnh_Lai_Ch%C3%A2u
 tinhlaocai,huyenbatxat,"[""huyenbatxat"",""batxat""]",thanhpholaocai,,https://vi.wikipedia.org/wiki/L%E1%BB%8Bch_s%E1%BB%AD_h%C3%A0nh_ch%C3%ADnh_L%C3%A0o_Cai
 tinhlaocai,huyenbatxat,"[""huyenbatxat"",""batxat""]",huyenbatxat,TRUE,https://vi.wikipedia.org/wiki/L%E1%BB%8Bch_s%E1%BB%AD_h%C3%A0nh_ch%C3%ADnh_L%C3%A0o_Cai
+thanhphohue,thixahuongtra,"[""thixahuongtra"",""txhuongtra"",""huongtra""]",quanphuxuan,,https://vi.wikipedia.org/wiki/L%E1%BB%8Bch_s%E1%BB%AD_h%C3%A0nh_ch%C3%ADnh_Hu%E1%BA%BF
+thanhphohue,thixahuongtra,"[""thixahuongtra"",""txhuongtra"",""huongtra""]",quanthuanhoa,,https://vi.wikipedia.org/wiki/L%E1%BB%8Bch_s%E1%BB%AD_h%C3%A0nh_ch%C3%ADnh_Hu%E1%BA%BF
+thanhphohue,thixahuongtra,"[""thixahuongtra"",""txhuongtra"",""huongtra""]",thixahuongtra,TRUE,https://vi.wikipedia.org/wiki/L%E1%BB%8Bch_s%E1%BB%AD_h%C3%A0nh_ch%C3%ADnh_Hu%E1%BA%BF
+thanhphohue,thixahuongthuy,"[""thixahuongthuy"",""txhuongthuy"",""huongthuy""]",quanthuanhoa,,https://vi.wikipedia.org/wiki/L%E1%BB%8Bch_s%E1%BB%AD_h%C3%A0nh_ch%C3%ADnh_Hu%E1%BA%BF
+thanhphohue,thixahuongthuy,"[""thixahuongthuy"",""txhuongthuy"",""huongthuy""]",thixahuongthuy,TRUE,https://vi.wikipedia.org/wiki/L%E1%BB%8Bch_s%E1%BB%AD_h%C3%A0nh_ch%C3%ADnh_Hu%E1%BA%BF
+thanhphohue,huyenphuvang,"[""huyenphuvang"",""phuvang""]",quanthuanhoa,,https://vi.wikipedia.org/wiki/L%E1%BB%8Bch_s%E1%BB%AD_h%C3%A0nh_ch%C3%ADnh_Hu%E1%BA%BF
+thanhphohue,huyenphuvang,"[""huyenphuvang"",""phuvang""]",huyenphuvang,TRUE,https://vi.wikipedia.org/wiki/L%E1%BB%8Bch_s%E1%BB%AD_h%C3%A0nh_ch%C3%ADnh_Hu%E1%BA%BF

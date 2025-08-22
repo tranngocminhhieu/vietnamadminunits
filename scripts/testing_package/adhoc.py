@@ -3,4 +3,4 @@ from vietnamadminunits.pandas import standardize_admin_unit_columns, convert_add
 import pandas as pd
 
 
-print(parse_address('Thuận Hòa	Huế	Thừa Thiên Huế', mode='LEGACY'))
+print(parse_address('Long Thành, thu thua, long an', mode='LEGACY'))

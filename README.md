@@ -362,9 +362,9 @@ import re
 
 # Step 1: Define a keyword dictionary for each province.
 DICT_PROVINCE = {
-    'thudohanoi': {
-        'provinceKeywords': ['thudohanoi', 'hanoi', 'hn'],
-        'province': 'Thủ đô Hà Nội',
+    'thanhphohanoi': {
+        'provinceKeywords': ['thanhphohanoi', 'hanoi', 'hn'],
+        'province': 'Thành phố Hà Nội',
         'provinceShort': 'Hà Nội',
         'provinceLat': 21.0001,
         'provinceLon': 105.698
@@ -394,8 +394,8 @@ province_keyword = next((m.group() for m in reversed(list(PATTERN_PROVINCE.findi
 province_key = next((k for k, v in DICT_PROVINCE.items() if province_keyword in v['provinceKeywords']), None)
 
 # Output
-print(province_key)                              # thudohanoi
-print(DICT_PROVINCE[province_key]['province'])   # Thủ đô Hà Nội
+print(province_key)                              # thanhphohanoi
+print(DICT_PROVINCE[province_key]['province'])   # Thành phố Hà Nội
 ```
 
 

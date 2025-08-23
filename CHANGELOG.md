@@ -1,3 +1,7 @@
+# 2025-08-23
+- Added 2000 alias keywords for legacy ward.
+- Improve [vietnamadminunits/parser/parser_legacy.py](vietnamadminunits/parser/parser_legacy.py)
+
 # 2025-08-15 (Version 1.0.0 - 1.0.2)
 - Added 2000 alias keywords for legacy ward.
 - Optimize, clean code, add comments to code.

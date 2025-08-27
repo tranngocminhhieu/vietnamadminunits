@@ -4,6 +4,8 @@ A Python library and open dataset for parsing, converting, and standardizing Vie
 ![Made in Vietnam](https://raw.githubusercontent.com/webuild-community/badge/master/svg/made.svg)
 [![Pypi](https://img.shields.io/pypi/v/vietnamadminunits?label=pip&logo=PyPI&logoColor=white)](https://pypi.org/project/vietnamadminunits)
 
+![vietnamadminunits.jpg](media/vietnamadminunits.jpg)
+
 ## Introduction
 This project began as a personal initiative to help myself and others navigate the complexities of Vietnam's administrative unit changes, especially leading up to the 2025 restructuring.  
 After cleaning, mapping, and converting large amounts of data from various sources, I realized it could benefit a wider community.
